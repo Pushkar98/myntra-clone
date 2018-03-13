@@ -107,7 +107,7 @@ class SignUpState extends State<SignUp> with TickerProviderStateMixin {
                       padding: const EdgeInsets.only(top: 50.0),
                       child: new InkWell(
                         onTap: () {
-                          Navigator.of(context).pushNamed("/PhoneNumber");
+                          Navigator.of(context).pushNamed("/login");
                         },
                         child: new Container(
                           child: new Text(

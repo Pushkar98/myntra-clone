@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:ecommerce_pro/components/Buttons/textButton.dart';
+import 'package:ecommerce_pro/theme/style.dart';
 import 'style.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -6,6 +8,9 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
+    onPressed(String routeName) {
+      Navigator.of(context).pushNamed(routeName);
+    }
 
     return new Scaffold(
       body: new Container(
@@ -43,43 +48,25 @@ class HomeScreen extends StatelessWidget {
                   fontSize: 14.0,
                   fontWeight: FontWeight.w400),
             ),
-            new Container(
-              padding: const EdgeInsets.only(
-                  left: 30.0, right: 30.0, bottom: 30.0, top: 30.0),
-              child: new Column(
-                children: <Widget>[
-                  new Column(
-                    children: <Widget>[
-                      new Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: <Widget>[
-                          new Text(
-                            "LOGIN",
-                            style: const TextStyle(
-                                color: Colors.blue,
-                                fontSize: 14.0,
-                                fontWeight: FontWeight.w600),
-                          ),
-                          new Text(
-                            "|",
-                            style: const TextStyle(
-                                color: Colors.grey,
-                                fontSize: 20.0,
-                                fontWeight: FontWeight.w200),
-                          ),
-                          new Text(
-                            "SIGNUP",
-                            style: const TextStyle(
-                                color: Colors.blue,
-                                fontSize: 14.0,
-                                fontWeight: FontWeight.w600),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ],
-              ),
+            new Flex(
+              //flex: 1,
+              direction: Axis.horizontal,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                new TextButton(
+                  buttonName: "LOGIN",
+                  onPressed: () => onPressed("/login"),
+                  buttonTextStyle: textStyleSmall,
+                  textAlign: TextAlign.center,
+                ),
+                new Text('|'),
+                new TextButton(
+                  buttonName: "SIGNUP",
+                  onPressed: () => onPressed("/signup"),
+                  buttonTextStyle: textStyleSmall,
+                  textAlign: TextAlign.left,
+                )
+              ],
             ),
           ],
         ),

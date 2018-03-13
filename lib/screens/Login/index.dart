@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ecommerce_pro/theme/style.dart';
+import 'package:flutter/foundation.dart';
 
 class Login extends StatefulWidget {
   Login({Key key}) : super(key: key);
@@ -34,7 +35,7 @@ class LoginState extends State<Login> with TickerProviderStateMixin {
         backgroundColor: whiteColor,
         centerTitle: true,
         title: new Text(
-          "SIGN UP",
+          "LOGIN",
           style: textStylew600,
         ),
         leading: new IconButton(
@@ -44,7 +45,7 @@ class LoginState extends State<Login> with TickerProviderStateMixin {
               color: Colors.grey[500],
             ),
             onPressed: () {
-              Navigator.of(context).pushReplacementNamed("/home");
+              Navigator.of(context).pushReplacementNamed("/HomewithTab");
             }),
       ),
       body: new ListView(
@@ -74,13 +75,47 @@ class LoginState extends State<Login> with TickerProviderStateMixin {
                     decoration: const InputDecoration(
                       //icon: const Icon(Icons.lock),
                       hintText: 'Enter your password',
-                      labelText: 'New Password',
+                      labelText: 'Password',
                     ),
                     obscureText: true,
                   ),
-                  new RaisedButton(
-                    onPressed: _submit,
-                    child: new Text('Login'),
+                  new Padding(
+                    padding: const EdgeInsets.only(top: 50.0),
+                    child: new InkWell(
+                      onTap: () {
+                        Navigator.of(context).pushNamed("/PhoneNumber");
+                      },
+                      child: new Container(
+                        child: new Text(
+                          defaultTargetPlatform == TargetPlatform.android
+                              ? "LOGIN"
+                              : "LOGIN",
+                          style: const TextStyle(
+                              color: Colors.white, fontSize: 18.0),
+                        ),
+                        // width: screenSize.width - 30,
+                        height: 45.0,
+
+//                margin: new EdgeInsets.only(
+//                    top: 20.0, bottom: 20.0, left: 10.0, right: 10.0),
+                        alignment: FractionalOffset.center,
+                        decoration: new BoxDecoration(
+                          color: Theme.of(context).primaryColor,
+                          borderRadius: const BorderRadius.all(
+                              const Radius.circular(5.0)),
+                        ),
+                      ),
+                    ),
+                  ),
+                  new Container(
+                    padding: const EdgeInsets.only(
+                        left: 30.0, right: 30.0, bottom: 20.0, top: 20.0),
+                    child: new Text(
+                      defaultTargetPlatform == TargetPlatform.android
+                          ? "FORGOT PASSWORD?"
+                          : "FORGOT PASSWORD?",
+                      style: textStyle12Bold,
+                    ),
                   ),
                 ],
               ),
