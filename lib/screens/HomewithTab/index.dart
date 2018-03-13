@@ -4,9 +4,9 @@ import 'package:ecommerce_pro/screens/HomeWithTab/style.dart';
 
 import 'package:ecommerce_pro/screens/Home/index.dart' as HomeScreen;
 import 'package:ecommerce_pro/screens/Login/index.dart' as Login;
-import 'package:ecommerce_pro/screens/SignUp/index.dart' as SignUp;
 import 'package:ecommerce_pro/screens/HomePro/index.dart' as HomePro;
 import 'package:ecommerce_pro/screens/Categories/index.dart' as Categories;
+import 'package:ecommerce_pro/screens/Bag/index.dart' as Bag;
 
 class HomeWithTab extends StatefulWidget {
   HomeWithTab({Key key}) : super(key: key);
@@ -28,7 +28,7 @@ class _HomeWithTabState extends State<HomeWithTab>
           new Categories.Categories(),
           new HomeScreen.HomeScreen(),
           new Login.Login(),
-          new SignUp.SignUp(),
+          new Bag.Bag(),
         ],
         controller: controller,
       ),

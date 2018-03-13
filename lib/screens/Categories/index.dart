@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ecommerce_pro/theme/style.dart';
 import 'package:ecommerce_pro/screens/Categories/style.dart';
+import 'package:ecommerce_pro/components/CustomCardAccount.dart';
 
 class Categories extends StatefulWidget {
   Categories({Key key}) : super(key: key);
@@ -192,7 +193,7 @@ class CategoriesState extends State<Categories> with TickerProviderStateMixin {
   }
 }
 
-class CustomCardAccount extends StatelessWidget {
+/* class CustomCardAccount extends StatelessWidget {
   String text;
   IconData trailingIcon;
   final Function onPress;
@@ -236,4 +237,4 @@ class CustomCardAccount extends StatelessWidget {
   }
 
   CustomCardAccount({this.text, this.trailingIcon});
-}
+} */
