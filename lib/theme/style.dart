@@ -17,8 +17,7 @@ TextStyle textStyle10Bold = const TextStyle(
 TextStyle textStyle10normal = const TextStyle(
     color: Colors.black, fontSize: 10.0, fontWeight: FontWeight.normal);
 TextStyle textStylew600 = const TextStyle(
-    color: const Color.fromRGBO(169, 169, 169, 4.0),
-    fontWeight: FontWeight.w500);
+    color: const Color.fromRGBO(0, 0, 0, 2.0), fontWeight: FontWeight.w500);
 const Color textFieldColor = const Color.fromRGBO(105, 105, 105, 1.0);
 const Color whiteColor = const Color(0XFFFFFFFF);
 TextStyle textStyleSmall = const TextStyle(

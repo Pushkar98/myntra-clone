@@ -7,6 +7,7 @@ import 'package:ecommerce_pro/screens/splashScreen/index.dart';
 import 'package:ecommerce_pro/screens/HomePro/index.dart';
 import 'package:ecommerce_pro/screens/Categories/index.dart';
 import 'package:ecommerce_pro/screens/Bag/index.dart';
+import 'package:ecommerce_pro/screens/Address/index.dart';
 
 class Routes {
   var routes = <String, WidgetBuilder>{
@@ -18,13 +19,14 @@ class Routes {
     "/homePro": (BuildContext context) => new HomePro(),
     "/categories": (BuildContext context) => new Categories(),
     "/bag": (BuildContext context) => new Bag(),
+    "/address": (BuildContext context) => new Address(),
   };
 
   Routes() {
     runApp(new MaterialApp(
       title: "Flutter Ecommerce App",
       //debugShowCheckedModeBanner: false,
-      home: new HomeWithTab(),
+      home: new Address(),
       //theme: appTheme,
       routes: routes,
     ));
