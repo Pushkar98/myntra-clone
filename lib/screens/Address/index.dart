@@ -57,121 +57,110 @@ class AddressState extends State<Address> with TickerProviderStateMixin {
               new Text('ADD NEW ADDRESS'),
             ],
           ),
-          new Container(
-            margin: const EdgeInsets.only(left: 7.0, right: 7.0, bottom: 10.0),
-            decoration: new BoxDecoration(
-              color: Colors.white,
-              border: new Border(
-                bottom: new BorderSide(
-                  // width: 0.5,
-                  color: Colors.white,
-                ),
+          new Card(
+            child: new Padding(
+              padding: const EdgeInsets.only(
+                  left: 10.0, top: 0.0, bottom: 10.0, right: 10.0),
+              child: new Column(
+                children: <Widget>[
+                  new TextFormField(
+                    validator: (val) =>
+                        val.length < 6 ? 'Password too short.' : null,
+                    onSaved: (val) => _password = val,
+                    decoration: const InputDecoration(
+                      //icon: const Icon(Icons.lock),
+                      hintText: 'Enter your Pin Code',
+                      labelText: 'Pin Code',
+                    ),
+                    obscureText: true,
+                  ),
+                  new TextFormField(
+                    validator: (val) =>
+                        val.length < 6 ? 'Password too short.' : null,
+                    onSaved: (val) => _password = val,
+                    decoration: const InputDecoration(
+                      //icon: const Icon(Icons.lock),
+                      hintText: 'Enter your Locality',
+                      labelText: 'Locality',
+                    ),
+                    obscureText: true,
+                  ),
+                  new TextFormField(
+                    validator: (val) =>
+                        val.length < 6 ? 'Password too short.' : null,
+                    onSaved: (val) => _password = val,
+                    decoration: const InputDecoration(
+                      //icon: const Icon(Icons.lock),
+                      hintText: 'Enter your City',
+                      labelText: 'City',
+                    ),
+                    obscureText: true,
+                  ),
+                  new TextFormField(
+                    validator: (val) =>
+                        val.length < 6 ? 'Password too short.' : null,
+                    onSaved: (val) => _password = val,
+                    decoration: const InputDecoration(
+                      //icon: const Icon(Icons.lock),
+                      hintText: 'Enter your State',
+                      labelText: 'State',
+                      border: InputBorder.none,
+                    ),
+                    //  obscureText: true,
+                  ),
+                ],
               ),
-            ),
-            child: new Column(
-              children: <Widget>[
-                new TextFormField(
-                  validator: (val) =>
-                      val.length < 6 ? 'Password too short.' : null,
-                  onSaved: (val) => _password = val,
-                  decoration: const InputDecoration(
-                    //icon: const Icon(Icons.lock),
-                    hintText: 'Enter your Pin Code',
-                    labelText: 'Pin Code',
-                  ),
-                  obscureText: true,
-                ),
-                new TextFormField(
-                  validator: (val) =>
-                      val.length < 6 ? 'Password too short.' : null,
-                  onSaved: (val) => _password = val,
-                  decoration: const InputDecoration(
-                    //icon: const Icon(Icons.lock),
-                    hintText: 'Enter your Locality',
-                    labelText: 'Locality',
-                  ),
-                  obscureText: true,
-                ),
-                new TextFormField(
-                  validator: (val) =>
-                      val.length < 6 ? 'Password too short.' : null,
-                  onSaved: (val) => _password = val,
-                  decoration: const InputDecoration(
-                    //icon: const Icon(Icons.lock),
-                    hintText: 'Enter your City',
-                    labelText: 'City',
-                  ),
-                  obscureText: true,
-                ),
-                new TextFormField(
-                  validator: (val) =>
-                      val.length < 6 ? 'Password too short.' : null,
-                  onSaved: (val) => _password = val,
-                  decoration: const InputDecoration(
-                    //icon: const Icon(Icons.lock),
-                    hintText: 'Enter your State',
-                    labelText: 'State',
-                    border: InputBorder.none,
-                  ),
-                  //  obscureText: true,
-                ),
-              ],
             ),
           ),
-          new Container(
-            margin: const EdgeInsets.only(left: 7.0, right: 7.0, bottom: 10.0),
-            decoration: new BoxDecoration(
-              color: Colors.white,
-              border: new Border(
-                bottom: new BorderSide(
-                  width: 0.5,
-                  color: Colors.white,
-                ),
+          new Card(
+            child: new Padding(
+              padding: const EdgeInsets.only(
+                  left: 10.0, top: 0.0, bottom: 10.0, right: 10.0),
+              child: new Column(
+                children: <Widget>[
+                  new TextFormField(
+                    validator: (val) =>
+                        val.length < 6 ? 'Password too short.' : null,
+                    onSaved: (val) => _password = val,
+                    decoration: const InputDecoration(
+                      //icon: const Icon(Icons.lock),
+                      hintText: 'Enter your Name',
+                      labelText: 'Name',
+                    ),
+                    obscureText: true,
+                  ),
+                  new TextFormField(
+                    validator: (val) =>
+                        val.length < 6 ? 'Password too short.' : null,
+                    onSaved: (val) => _password = val,
+                    decoration: const InputDecoration(
+                      //icon: const Icon(Icons.lock),
+                      hintText: 'Enter your Address',
+                      labelText: 'Address',
+                    ),
+                    obscureText: true,
+                  ),
+                  new TextFormField(
+                    validator: (val) =>
+                        val.length < 6 ? 'Password too short.' : null,
+                    onSaved: (val) => _password = val,
+                    decoration: const InputDecoration(
+                      //icon: const Icon(Icons.lock),
+                      hintText: 'Enter your Mobile No.',
+                      labelText: 'Mobile No.',
+                      border: InputBorder.none,
+                    ),
+                    obscureText: true,
+                  ),
+                ],
               ),
-            ),
-            child: new Column(
-              children: <Widget>[
-                new TextFormField(
-                  validator: (val) =>
-                      val.length < 6 ? 'Password too short.' : null,
-                  onSaved: (val) => _password = val,
-                  decoration: const InputDecoration(
-                    //icon: const Icon(Icons.lock),
-                    hintText: 'Enter your Name',
-                    labelText: 'Name',
-                  ),
-                  obscureText: true,
-                ),
-                new TextFormField(
-                  validator: (val) =>
-                      val.length < 6 ? 'Password too short.' : null,
-                  onSaved: (val) => _password = val,
-                  decoration: const InputDecoration(
-                    //icon: const Icon(Icons.lock),
-                    hintText: 'Enter your Address',
-                    labelText: 'Address',
-                  ),
-                  obscureText: true,
-                ),
-                new TextFormField(
-                  validator: (val) =>
-                      val.length < 6 ? 'Password too short.' : null,
-                  onSaved: (val) => _password = val,
-                  decoration: const InputDecoration(
-                    //icon: const Icon(Icons.lock),
-                    hintText: 'Enter your Mobile No.',
-                    labelText: 'Mobile No',
-                  ),
-                  obscureText: true,
-                ),
-              ],
             ),
           ),
           new Padding(
             padding: const EdgeInsets.only(top: 25.0),
             child: new InkWell(
               onTap: () {
-                Navigator.of(context).pushNamed("/login");
+                Navigator.of(context).pushNamed("/confirm");
               },
               child: new Container(
                 child: new Text(
