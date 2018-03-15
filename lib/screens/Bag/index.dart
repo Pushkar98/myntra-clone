@@ -38,37 +38,47 @@ class BagState extends State<Bag> with TickerProviderStateMixin {
                 new Text('Rs 1,598'),
               ],
             ),
-            new Container(
-              margin: const EdgeInsets.only(left: 10.0, right: 10.0),
-              decoration: new BoxDecoration(
-                  color: Colors.white,
-                  border: new Border(
-                      bottom: new BorderSide(
-                    width: 0.5,
-                    color: Colors.black38,
-                  ))),
-              child: new Padding(
+            new Card(
+              child: new Container(
+                margin: const EdgeInsets.only(
+                    top: 5.0, bottom: 0.0, right: 5.0, left: 0.0),
                 padding: const EdgeInsets.only(
-                    left: 10.0, top: 10.0, bottom: 10.0, right: 10.0),
-                child: new Row(
-                  children: <Widget>[
-                    new Image(
-                      image: bag1,
-                      height: 100.0,
-                      width: 80.0,
-                    ),
-                    new Column(
+                    top: 15.0, bottom: 0.0, left: 0.0, right: 2.0),
+//      color: Colors.white,
+                decoration: new BoxDecoration(
+                    color: Colors.white,
+                    border: new Border(
+                        bottom: new BorderSide(
+//              width: 0.3,
+                      color: Colors.black26,
+                    ))),
+                child: new Container(
+                  margin: const EdgeInsets.only(left: 2.0),
+                  child: new ListTile(
+                    title: new Row(
                       children: <Widget>[
-                        new Text('FabAlley Women Gray Classic Fit Casual'),
-                        new Text(
-                            'Top                                                             '),
-                        new Text(
-                            "Sold by: Funfash                                        "),
-                        new Text(
-                            'Only 1 units in stock                                  '),
+                        new Image(
+                          image: const AssetImage("assets/6.png"),
+                          height: 50.0,
+                          width: 30.0,
+                          // color: new Color.fromRGBO(153, 153, 153, 1.0),
+                        ),
+                        new Padding(
+                          padding: const EdgeInsets.only(
+                              left: 5.0, top: 0.0, bottom: 0.0),
+                          child: new Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              new Text('FabAlley Women Gray Classic Fi'),
+                              new Text('Top'),
+                              new Text('Sold by: Funfash'),
+                              new Text('Only 1 units in stock'),
+                            ],
+                          ),
+                        ),
                       ],
-                    )
-                  ],
+                    ),
+                  ),
                 ),
               ),
             ),
@@ -219,7 +229,7 @@ class BagState extends State<Bag> with TickerProviderStateMixin {
               padding: const EdgeInsets.only(top: 10.0),
               child: new InkWell(
                 onTap: () {
-                  Navigator.of(context).pushNamed("/PhoneNumber");
+                  Navigator.of(context).pushNamed("/address");
                 },
                 child: new Container(
                   child: new Text(

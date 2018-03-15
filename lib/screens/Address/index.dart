@@ -45,7 +45,7 @@ class AddressState extends State<Address> with TickerProviderStateMixin {
               color: Colors.black,
             ),
             onPressed: () {
-              Navigator.of(context).pushReplacementNamed("/bag");
+              Navigator.of(context).pushReplacementNamed("/HomewithTab");
             }),
       ),
       body: new ListView(

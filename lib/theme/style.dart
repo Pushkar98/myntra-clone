@@ -3,7 +3,41 @@ import 'package:flutter/material.dart';
 TextStyle textStyle = const TextStyle(
     color: const Color.fromRGBO(35, 92, 254, 10.0),
     fontWeight: FontWeight.normal);
-//
+TextStyle textStylesub = const TextStyle(
+    color: const Color.fromRGBO(0, 0, 0, 2.0),
+    fontWeight: FontWeight.bold,
+    fontSize: 12.0,
+    letterSpacing: 0.4);
+TextStyle textStylesubTitle = const TextStyle(
+    color: const Color.fromRGBO(0, 0, 0, 2.0),
+    fontWeight: FontWeight.bold,
+    fontSize: 14.0,
+    letterSpacing: 0.4);
+TextStyle textStylesubTitleLight = const TextStyle(
+    color: const Color.fromRGBO(211, 211, 211, 2.0),
+    fontWeight: FontWeight.normal,
+    fontSize: 12.0,
+    letterSpacing: 0.4);
+TextStyle textStylebottom = const TextStyle(
+    color: const Color.fromRGBO(30, 144, 255, 2.0),
+    fontWeight: FontWeight.bold,
+    fontSize: 16.0,
+    letterSpacing: 0.4);
+TextStyle textStylebottomcategory = const TextStyle(
+    color: const Color.fromRGBO(30, 144, 255, 1.0),
+    fontWeight: FontWeight.normal,
+    fontSize: 14.0,
+    letterSpacing: 0.4);
+TextStyle textStylesubTitleLighter = const TextStyle(
+    color: const Color.fromRGBO(211, 211, 211, 2.0),
+    fontWeight: FontWeight.normal,
+    fontSize: 10.0,
+    letterSpacing: 0.4);
+TextStyle textStyleheader = const TextStyle(
+    color: const Color.fromRGBO(0, 0, 0, 1.0),
+    fontWeight: FontWeight.w400,
+    fontSize: 16.0,
+    letterSpacing: 0.4);
 TextStyle textStyleBold = const TextStyle(
     color: const Color.fromRGBO(35, 92, 254, 10.0),
     fontWeight: FontWeight.bold);

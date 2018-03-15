@@ -21,7 +21,7 @@ class _HomeWithTabState extends State<HomeWithTab>
     TabController controller = new TabController(length: 7, vsync: this);
     Size screenSize = MediaQuery.of(context).size;
     return new Scaffold(
-      backgroundColor: new Color.fromRGBO(255, 255, 255, 5.0),
+      backgroundColor: new Color.fromRGBO(255, 255, 255, 1.0),
       body: new TabBarView(
         children: <Widget>[
           new HomePro.HomePro(),
@@ -33,7 +33,7 @@ class _HomeWithTabState extends State<HomeWithTab>
         controller: controller,
       ),
       bottomNavigationBar: new Container(
-        height: screenSize.height / 12,
+        height: screenSize.height / 10,
         decoration: new BoxDecoration(
             //color: Theme.of(context).primaryColor,
             ),
@@ -45,6 +45,7 @@ class _HomeWithTabState extends State<HomeWithTab>
                   new Icon(
                     Icons.home,
                     size: 25.0,
+                    color: Colors.grey.shade400,
                   ),
                   new Text("Home")
                 ],
@@ -56,6 +57,7 @@ class _HomeWithTabState extends State<HomeWithTab>
                   new Icon(
                     Icons.category,
                     size: 25.0,
+                    color: Colors.grey.shade400,
                   ),
                   new Text("Categories")
                 ],
@@ -67,6 +69,7 @@ class _HomeWithTabState extends State<HomeWithTab>
                   new Icon(
                     Icons.account_box,
                     size: 25.0,
+                    color: Colors.grey.shade400,
                   ),
                   new Text("Profile")
                 ],
@@ -78,6 +81,7 @@ class _HomeWithTabState extends State<HomeWithTab>
                   new Icon(
                     Icons.notifications,
                     size: 25.0,
+                    color: Colors.grey.shade400,
                   ),
                   new Text("Notifications")
                 ],
@@ -89,6 +93,7 @@ class _HomeWithTabState extends State<HomeWithTab>
                   new Icon(
                     Icons.card_travel,
                     size: 25.0,
+                    color: Colors.grey.shade400,
                   ),
                   new Text("Bag")
                 ],
@@ -101,6 +106,8 @@ class _HomeWithTabState extends State<HomeWithTab>
           controller: controller,
           labelStyle: new TextStyle(
             fontSize: 10.0,
+            color: Colors.grey[400],
+            // fontWeight: FontWeight.w500
           ),
         ),
       ),

@@ -74,9 +74,18 @@ class CategoriesState extends State<Categories> with TickerProviderStateMixin {
                 new Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: <Widget>[
-                    new Text('RECENTLY VIEWED'),
+                    new Text(
+                      'RECENTLY VIEWED',
+                      style: textStyleheader,
+                    ),
                     new Text('                                   '),
-                    new Text('CLEAR ALL'),
+                    new Text(
+                      'CLEAR ALL',
+                      style: new TextStyle(
+                          color: Colors.red,
+                          fontSize: 12.0,
+                          fontWeight: FontWeight.normal),
+                    ),
                   ],
                 ),
                 new SingleChildScrollView(
@@ -96,8 +105,14 @@ class CategoriesState extends State<Categories> with TickerProviderStateMixin {
                               width: 200.0,
                               fit: BoxFit.cover,
                             )),
-                        new Text("We Love Winters!"),
-                        new Text("stay warm & Cozy"),
+                        new Text(
+                          "We Love Winters!",
+                          style: textStylesubTitle,
+                        ),
+                        new Text(
+                          "stay warm & Cozy",
+                          style: textStylesubTitleLight,
+                        ),
                       ]),
                       new Column(children: <Widget>[
                         new Padding(
@@ -112,8 +127,14 @@ class CategoriesState extends State<Categories> with TickerProviderStateMixin {
                               width: 200.0,
                               fit: BoxFit.cover,
                             )),
-                        new Text("The Grunge Collection!"),
-                        new Text("Born For The Road"),
+                        new Text(
+                          "The Grunge Collection!",
+                          style: textStylesubTitle,
+                        ),
+                        new Text(
+                          "Born For The Road",
+                          style: textStylesubTitleLight,
+                        ),
                       ]),
                       new Column(children: <Widget>[
                         new Padding(
@@ -128,8 +149,14 @@ class CategoriesState extends State<Categories> with TickerProviderStateMixin {
                               width: 200.0,
                               fit: BoxFit.cover,
                             )),
-                        new Text("On Point!"),
-                        new Text("Premium Bags"),
+                        new Text(
+                          "On Point!",
+                          style: textStylesubTitle,
+                        ),
+                        new Text(
+                          "Premium Bags",
+                          style: textStylesubTitleLight,
+                        ),
                       ]),
                       new Column(children: <Widget>[
                         new Padding(
@@ -144,8 +171,14 @@ class CategoriesState extends State<Categories> with TickerProviderStateMixin {
                               width: 200.0,
                               fit: BoxFit.cover,
                             )),
-                        new Text("Everyday Wear"),
-                        new Text("Printed Tees"),
+                        new Text(
+                          "Everyday Wear",
+                          style: textStylesubTitle,
+                        ),
+                        new Text(
+                          "Printed Tees",
+                          style: textStylesubTitleLight,
+                        ),
                       ]),
                     ],
                   ),
@@ -157,7 +190,10 @@ class CategoriesState extends State<Categories> with TickerProviderStateMixin {
                   left: 30.0, right: 30.0, bottom: 20.0, top: 20.0),
               child: new Column(
                 children: <Widget>[
-                  new Text('Contact Us'),
+                  new Text(
+                    'Contact Us',
+                    style: textStylebottom,
+                  ),
                 ],
               ),
             ),
@@ -166,7 +202,10 @@ class CategoriesState extends State<Categories> with TickerProviderStateMixin {
                   left: 30.0, right: 30.0, bottom: 20.0, top: 20.0),
               child: new Column(
                 children: <Widget>[
-                  new Text('FAQs'),
+                  new Text(
+                    'FAQs',
+                    style: textStylebottom,
+                  ),
                 ],
               ),
             ),
@@ -175,7 +214,10 @@ class CategoriesState extends State<Categories> with TickerProviderStateMixin {
                   left: 30.0, right: 30.0, bottom: 20.0, top: 20.0),
               child: new Column(
                 children: <Widget>[
-                  new Text('About Us'),
+                  new Text(
+                    'About Us',
+                    style: textStylebottom,
+                  ),
                 ],
               ),
             ),
@@ -184,7 +226,10 @@ class CategoriesState extends State<Categories> with TickerProviderStateMixin {
                   left: 30.0, right: 30.0, bottom: 20.0, top: 20.0),
               child: new Column(
                 children: <Widget>[
-                  new Text('Terms of use '),
+                  new Text(
+                    'Terms of use ',
+                    style: textStylebottom,
+                  ),
                 ],
               ),
             ),

@@ -83,7 +83,7 @@ class LoginState extends State<Login> with TickerProviderStateMixin {
                     padding: const EdgeInsets.only(top: 50.0),
                     child: new InkWell(
                       onTap: () {
-                        Navigator.of(context).pushNamed("/PhoneNumber");
+                        Navigator.of(context).pushNamed("/signup");
                       },
                       child: new Container(
                         child: new Text(
@@ -109,12 +109,12 @@ class LoginState extends State<Login> with TickerProviderStateMixin {
                   ),
                   new Container(
                     padding: const EdgeInsets.only(
-                        left: 30.0, right: 30.0, bottom: 20.0, top: 20.0),
+                        left: 30.0, right: 30.0, bottom: 20.0, top: 10.0),
                     child: new Text(
                       defaultTargetPlatform == TargetPlatform.android
                           ? "FORGOT PASSWORD?"
                           : "FORGOT PASSWORD?",
-                      style: textStyle12Bold,
+                      style: textStylebottomcategory,
                     ),
                   ),
                 ],

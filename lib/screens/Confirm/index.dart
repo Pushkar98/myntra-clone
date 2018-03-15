@@ -182,7 +182,7 @@ class ConfirmState extends State<Confirm> with TickerProviderStateMixin {
                         // color: new Color.fromRGBO(153, 153, 153, 1.0),
                       ),
                       new Padding(
-                        padding: const EdgeInsets.only(left: 10.0),
+                        padding: const EdgeInsets.only(left: 5.0),
                         child: new Column(
                           children: <Widget>[
                             new Row(
@@ -234,7 +234,7 @@ class ConfirmState extends State<Confirm> with TickerProviderStateMixin {
                         // color: new Color.fromRGBO(153, 153, 153, 1.0),
                       ),
                       new Padding(
-                        padding: const EdgeInsets.only(left: 10.0),
+                        padding: const EdgeInsets.only(left: 5.0),
                         child: new Column(
                           children: <Widget>[
                             new Row(
@@ -265,22 +265,21 @@ class ConfirmState extends State<Confirm> with TickerProviderStateMixin {
               new Text('ORDER SUMMARY'),
             ],
           ),
-          new Container(
-            height: 40.0,
-            width: 20.0,
-            margin: const EdgeInsets.only(
-                top: 5.0, bottom: 0.0, right: 5.0, left: 5.0),
-            padding: const EdgeInsets.only(
-                top: 15.0, bottom: 0.0, left: 15.0, right: 15.0),
-            color: Colors.white,
-            child: new Text(
-              "2 ITEMS",
-              style: textStyle12Bold,
-            ),
-          ),
           new Card(
             child: new Column(
               children: <Widget>[
+                new Container(
+                  height: 40.0,
+                  color: Colors.white,
+                  child: new ListTile(
+                    title: new Text(
+                      "2 ITEMS",
+                      style: new TextStyle(
+                          fontSize: 12.0,
+                          color: new Color.fromRGBO(153, 153, 153, 1.0)),
+                    ),
+                  ),
+                ),
                 new Container(
                   height: 40.0,
                   color: Colors.white,
@@ -354,7 +353,7 @@ class ConfirmState extends State<Confirm> with TickerProviderStateMixin {
             padding: const EdgeInsets.only(top: 20.0),
             child: new InkWell(
               onTap: () {
-                Navigator.of(context).pushNamed("/PhoneNumber");
+                Navigator.of(context).pushNamed("/payment");
               },
               child: new Container(
                 child: new Text(
