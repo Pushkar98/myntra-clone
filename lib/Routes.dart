@@ -25,7 +25,7 @@ class Routes {
     "/address": (BuildContext context) => new Address(),
     "/confirm": (BuildContext context) => new Confirm(),
     "/payment": (BuildContext context) => new Payment(),
-    "/notifications": (BuildContext context) => new Notification(),
+    "/notification": (BuildContext context) => new Notifications(),
   };
 
   Routes() {
