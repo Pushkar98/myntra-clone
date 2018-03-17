@@ -11,6 +11,7 @@ import 'package:ecommerce_pro/screens/Address/index.dart';
 import 'package:ecommerce_pro/screens/Confirm/index.dart';
 import 'package:ecommerce_pro/screens/Payment/index.dart';
 import 'package:ecommerce_pro/screens/Notification/index.dart';
+import 'package:ecommerce_pro/screens/Product/index.dart';
 
 class Routes {
   var routes = <String, WidgetBuilder>{
@@ -26,6 +27,7 @@ class Routes {
     "/confirm": (BuildContext context) => new Confirm(),
     "/payment": (BuildContext context) => new Payment(),
     "/notification": (BuildContext context) => new Notifications(),
+    "/product": (BuildContext context) => new Product(),
   };
 
   Routes() {

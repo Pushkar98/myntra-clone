@@ -47,6 +47,9 @@ flutter:
     - assets/circle4.png
     - assets/circle5.png
     - assets/b5.png
+    - assets/KidsThumb.png
+    - assets/loginCover1.png
+    - assets/last-chance-to-stock-up.png
   #  - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -54,7 +54,10 @@ class AddressState extends State<Address> with TickerProviderStateMixin {
         children: <Widget>[
           new Row(
             children: <Widget>[
-              new Text('ADD NEW ADDRESS'),
+              new Text(
+                'ADD NEW ADDRESS',
+                style: textStylesubTitle,
+              ),
             ],
           ),
           new Card(

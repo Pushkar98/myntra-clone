@@ -8,11 +8,65 @@ TextStyle textStylesub = const TextStyle(
     fontWeight: FontWeight.bold,
     fontSize: 12.0,
     letterSpacing: 0.4);
+TextStyle textStylesubnotification = const TextStyle(
+    color: const Color.fromRGBO(0, 0, 0, 2.0),
+    fontWeight: FontWeight.bold,
+    fontSize: 16.0,
+    letterSpacing: 0.0);
+TextStyle textStylesubTitleLightNotification = const TextStyle(
+    color: const Color.fromRGBO(211, 211, 211, 2.0),
+    fontWeight: FontWeight.normal,
+    fontSize: 14.0,
+    letterSpacing: 0.0);
+TextStyle textStylesubTitleLightBAg = const TextStyle(
+    color: const Color.fromRGBO(69, 169, 169, 1.0),
+    fontWeight: FontWeight.normal,
+    fontSize: 14.0,
+    letterSpacing: 0.0);
+TextStyle textStylesTitleubnotification = const TextStyle(
+    //color: const Color.fromRGBO(0, 0, 0, 0.8),
+    fontWeight: FontWeight.normal,
+    fontSize: 15.0,
+    letterSpacing: 0.0);
+TextStyle textStylesubBag = const TextStyle(
+    color: const Color.fromRGBO(0, 0, 0, 2.0),
+    fontWeight: FontWeight.bold,
+    fontSize: 13.0,
+    letterSpacing: 0.0);
+TextStyle textStylesubBagpriceActual = const TextStyle(
+    color: const Color.fromRGBO(0, 0, 255, 2.0),
+    fontWeight: FontWeight.normal,
+    fontSize: 13.0,
+    letterSpacing: 0.0);
+TextStyle yellow = const TextStyle(
+    color: const Color.fromRGBO(255, 255, 0, 0.8),
+    fontWeight: FontWeight.normal,
+    fontSize: 12.0,
+    letterSpacing: 0.0);
 TextStyle textStylesubTitle = const TextStyle(
     color: const Color.fromRGBO(0, 0, 0, 2.0),
     fontWeight: FontWeight.bold,
     fontSize: 14.0,
-    letterSpacing: 0.4);
+    letterSpacing: 0.0);
+TextStyle textStylePayment = const TextStyle(
+    fontSize: 14.0,
+    color: const Color.fromRGBO(0, 0, 0, 1.0),
+    fontWeight: FontWeight.bold,
+    letterSpacing: 0.0);
+TextStyle textStylePayment1 = const TextStyle(
+    fontSize: 14.0,
+    color: const Color.fromRGBO(0, 0, 255, 1.0),
+    fontWeight: FontWeight.bold,
+    letterSpacing: 0.0);
+TextStyle textStylePayment2 = const TextStyle(
+    fontSize: 11.0,
+    color: const Color.fromRGBO(0, 0, 0, 1.0),
+    fontWeight: FontWeight.w600,
+    letterSpacing: 0.0);
+TextStyle textStylePayment3 =
+    const TextStyle(color: Colors.black54, letterSpacing: 0.0);
+TextStyle textStylePayment4 =
+    const TextStyle(fontSize: 14.0, color: Colors.black54, letterSpacing: 0.0);
 TextStyle textStylesubTitleLight = const TextStyle(
     color: const Color.fromRGBO(211, 211, 211, 2.0),
     fontWeight: FontWeight.normal,
@@ -30,7 +84,7 @@ TextStyle textStylebottomcategory = const TextStyle(
     letterSpacing: 0.4);
 TextStyle textStylesubTitleLighter = const TextStyle(
     color: const Color.fromRGBO(211, 211, 211, 2.0),
-    fontWeight: FontWeight.normal,
+    fontWeight: FontWeight.bold,
     fontSize: 10.0,
     letterSpacing: 0.4);
 TextStyle textStyleheader = const TextStyle(
@@ -59,6 +113,11 @@ TextStyle textStyleSmall = const TextStyle(
     fontSize: 14.0,
     fontFamily: "Roboto",
     fontWeight: FontWeight.bold);
+TextStyle textStyleSmallBag = const TextStyle(
+    color: const Color.fromRGBO(0, 0, 0, 0.8),
+    fontSize: 14.0,
+    fontFamily: "Roboto",
+    fontWeight: FontWeight.w500);
 //const Color secondaryColor = const Color.fromRGBO(102, 51, 153, 0.8);
 
 ThemeData appTheme = new ThemeData(

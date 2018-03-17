@@ -27,24 +27,28 @@ class BagState extends State<Bag> with TickerProviderStateMixin {
         ),
         body: new ListView(
           padding: const EdgeInsets.only(
-              left: 10.0, top: 10.0, bottom: 0.0, right: 10.0),
+              left: 10.0, top: 10.0, bottom: 10.0, right: 10.0),
           children: <Widget>[
             new Row(
               children: <Widget>[
-                new Text('ITEMS (2)'),
+                new Text(
+                  'ITEMS (2)',
+                  style: textStylesubTitle,
+                ),
                 new Text(
                     '                                                    '),
-                new Text('TOTAL:'),
-                new Text('Rs 1,598'),
+                new Text(
+                  'TOTAL:',
+                  style: textStylesubTitle,
+                ),
+                new Text(
+                  'Rs 1,598',
+                  style: textStylesubTitle,
+                ),
               ],
             ),
-            new Card(
+            new Container(
               child: new Container(
-                margin: const EdgeInsets.only(
-                    top: 5.0, bottom: 0.0, right: 5.0, left: 0.0),
-                padding: const EdgeInsets.only(
-                    top: 15.0, bottom: 0.0, left: 0.0, right: 2.0),
-//      color: Colors.white,
                 decoration: new BoxDecoration(
                     color: Colors.white,
                     border: new Border(
@@ -53,26 +57,48 @@ class BagState extends State<Bag> with TickerProviderStateMixin {
                       color: Colors.black26,
                     ))),
                 child: new Container(
-                  margin: const EdgeInsets.only(left: 2.0),
+                  margin: const EdgeInsets.only(
+                      left: 10.0, top: 5.0, bottom: 0.0, right: 10.0),
                   child: new ListTile(
                     title: new Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         new Image(
-                          image: const AssetImage("assets/6.png"),
+                          image: bag1,
                           height: 50.0,
-                          width: 30.0,
-                          // color: new Color.fromRGBO(153, 153, 153, 1.0),
+                          width: 40.0,
                         ),
                         new Padding(
-                          padding: const EdgeInsets.only(
-                              left: 5.0, top: 0.0, bottom: 0.0),
+                          padding:
+                              const EdgeInsets.only(left: 10.0, bottom: 10.0),
                           child: new Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
-                              new Text('FabAlley Women Gray Classic Fi'),
-                              new Text('Top'),
-                              new Text('Sold by: Funfash'),
-                              new Text('Only 1 units in stock'),
+                              new Text(
+                                'FabAlley Women Gray Classic Fit Casual,',
+                                style: textStyleSmallBag,
+                              ),
+                              new Text(
+                                'Top',
+                                style: textStyleSmallBag,
+                              ),
+                              new Text(
+                                'Sold by: Funfash',
+                                style: textStylesubTitleLightNotification,
+                              ),
+                              new Text(
+                                'Only 1 unit in Stock',
+                                style: yellow,
+                              ),
+                              new Text(
+                                'Rs 1299',
+                                style: textStylesubBag,
+                              ),
+                              new Text(
+                                'Rs 799',
+                                style: textStylesubBagpriceActual,
+                              ),
                             ],
                           ),
                         ),
@@ -83,7 +109,7 @@ class BagState extends State<Bag> with TickerProviderStateMixin {
               ),
             ),
             new Container(
-              margin: const EdgeInsets.only(left: 10.0, right: 10.0),
+              margin: const EdgeInsets.only(left: 0.0, right: 0.0),
               decoration: new BoxDecoration(
                   color: Colors.white,
                   border: new Border(
@@ -101,9 +127,18 @@ class BagState extends State<Bag> with TickerProviderStateMixin {
                       direction: Axis.horizontal,
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: <Widget>[
-                        new Text('Remove        '),
-                        new Text('|'),
-                        new Text('     MOVE TO WISHLIST'),
+                        new Text(
+                          'REMOVE        ',
+                          style: textStylesubTitleLightBAg,
+                        ),
+                        new Text(
+                          '|',
+                          style: textStylesubTitleLightBAg,
+                        ),
+                        new Text(
+                          '     MOVE TO WISHLIST',
+                          style: textStylesubTitleLightBAg,
+                        ),
                       ],
                     ),
                   ),
@@ -111,42 +146,69 @@ class BagState extends State<Bag> with TickerProviderStateMixin {
               ),
             ),
             new Container(
-              margin: const EdgeInsets.only(left: 10.0, right: 10.0, top: 10.0),
-              decoration: new BoxDecoration(
-                  color: Colors.white,
-                  border: new Border(
-                      bottom: new BorderSide(
-                    width: 0.5,
-                    color: Colors.black38,
-                  ))),
-              child: new Row(
-                children: <Widget>[
-                  new Image(
-                    image: bag2,
-                    height: 130.0,
-                    width: 100.0,
+              child: new Container(
+                decoration: new BoxDecoration(
+                    color: Colors.white,
+                    border: new Border(
+                        bottom: new BorderSide(
+//              width: 0.3,
+                      color: Colors.black26,
+                    ))),
+                child: new Container(
+                  margin: const EdgeInsets.only(
+                      left: 10.0, top: 10.0, bottom: 0.0, right: 10.0),
+                  child: new ListTile(
+                    title: new Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        new Image(
+                          image: bag2,
+                          height: 50.0,
+                          width: 40.0,
+                        ),
+                        new Padding(
+                          padding:
+                              const EdgeInsets.only(left: 10.0, bottom: 10.0),
+                          child: new Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              new Text(
+                                'FabAlley Women Gray Classic Fit Casual,',
+                                style: textStyleSmallBag,
+                              ),
+                              new Text(
+                                'Top',
+                                style: textStyleSmallBag,
+                              ),
+                              new Text(
+                                'Sold by: Funfash',
+                                style: textStylesubTitleLightNotification,
+                              ),
+                              new Text(
+                                'Only 1 unit in Stock',
+                                style: yellow,
+                              ),
+                              new Text(
+                                'Rs 1299',
+                                style: textStylesubBag,
+                              ),
+                              new Text(
+                                'Rs 799',
+                                style: textStylesubBagpriceActual,
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
-                  new Column(
-                    children: <Widget>[
-                      new Text('FabAlley Women Black Classic Fit Casual'),
-                      new Text(
-                          'Top                                                             '),
-                      new Text(
-                          "Sold by: Funfash                                        "),
-                      new Text(
-                          'Only 2 units in stock                                  '),
-                      new Text(
-                          "1,299                                                        "),
-                      new Text(
-                          '799                                                          '),
-                    ],
-                  )
-                ],
+                ),
               ),
             ),
             new Container(
               margin:
-                  const EdgeInsets.only(left: 10.0, right: 10.0, bottom: 15.0),
+                  const EdgeInsets.only(left: 0.0, right: 0.0, bottom: 15.0),
               decoration: new BoxDecoration(
                   color: Colors.white,
                   border: new Border(
@@ -164,16 +226,28 @@ class BagState extends State<Bag> with TickerProviderStateMixin {
                       direction: Axis.horizontal,
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: <Widget>[
-                        new Text('Remove        '),
-                        new Text('|'),
-                        new Text('     MOVE TO WISHLIST'),
+                        new Text(
+                          'REMOVE        ',
+                          style: textStylesubTitleLightBAg,
+                        ),
+                        new Text(
+                          '|',
+                          style: textStylesubTitleLightBAg,
+                        ),
+                        new Text(
+                          '     MOVE TO WISHLIST',
+                          style: textStylesubTitleLightBAg,
+                        ),
                       ],
                     ),
                   ),
                 ],
               ),
             ),
-            new Text("OPTIONS"),
+            new Text(
+              "OPTIONS",
+              style: textStylesubTitle,
+            ),
             new Padding(
               padding: const EdgeInsets.only(
                   left: 10.0, top: 10.0, bottom: 10.0, right: 10.0),
@@ -194,7 +268,10 @@ class BagState extends State<Bag> with TickerProviderStateMixin {
                 ),
               ),
             ),
-            new Text("PRICE DETAILS"),
+            new Text(
+              "PRICE DETAILS",
+              style: textStylesubTitle,
+            ),
             new Padding(
               padding: const EdgeInsets.only(
                   left: 10.0, top: 10.0, bottom: 0.0, right: 10.0),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ecommerce_pro/theme/style.dart';
 import 'package:flutter/foundation.dart';
+import 'package:ecommerce_pro/components/PaymentCard.dart';
 
 class Payment extends StatefulWidget {
   Payment({Key key}) : super(key: key);
@@ -42,156 +43,54 @@ class PaymentState extends State<Payment> with TickerProviderStateMixin {
                   left: 10.0, top: 10.0, bottom: 10.0, right: 10.0),
               child: new Text(
                 "You Pay Rs 1,598",
-                style: textStyle12Bold,
+                style: new TextStyle(fontWeight: FontWeight.w500),
               ),
             ),
           ),
           new Row(
             children: <Widget>[
-              new Text('OTHER PAYMENT OPTIONS'),
+              new Text(
+                'OTHER PAYMENT OPTIONS',
+                style: textStylesubTitle,
+              ),
             ],
           ),
-          new Card(
-            child: new Column(
-              children: <Widget>[
-                new Container(
-                  height: 40.0,
-                  color: Colors.white,
-                  child: new ListTile(
-                    title: new Text(
-                      "Credit/Debit Card",
-                      style: new TextStyle(
-                          fontSize: 12.0,
-                          color: new Color.fromRGBO(153, 153, 153, 1.0)),
-                    ),
-                    trailing: new Container(
-                      child: new Row(
-                        children: <Widget>[
-                          new Text(
-                            "SELECT",
-                            style: new TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                        ],
-                      ),
-                    ),
+          new Padding(
+            padding: const EdgeInsets.only(
+                left: 10.0, top: 10.0, bottom: 0.0, right: 10.0),
+            child: new Card(
+              child: new Column(
+                children: <Widget>[
+                  new PaymentCard(
+                    text: "Credit/Debit Card",
+                    text1: "SELECT",
                   ),
-                ),
-                new Container(
-                  height: 40.0,
-                  color: Colors.white,
-                  child: new ListTile(
-                    title: new Text(
-                      "NET Banking",
-                      style: new TextStyle(
-                          fontSize: 12.0,
-                          color: new Color.fromRGBO(153, 153, 153, 1.0)),
-                    ),
-                    trailing: new Container(
-                      child: new Row(
-                        children: <Widget>[
-                          new Text(
-                            "SELECT",
-                            style: new TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                        ],
-                      ),
-                    ),
+                  new PaymentCard(
+                    text: "NET Banking",
+                    text1: "SELECT",
                   ),
-                ),
-                new Container(
-                  height: 40.0,
-                  color: Colors.white,
-                  child: new ListTile(
-                    title: new Text(
-                      "Cash On Delivery",
-                      style: new TextStyle(
-                          fontSize: 12.0,
-                          color: new Color.fromRGBO(153, 153, 153, 1.0)),
-                    ),
-                    trailing: new Container(
-                      child: new Row(
-                        children: <Widget>[
-                          new Text(
-                            "SELECT",
-                            style: new TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                        ],
-                      ),
-                    ),
+                  new PaymentCard(
+                    text: "Cash On Delivery",
+                    text1: "SELECT",
                   ),
-                ),
-                new Container(
-                  height: 40.0,
-                  color: Colors.white,
-                  child: new ListTile(
-                    title: new Text(
-                      "Wallets",
-                      style: new TextStyle(
-                          fontSize: 12.0,
-                          color: new Color.fromRGBO(153, 153, 153, 1.0)),
-                    ),
-                    trailing: new Container(
-                      child: new Row(
-                        children: <Widget>[
-                          new Text(
-                            "SELECT",
-                            style: new TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                        ],
-                      ),
-                    ),
+                  new PaymentCard(
+                    text: "Wallets",
+                    text1: "SELECT",
                   ),
-                ),
-                new Container(
-                  height: 40.0,
-                  color: Colors.white,
-                  child: new ListTile(
-                    title: new Text(
-                      "EMI (Credit Card)",
-                      style: new TextStyle(
-                          fontSize: 12.0,
-                          color: new Color.fromRGBO(153, 153, 153, 1.0)),
-                    ),
-                    trailing: new Container(
-                      child: new Row(
-                        children: <Widget>[
-                          new Text(
-                            "SELECT",
-                            style: new TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                        ],
-                      ),
-                    ),
+                  new PaymentCard(
+                    text: "EMI (Credit Card)",
+                    text1: "SELECT",
                   ),
-                ),
-                new Container(
-                  height: 40.0,
-                  color: Colors.white,
-                  child: new ListTile(
-                    title: new Text(
-                      "Gift Card",
-                      style: new TextStyle(
-                          fontSize: 12.0,
-                          color: new Color.fromRGBO(153, 153, 153, 1.0)),
-                    ),
-                    trailing: new Container(
-                      child: new Row(
-                        children: <Widget>[
-                          new Text(
-                            "SELECT",
-                            style: new TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
           new Row(
             children: <Widget>[
-              new Text('ORDER SUMMARY'),
+              new Text(
+                'ORDER SUMMARY',
+                style: textStylesubTitle,
+              ),
             ],
           ),
           new Card(
@@ -203,9 +102,7 @@ class PaymentState extends State<Payment> with TickerProviderStateMixin {
                   child: new ListTile(
                     title: new Text(
                       "2 ITEMS",
-                      style: new TextStyle(
-                          fontSize: 12.0,
-                          color: new Color.fromRGBO(153, 153, 153, 1.0)),
+                      style: textStylePayment4,
                     ),
                   ),
                 ),
@@ -215,16 +112,14 @@ class PaymentState extends State<Payment> with TickerProviderStateMixin {
                   child: new ListTile(
                     title: new Text(
                       "ORDER TOTAL",
-                      style: new TextStyle(
-                          fontSize: 12.0,
-                          color: new Color.fromRGBO(153, 153, 153, 1.0)),
+                      style: textStylePayment4,
                     ),
                     trailing: new Container(
                       child: new Row(
                         children: <Widget>[
                           new Text(
                             "Rs. 1120",
-                            style: new TextStyle(fontWeight: FontWeight.bold),
+                            style: new TextStyle(fontWeight: FontWeight.normal),
                           ),
                         ],
                       ),
@@ -237,16 +132,16 @@ class PaymentState extends State<Payment> with TickerProviderStateMixin {
                   child: new ListTile(
                     title: new Text(
                       "Delivery",
-                      style: new TextStyle(
-                          fontSize: 12.0,
-                          color: new Color.fromRGBO(153, 153, 153, 1.0)),
+                      style: textStylePayment4,
                     ),
                     trailing: new Container(
                       child: new Row(
                         children: <Widget>[
                           new Text(
                             "FREE",
-                            style: new TextStyle(fontWeight: FontWeight.bold),
+                            style: new TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.green),
                           ),
                         ],
                       ),
@@ -259,9 +154,7 @@ class PaymentState extends State<Payment> with TickerProviderStateMixin {
                   child: new ListTile(
                     title: new Text(
                       "Total Payable",
-                      style: new TextStyle(
-                          fontSize: 12.0,
-                          color: new Color.fromRGBO(153, 153, 153, 1.0)),
+                      style: textStylePayment4,
                     ),
                     trailing: new Container(
                       child: new Row(
@@ -280,7 +173,10 @@ class PaymentState extends State<Payment> with TickerProviderStateMixin {
           ),
           new Row(
             children: <Widget>[
-              new Text('ORDER SUMMARY'),
+              new Text(
+                'ORDER SUMMARY',
+                style: textStylesubTitle,
+              ),
             ],
           ),
           new Card(
@@ -290,22 +186,52 @@ class PaymentState extends State<Payment> with TickerProviderStateMixin {
               child: new Column(
                 children: <Widget>[
                   new Row(
-                    children: <Widget>[new Text('Flat Abc,')],
+                    children: <Widget>[
+                      new Text(
+                        'Flat Abc,',
+                        style: textStylePayment3,
+                      )
+                    ],
                   ),
                   new Row(
-                    children: <Widget>[new Text('Xyz Apartment,')],
+                    children: <Widget>[
+                      new Text(
+                        'Xyz Apartment,',
+                        style: textStylePayment3,
+                      )
+                    ],
                   ),
                   new Row(
-                    children: <Widget>[new Text('123 Main Road,')],
+                    children: <Widget>[
+                      new Text(
+                        '123 Main Road,',
+                        style: textStylePayment3,
+                      )
+                    ],
                   ),
                   new Row(
-                    children: <Widget>[new Text('XX Sector, ZZ Layout,')],
+                    children: <Widget>[
+                      new Text(
+                        'XX Sector, ZZ Layout,',
+                        style: textStylePayment3,
+                      )
+                    ],
                   ),
                   new Row(
-                    children: <Widget>[new Text('AAA City,')],
+                    children: <Widget>[
+                      new Text(
+                        'AAA City,',
+                        style: textStylePayment3,
+                      )
+                    ],
                   ),
                   new Row(
-                    children: <Widget>[new Text('State,- 111111')],
+                    children: <Widget>[
+                      new Text(
+                        'State,- 111111',
+                        style: textStylePayment3,
+                      )
+                    ],
                   ),
                   new Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -331,10 +257,7 @@ class PaymentState extends State<Payment> with TickerProviderStateMixin {
                                               TargetPlatform.android
                                           ? "EDIT/CHANGE ADDRESS"
                                           : "EDIT/CHANGE ADDRESS",
-                                      style: const TextStyle(
-                                        color: Colors.black,
-                                        fontSize: 12.0,
-                                      ),
+                                      style: textStylePayment2,
                                     ),
                                     // width: screenSize.width - 30,
                                     height: 45.0,
@@ -363,10 +286,7 @@ class PaymentState extends State<Payment> with TickerProviderStateMixin {
                                               TargetPlatform.android
                                           ? "ADD NEW ADDRESS"
                                           : "ADD NEW ADDRESS",
-                                      style: const TextStyle(
-                                        color: Colors.black,
-                                        fontSize: 12.0,
-                                      ),
+                                      style: textStylePayment2,
                                     ),
                                     // width: screenSize.width - 30,
                                     height: 45.0,

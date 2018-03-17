@@ -559,7 +559,7 @@ class HomeProState extends State<HomePro> with TickerProviderStateMixin {
                                   ),
                                   // width: screenSize.width - 30,
                                   height: 45.0,
-                                  width: 90.0,
+                                  width: 110.0,
 
 //                margin: new EdgeInsets.only(
 //                    top: 20.0, bottom: 20.0, left: 10.0, right: 10.0),
