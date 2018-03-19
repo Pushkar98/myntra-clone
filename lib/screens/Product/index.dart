@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:ecommerce_pro/theme/style.dart';
-import 'package:ecommerce_pro/screens/Product/style.dart';
+import 'style.dart';
+import 'package:ecommerce_pro/components/ProductCard.dart';
+import 'package:ecommerce_pro/components/BrandCard.dart';
 
 class Product extends StatefulWidget {
   Product({Key key}) : super(key: key);
@@ -44,51 +46,47 @@ class ProductState extends State<Product> with TickerProviderStateMixin {
             new Image(
               image: stockUp,
             ),
-            new Row(
-              children: <Widget>[
-                new Column(children: <Widget>[
-                  new Padding(
-                      padding: const EdgeInsets.only(
-                          left: 10.0, top: 0.0, bottom: 10.0, right: 10.0),
-                      child: new Image(
-                        image: women1,
-                        height: 80.0,
-                        fit: BoxFit.cover,
-                      )),
-                  new Text(
-                    "30-50 % Off",
-                    style: textStylesubTitle,
-                  ),
-                ]),
-                new Column(children: <Widget>[
-                  new Padding(
-                      padding: const EdgeInsets.only(
-                          left: 10.0, top: 0.0, bottom: 10.0, right: 10.0),
-                      child: new Image(
-                        image: men,
-                        height: 80.0,
-                        fit: BoxFit.cover,
-                      )),
-                  new Text(
-                    "On Point!",
-                    style: textStylesubTitle,
-                  ),
-                ]),
-                new Column(children: <Widget>[
-                  new Padding(
-                      padding: const EdgeInsets.only(
-                          left: 10.0, top: 0.0, bottom: 10.0, right: 10.0),
-                      child: new Image(
-                        image: bag,
-                        height: 80.0,
-                        fit: BoxFit.cover,
-                      )),
-                  new Text(
-                    "30-50 % Off",
-                    style: textStylesubTitle,
-                  ),
-                ]),
-              ],
+            new ProductCard(
+              picture: women1,
+              picture1: women1,
+              picture2: women1,
+              text: '30 - 50% Off',
+              text1: "Up to 60% Off",
+              text2: '30 - 50% Off',
+            ),
+            new ProductCard(
+              picture: women1,
+              picture1: women1,
+              picture2: women1,
+              text: '30 - 50% Off',
+              text1: "Up to 60% Off",
+              text2: '30 - 50% Off',
+            ),
+            new ProductCard(
+              picture: women1,
+              picture1: women1,
+              picture2: women1,
+              text: '30 - 50% Off',
+              text1: "Up to 60% Off",
+              text2: '30 - 50% Off',
+            ),
+            new Column(
+              children: <Widget>[new Text('---- Shop More Brands---')],
+            ),
+            new BrandCard(
+              picture: brand1,
+              picture1: brand2,
+              picture2: brand1,
+            ),
+            new BrandCard(
+              picture: brand2,
+              picture1: brand1,
+              picture2: brand2,
+            ),
+            new BrandCard(
+              picture: brand1,
+              picture1: brand2,
+              picture2: brand1,
             ),
           ],
         ));

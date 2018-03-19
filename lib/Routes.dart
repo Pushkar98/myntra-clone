@@ -12,6 +12,9 @@ import 'package:ecommerce_pro/screens/Confirm/index.dart';
 import 'package:ecommerce_pro/screens/Payment/index.dart';
 import 'package:ecommerce_pro/screens/Notification/index.dart';
 import 'package:ecommerce_pro/screens/Product/index.dart';
+import 'package:ecommerce_pro/screens/ProductList/index.dart';
+import 'package:ecommerce_pro/screens/ShopMen/index.dart';
+import 'package:ecommerce_pro/screens/ProductDetail/index.dart';
 
 class Routes {
   var routes = <String, WidgetBuilder>{
@@ -28,13 +31,16 @@ class Routes {
     "/payment": (BuildContext context) => new Payment(),
     "/notification": (BuildContext context) => new Notifications(),
     "/product": (BuildContext context) => new Product(),
+    "/productList": (BuildContext context) => new ProductList(),
+    "/shopmen": (BuildContext context) => new ShopMen(),
+    "/productdetails": (BuildContext context) => new ProductDetail(),
   };
 
   Routes() {
     runApp(new MaterialApp(
       title: "Flutter Ecommerce App",
       //debugShowCheckedModeBanner: false,
-      home: new HomeWithTab(),
+      home: new ProductDetail(),
       //theme: appTheme,
       routes: routes,
     ));

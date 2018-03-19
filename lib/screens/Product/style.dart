@@ -12,3 +12,10 @@ ExactAssetImage men = new ExactAssetImage("assets/b4.png");
 ExactAssetImage bag = new ExactAssetImage("assets/b3.png");
 ExactAssetImage glasses = new ExactAssetImage("assets/b2.png");
 ExactAssetImage girl = new ExactAssetImage("assets/b5.png");
+ExactAssetImage brand1 = new ExactAssetImage("assets/brandLogo.png");
+ExactAssetImage brand2 = new ExactAssetImage("assets/brandLogo2.png");
+
+/* DecorationImage women = new DecorationImage(
+  image: new ExactAssetImage('assets/women.png'),
+  fit: BoxFit.cover,
+); */

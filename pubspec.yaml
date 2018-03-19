@@ -50,6 +50,10 @@ flutter:
     - assets/KidsThumb.png
     - assets/loginCover1.png
     - assets/last-chance-to-stock-up.png
+    - assets/brandLogo.png
+    - assets/brandLogo2.png
+    - assets/18.png
+
   #  - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
