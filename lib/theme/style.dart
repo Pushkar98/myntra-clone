@@ -155,3 +155,4 @@ ThemeData appTheme = new ThemeData(
 //  accentColorBrightness: Brightness.light,
 //    accentColor: whiteColor
 );
+const Color transparentColor = const Color.fromRGBO(0, 0, 0, 0.2);
