@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:ecommerce_pro/theme/style.dart';
-import 'package:ecommerce_pro/components/CustomCard.dart';
+import 'package:ecommerce_pro/components/ProductDetailCard.dart';
+import 'package:ecommerce_pro/components/ProductSizeCard.dart';
+import 'package:ecommerce_pro/components/SizeCard.dart';
+import 'style.dart';
 
 class ProductDetail extends StatelessWidget {
   List<String> images = [
@@ -8,6 +11,7 @@ class ProductDetail extends StatelessWidget {
     "assets/b4.png",
     "assets/b4.png",
   ];
+  List<String> pages = ["DETAILS", "MATERIAL & CARE"];
 
   @override
   Widget build(BuildContext context) {
@@ -121,13 +125,92 @@ class ProductDetail extends StatelessWidget {
                 ],
               ),
             ),
-            new CustomCard(
+            new ProductDetailCard(
               icon: Icons.list,
               text: "Tap to get the best Price",
-            )
+            ),
+            new Container(
+              height: 300.0,
+              padding: const EdgeInsets.only(
+                  left: 5.0, right: 10.0, top: 0.0, bottom: 0.0),
+              decoration: new BoxDecoration(image: backgroundImage),
+              child: new Column(
+                children: <Widget>[
+                  new ProductSizeCard(
+                    icon: Icons.list,
+                    text: 'Size',
+                    text1: "SIZE CHART",
+                  ),
+                  new Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      new Padding(
+                        padding: const EdgeInsets.only(
+                            left: 0.0, top: 10.0, bottom: 10.0, right: 10.0),
+                        child: new SizeCard(
+                          text: "S",
+                        ),
+                      ),
+                      new Padding(
+                        padding: const EdgeInsets.only(
+                            left: 0.0, top: 10.0, bottom: 10.0, right: 10.0),
+                        child: new SizeCard(
+                          text: "M",
+                        ),
+                      ),
+                      new Padding(
+                        padding: const EdgeInsets.only(
+                            left: 0.0, top: 10.0, bottom: 10.0, right: 10.0),
+                        child: new SizeCard(
+                          text: "L",
+                        ),
+                      ),
+                      new Padding(
+                        padding: const EdgeInsets.only(
+                            left: 0.0, top: 10.0, bottom: 10.0, right: 10.0),
+                        child: new SizeCard(
+                          text: "X",
+                        ),
+                      ),
+                    ],
+                  ),
+                  new DefaultTabController(
+                    length: 2,
+                    child: new Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: <Widget>[
+                        new Container(
+                          color: Colors.white,
+                          height: 40.0,
+                          //alignment: FractionalOffset.center,
+                          child: new TabBar(
+                            indicatorColor: whiteColor,
+                            indicatorPadding: new EdgeInsets.all(8.0),
+                            labelColor: const Color.fromRGBO(0, 0, 0, 1.0),
+                            labelStyle: new TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 16.0),
+                            unselectedLabelColor:
+                                const Color.fromRGBO(0, 0, 0, 0.5),
+                            unselectedLabelStyle: new TextStyle(
+                                fontWeight: FontWeight.normal, fontSize: 16.0),
+                            tabs: pages.map((String page) {
+                              return new Center(child: new Text(page));
+                            }).toList(),
+                          ),
+                        ),
+
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
     );
   }
 }
+

@@ -14,7 +14,7 @@ import 'package:ecommerce_pro/screens/Notification/index.dart';
 import 'package:ecommerce_pro/screens/Product/index.dart';
 import 'package:ecommerce_pro/screens/ProductList/index.dart';
 import 'package:ecommerce_pro/screens/ShopMen/index.dart';
-import 'package:ecommerce_pro/screens/ProductDetail/index.dart';
+//import 'package:ecommerce_pro/screens/ProductDetail/index.dart';
 import 'package:ecommerce_pro/screens/Profile/index.dart';
 
 class Routes {
@@ -34,7 +34,7 @@ class Routes {
     "/product": (BuildContext context) => new Product(),
     "/productList": (BuildContext context) => new ProductList(),
     "/shopmen": (BuildContext context) => new ShopMen(),
-    "/productdetails": (BuildContext context) => new ProductDetail(),
+    //"/productdetails": (BuildContext context) => new ProductDetail(),
     "/profile": (BuildContext context) => new ProfileScreen()
   };
 
@@ -42,7 +42,7 @@ class Routes {
     runApp(new MaterialApp(
       title: "Flutter Ecommerce App",
       //debugShowCheckedModeBanner: false,
-      home: new ProductDetail(),
+      home: new HomeWithTab(),
       //theme: appTheme,
       routes: routes,
     ));
