@@ -237,4 +237,3 @@ class CategoriesState extends State<Categories> with TickerProviderStateMixin {
         ));
   }
 }
-

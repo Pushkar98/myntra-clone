@@ -38,6 +38,11 @@ TextStyle textStylesubBagpriceActual = const TextStyle(
     fontWeight: FontWeight.normal,
     fontSize: 13.0,
     letterSpacing: 0.0);
+TextStyle textprofile = const TextStyle(
+    color: Colors.grey,
+    fontSize: 14.0,
+    fontWeight: FontWeight.bold,
+    letterSpacing: 0.0);
 TextStyle yellow = const TextStyle(
     color: const Color.fromRGBO(255, 255, 0, 0.8),
     fontWeight: FontWeight.normal,

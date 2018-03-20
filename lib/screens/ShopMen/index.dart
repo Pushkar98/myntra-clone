@@ -63,8 +63,8 @@ class ShopMenState extends State<ShopMen> with TickerProviderStateMixin {
                   'Hand-Picked Authenticity',
                   style: new TextStyle(
                     fontSize: 12.0,
-                    color: Colors.black,
-                    fontWeight: FontWeight.normal,
+                    color: Colors.grey,
+                    //fontWeight: FontWeight.w400,
                   ),
                 ),
               ],
