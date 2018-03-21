@@ -91,13 +91,20 @@ class ProductDetailState extends State<ProductDetail>
                   ))),
             ),
             new Container(
+              decoration: new BoxDecoration(color: Colors.white),
               padding: const EdgeInsets.only(
                   left: 10.0, right: 10.0, top: 10.0, bottom: 10.0),
               child: new Row(
-                children: <Widget>[new Text('Black Leather Jacket')],
+                children: <Widget>[
+                  new Text(
+                    'Black Leather Jacket',
+                    style: textStylew600,
+                  )
+                ],
               ),
             ),
             new Container(
+              decoration: new BoxDecoration(color: Colors.white),
               padding: const EdgeInsets.only(
                   left: 10.0, right: 0.0, top: 10.0, bottom: 10.0),
               child: new Row(
@@ -109,9 +116,7 @@ class ProductDetailState extends State<ProductDetail>
                         left: 0.0, top: 10.0, bottom: 10.0, right: 10.0),
                     child: new Text(
                       'Rs 1,499',
-                      style: new TextStyle(
-                        color: Colors.grey,
-                      ),
+                      style: textPrice,
                     ),
                   ),
                   new Padding(
@@ -119,9 +124,7 @@ class ProductDetailState extends State<ProductDetail>
                         left: 10.0, top: 10.0, bottom: 10.0, right: 10.0),
                     child: new Text(
                       'Rs 2,499',
-                      style: new TextStyle(
-                        color: Colors.grey,
-                      ),
+                      style: textDiscount,
                     ),
                   ),
                   new Padding(
@@ -129,9 +132,7 @@ class ProductDetailState extends State<ProductDetail>
                         left: 10.0, top: 10.0, bottom: 10.0, right: 0.0),
                     child: new Text(
                       '40% Off',
-                      style: new TextStyle(
-                        color: Colors.grey,
-                      ),
+                      style: textPriceActual,
                     ),
                   ),
                 ],
@@ -189,12 +190,12 @@ class ProductDetailState extends State<ProductDetail>
                   ),
                   new TabBar(
                     indicatorColor: Colors.blueGrey,
-                    labelColor: Colors.black45,
+                    labelColor: Colors.black,
                     labelStyle: new TextStyle(
-                        fontWeight: FontWeight.bold, fontSize: 16.0),
+                        fontWeight: FontWeight.normal, fontSize: 14.0),
                     unselectedLabelColor: Colors.black45,
                     unselectedLabelStyle: new TextStyle(
-                        fontWeight: FontWeight.normal, fontSize: 16.0),
+                        fontWeight: FontWeight.normal, fontSize: 14.0),
                     controller: controller1,
                     tabs: pages.map((String page) {
                       return new Tab(
@@ -235,7 +236,12 @@ class ProductDetailState extends State<ProductDetail>
                         child: new Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.start,
-                          children: <Widget>[new Text("STYLE NOTE")],
+                          children: <Widget>[
+                            new Text(
+                              "STYLE NOTE",
+                              style: textDescriptionheader,
+                            )
+                          ],
                         )),
                   ),
                   new Container(
@@ -255,7 +261,9 @@ class ProductDetailState extends State<ProductDetail>
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: <Widget>[
                             new Text(
-                                "Fashion has taken today's youth by surprise, and the avaibility of numerous options just leaves them spoilt of choice. Online stores fuel fashion by making the latest trending dresses, accessories, and apparels available to you within a few clicks. Shopping is no longer a day long affair with online shopping"),
+                              "Fashion has taken today's youth by surprise, and the avaibility of numerous options just leaves them spoilt of choice. Online stores fuel fashion by making the latest trending dresses, accessories, and apparels available to you within a few clicks. Shopping is no longer a day long affair with online shopping",
+                              style: textDescription,
+                            ),
                             new Padding(
                               padding: const EdgeInsets.only(
                                   left: 0.0,
@@ -263,7 +271,12 @@ class ProductDetailState extends State<ProductDetail>
                                   bottom: 10.0,
                                   right: 10.0),
                               child: new Row(
-                                children: <Widget>[new Text('MORE INFO')],
+                                children: <Widget>[
+                                  new Text(
+                                    'MORE INFO',
+                                    style: textDescriptionheader,
+                                  )
+                                ],
                               ),
                             )
                           ],
@@ -285,10 +298,18 @@ class ProductDetailState extends State<ProductDetail>
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: <Widget>[
-                            new Text("PRODUCT CODE: 1760167"),
-                            new Text('Sold By: Funfash'),
                             new Text(
-                                'Tax info: Applicable GST will be charged at the time of checkout')
+                              "PRODUCT CODE: 1760167",
+                              style: textDescription,
+                            ),
+                            new Text(
+                              'Sold By: Funfash',
+                              style: textDescription,
+                            ),
+                            new Text(
+                              'Tax info: Applicable GST will be charged at the time of checkout',
+                              style: textDescription,
+                            )
                           ],
                         )),
                   ),
@@ -334,20 +355,25 @@ class ProductDetailState extends State<ProductDetail>
               decoration: new BoxDecoration(color: Colors.green),
               padding: const EdgeInsets.only(
                   left: 0.0, right: 20.0, top: 0.0, bottom: 0.0),
-              child: new Row(
-                children: [
-                  new Icon(
-                    Icons.card_travel,
-                    color: Colors.white,
-                  ),
-                  new Text("GO TO BAG",
-                      style: new TextStyle(
-                          fontSize: 15.0,
-                          letterSpacing: 0.8,
-                          fontWeight: FontWeight.w400,
-                          fontFamily: "Roboto",
-                          color: Colors.white)),
-                ],
+              child: new GestureDetector(
+                onTap: () {
+                  Navigator.of(context).pushNamed('/bag');
+                },
+                child: new Row(
+                  children: [
+                    new Icon(
+                      Icons.card_travel,
+                      color: Colors.white,
+                    ),
+                    new Text("GO TO BAG",
+                        style: new TextStyle(
+                            fontSize: 15.0,
+                            letterSpacing: 0.8,
+                            fontWeight: FontWeight.w400,
+                            fontFamily: "Roboto",
+                            color: Colors.white)),
+                  ],
+                ),
               ),
             )
           ],

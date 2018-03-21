@@ -110,7 +110,21 @@ TextStyle textStyle10Bold = const TextStyle(
 TextStyle textStyle10normal = const TextStyle(
     color: Colors.black, fontSize: 10.0, fontWeight: FontWeight.normal);
 TextStyle textStylew600 = const TextStyle(
-    color: const Color.fromRGBO(0, 0, 0, 2.0), fontWeight: FontWeight.w500);
+    color: const Color.fromRGBO(0, 0, 0, 2.0),
+    fontSize: 17.0,
+    fontWeight: FontWeight.w500);
+TextStyle textPrice = const TextStyle(
+    color: const Color.fromRGBO(0, 0, 0, 2.0),
+    fontSize: 14.0,
+    fontWeight: FontWeight.w500);
+TextStyle textDiscount = const TextStyle(
+    color: Colors.grey, fontSize: 14.0, fontWeight: FontWeight.w500);
+TextStyle textPriceActual = const TextStyle(
+    color: Colors.blue, fontSize: 14.0, fontWeight: FontWeight.normal);
+TextStyle textDescription = const TextStyle(
+    color: Colors.grey, fontSize: 14.0, fontWeight: FontWeight.normal);
+TextStyle textDescriptionheader = const TextStyle(
+    color: Colors.black, fontSize: 15.0, fontWeight: FontWeight.normal);
 const Color textFieldColor = const Color.fromRGBO(105, 105, 105, 1.0);
 const Color whiteColor = const Color(0XFFFFFFFF);
 TextStyle textStyleSmall = const TextStyle(

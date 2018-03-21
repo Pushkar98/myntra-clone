@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ecommerce_pro/theme/style.dart';
 
 class Detail extends StatelessWidget {
   final String text;
@@ -10,10 +11,7 @@ class Detail extends StatelessWidget {
         new Text(
           text,
           // 'Stay warm and trendy this winter with this trendy sweater from nouk.Layer it on a tee, or just team it with a pair of jeans and boots when you head out this winter',
-          style: new TextStyle(
-            color: Colors.grey,
-            fontSize: 12.0,
-          ),
+          style: textDescription,
         ),
       ],
     );

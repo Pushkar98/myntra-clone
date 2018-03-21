@@ -12,10 +12,14 @@ class ProductCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size screenSize = MediaQuery.of(context).size;
+
     return new Row(
       children: <Widget>[
         new Column(children: <Widget>[
           new Container(
+            width: screenSize.width / 3.4,
+
             margin: const EdgeInsets.only(left: 8.0, bottom: 0.0, right: 0.0),
             // height: 115.0,
             color: Colors.white,
@@ -31,7 +35,7 @@ class ProductCard extends StatelessWidget {
                     ))),
                 child: new Image(
                   image: picture,
-                  height: 80.0,
+                  height: 83.0,
                   // fit: BoxFit.cover,
                 )),
           ),
@@ -41,7 +45,7 @@ class ProductCard extends StatelessWidget {
               children: <Widget>[
                 new Padding(
                     padding: const EdgeInsets.only(
-                        left: 18.0, top: 4.0, bottom: 10.0, right: 20.0),
+                        left: 10.0, top: 4.0, bottom: 10.0, right: 10.0),
                     child: new Text('30 - 50 % Off'))
               ],
             ),
@@ -49,6 +53,8 @@ class ProductCard extends StatelessWidget {
         ]),
         new Column(children: <Widget>[
           new Container(
+            width: screenSize.width / 3.4,
+
             margin: const EdgeInsets.only(left: 8.0, bottom: 0.0, right: 0.0),
             // height: 115.0,
             color: Colors.white,
@@ -74,7 +80,7 @@ class ProductCard extends StatelessWidget {
               children: <Widget>[
                 new Padding(
                     padding: const EdgeInsets.only(
-                        left: 18.0, top: 4.0, bottom: 10.0, right: 20.0),
+                        left: 8.0, top: 4.0, bottom: 10.0, right: 10.0),
                     child: new Text('30 - 50 % Off'))
               ],
             ),
@@ -82,6 +88,8 @@ class ProductCard extends StatelessWidget {
         ]),
         new Column(children: <Widget>[
           new Container(
+            width: screenSize.width / 3.4,
+
             margin: const EdgeInsets.only(left: 8.0, bottom: 0.0, right: 0.0),
             // height: 115.0,
             color: Colors.white,
@@ -107,7 +115,7 @@ class ProductCard extends StatelessWidget {
               children: <Widget>[
                 new Padding(
                     padding: const EdgeInsets.only(
-                        left: 18.0, top: 4.0, bottom: 10.0, right: 20.0),
+                        left: 10.0, top: 4.0, bottom: 10.0, right: 10.0),
                     child: new Text('30 - 50 % Off'))
               ],
             ),

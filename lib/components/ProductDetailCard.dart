@@ -30,9 +30,9 @@ class ProductDetailCard extends StatelessWidget {
                   child: new Text(
                     text,
                     style: new TextStyle(
-                        color: new Color.fromRGBO(68, 68, 68, 1.0),
+                        color: Colors.grey,
                         fontSize: 14.0,
-                        fontWeight: FontWeight.w500),
+                        fontWeight: FontWeight.normal),
                   )),
             ],
           ),

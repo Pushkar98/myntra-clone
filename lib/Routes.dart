@@ -42,7 +42,7 @@ class Routes {
     runApp(new MaterialApp(
       title: "Flutter Ecommerce App",
       //debugShowCheckedModeBanner: false,
-      home: new ProductDetail(),
+      home: new HomeWithTab(),
       //theme: appTheme,
       routes: routes,
     ));

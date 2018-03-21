@@ -23,6 +23,15 @@ class ProductState extends State<Product> with TickerProviderStateMixin {
             "PRODUCT",
             style: textStylew600,
           ),
+          leading: new IconButton(
+              icon: new Icon(
+                Icons.chevron_left,
+                size: 40.0,
+                color: Colors.black,
+              ),
+              onPressed: () {
+                Navigator.of(context).pushReplacementNamed("/HomewithTab");
+              }),
           actions: <Widget>[
             new Icon(
               Icons.search,
@@ -74,8 +83,10 @@ class ProductState extends State<Product> with TickerProviderStateMixin {
               text1: "Up to 60% Off",
               text2: '30 - 50% Off',
             ),
-            new Column(
-              children: <Widget>[new Text('---- Shop More Brands---')],
+            new Container(
+              child: new Column(
+                children: <Widget>[new Text("Shop More Brands")],
+              ),
             ),
             new BrandCard(
               picture: brand1,

@@ -30,14 +30,18 @@ class ProductSizeCard extends StatelessWidget {
                   child: new Text(
                     text,
                     style: new TextStyle(
-                        color: new Color.fromRGBO(68, 68, 68, 1.0),
+                        color: Colors.grey,
                         fontSize: 14.0,
-                        fontWeight: FontWeight.w500),
+                        fontWeight: FontWeight.normal),
                   )),
             ],
           ),
           trailing: new Text(
             text1,
+            style: new TextStyle(
+                color: Colors.blue,
+                fontSize: 12.0,
+                fontWeight: FontWeight.normal),
           ),
         ),
       ),
