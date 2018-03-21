@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:ecommerce_pro/theme/style.dart';
 
-class estimatedDeliveryCard extends StatelessWidget {
-  final DecorationImage picture;
+class EstimatedDeliveryCard extends StatelessWidget {
+  final AssetImage picture;
 
   final String text;
   final String text1;
@@ -24,13 +24,14 @@ class estimatedDeliveryCard extends StatelessWidget {
             color: Colors.black26,
           ))),
       child: new Container(
-        margin: const EdgeInsets.only(left: 2.0),
+        margin: const EdgeInsets.only(left: 2.0, bottom: 5.0),
         child: new ListTile(
           title: new Row(
             children: <Widget>[
-              new Container(
-                decoration: new BoxDecoration(image: picture),
-
+              new Image(
+                image: picture,
+                height: 60.0,
+                width: 40.0,
                 // color: new Color.fromRGBO(153, 153, 153, 1.0),
               ),
               new Padding(
@@ -67,5 +68,5 @@ class estimatedDeliveryCard extends StatelessWidget {
     );
   }
 
-  estimatedDeliveryCard({this.text, this.text1});
+  EstimatedDeliveryCard({this.picture, this.text, this.text1, this.text2});
 }

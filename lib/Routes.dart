@@ -21,7 +21,7 @@ class Routes {
   var routes = <String, WidgetBuilder>{
     "/home": (BuildContext context) => new HomeScreen(),
     "/login": (BuildContext context) => new Login(),
-    "/splashScreen": (BuildContext context) => new splashScreen(),
+    "/splashScreen": (BuildContext context) => new SplashScreen(),
     "/signup": (BuildContext context) => new SignUp(),
     "/HomewithTab": (BuildContext context) => new HomeWithTab(),
     "/homePro": (BuildContext context) => new HomePro(),
@@ -41,8 +41,8 @@ class Routes {
   Routes() {
     runApp(new MaterialApp(
       title: "Flutter Ecommerce App",
-      //debugShowCheckedModeBanner: false,
-      home: new HomeWithTab(),
+      debugShowCheckedModeBanner: false,
+      home: new SplashScreen(),
       //theme: appTheme,
       routes: routes,
     ));

@@ -18,8 +18,8 @@ class ProductDetailState extends State<ProductDetail>
     with TickerProviderStateMixin {
   List<String> images = [
     "assets/b4.png",
-    "assets/b4.png",
-    "assets/b4.png",
+    "assets/b3.png",
+    "assets/b5.png",
   ];
   List<String> pages = ["DETAILS", "MATERIAL & CARE"];
 

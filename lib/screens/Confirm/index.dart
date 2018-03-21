@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ecommerce_pro/theme/style.dart';
 import 'package:flutter/foundation.dart';
+import 'package:ecommerce_pro/components/EstimatedDeliveryCard.dart';
 
 class Confirm extends StatefulWidget {
   Confirm({Key key}) : super(key: key);
@@ -29,7 +30,7 @@ class ConfirmState extends State<Confirm> with TickerProviderStateMixin {
               color: Colors.black,
             ),
             onPressed: () {
-              Navigator.of(context).pushReplacementNamed("/bag");
+              Navigator.of(context).pushReplacementNamed("/address");
             }),
       ),
       body: new ListView(
@@ -178,121 +179,19 @@ class ConfirmState extends State<Confirm> with TickerProviderStateMixin {
             ],
           ),
           new Card(
-            child: new Container(
-              margin: const EdgeInsets.only(
-                  top: 5.0, bottom: 0.0, right: 5.0, left: 0.0),
-              padding: const EdgeInsets.only(
-                  top: 15.0, bottom: 0.0, left: 0.0, right: 2.0),
-//      color: Colors.white,
-              decoration: new BoxDecoration(
-                  color: Colors.white,
-                  border: new Border(
-                      bottom: new BorderSide(
-//              width: 0.3,
-                    color: Colors.black26,
-                  ))),
-              child: new Container(
-                margin: const EdgeInsets.only(left: 2.0),
-                child: new ListTile(
-                  title: new Row(
-                    children: <Widget>[
-                      new Image(
-                        image: const AssetImage("assets/6.png"),
-                        height: 50.0,
-                        width: 40.0,
-                        // color: new Color.fromRGBO(153, 153, 153, 1.0),
-                      ),
-                      new Padding(
-                        padding: const EdgeInsets.only(left: 5.0),
-                        child: new Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            new Text(
-                              'Estimated Delivery',
-                              style: textStylePayment4,
-                            ),
-                            new Text(
-                              'Date:',
-                              style: textStylePayment4,
-                            ),
-                          ],
-                        ),
-                      ),
-                      new Padding(
-                        padding: const EdgeInsets.only(left: 50.0, right: 0.0),
-                        child: new Column(
-                          children: <Widget>[
-                            new Text(
-                              '20 April 2018',
-                              style: new TextStyle(fontWeight: FontWeight.bold),
-                            )
-                          ],
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-              ),
-            ),
-          ),
+              child: new EstimatedDeliveryCard(
+            picture: const AssetImage("assets/6.png"),
+            text: 'Estimated Delivery',
+            text1: 'Date:',
+            text2: '20 April 2018',
+          )),
           new Card(
-            child: new Container(
-              margin: const EdgeInsets.only(
-                  top: 0.0, bottom: 0.0, right: 5.0, left: 0.0),
-              padding: const EdgeInsets.only(
-                  top: 0.0, bottom: 10.0, left: 0.0, right: 2.0),
-//      color: Colors.white,
-              decoration: new BoxDecoration(
-                  color: Colors.white,
-                  border: new Border(
-                      bottom: new BorderSide(
-//              width: 0.3,
-                    color: Colors.black26,
-                  ))),
-              child: new Container(
-                margin: const EdgeInsets.only(left: 2.0),
-                child: new ListTile(
-                  title: new Row(
-                    children: <Widget>[
-                      new Image(
-                        image: const AssetImage("assets/6.png"),
-                        height: 50.0,
-                        width: 40.0,
-                        // color: new Color.fromRGBO(153, 153, 153, 1.0),
-                      ),
-                      new Padding(
-                        padding: const EdgeInsets.only(left: 5.0),
-                        child: new Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            new Text(
-                              'Estimated Delivery',
-                              style: textStylePayment4,
-                            ),
-                            new Text(
-                              'Date:',
-                              style: textStylePayment4,
-                            ),
-                          ],
-                        ),
-                      ),
-                      new Padding(
-                        padding: const EdgeInsets.only(left: 50.0, right: 0.0),
-                        child: new Column(
-                          children: <Widget>[
-                            new Text(
-                              '20 April 2018',
-                              style: new TextStyle(fontWeight: FontWeight.bold),
-                            )
-                          ],
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-              ),
-            ),
-          ),
+              child: new EstimatedDeliveryCard(
+            picture: const AssetImage("assets/6.png"),
+            text: 'Estimated Delivery',
+            text1: 'Date:',
+            text2: '20 April 2018',
+          )),
           new Row(
             children: <Widget>[
               new Text(

@@ -124,7 +124,7 @@ TextStyle textPriceActual = const TextStyle(
 TextStyle textDescription = const TextStyle(
     color: Colors.grey, fontSize: 14.0, fontWeight: FontWeight.normal);
 TextStyle textDescriptionheader = const TextStyle(
-    color: Colors.black, fontSize: 15.0, fontWeight: FontWeight.normal);
+    color: Colors.blueGrey, fontSize: 15.0, fontWeight: FontWeight.normal);
 const Color textFieldColor = const Color.fromRGBO(105, 105, 105, 1.0);
 const Color whiteColor = const Color(0XFFFFFFFF);
 TextStyle textStyleSmall = const TextStyle(

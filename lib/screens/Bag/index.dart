@@ -3,6 +3,7 @@ import 'package:ecommerce_pro/theme/style.dart';
 import 'style.dart';
 import 'package:ecommerce_pro/components/CustomCard.dart';
 import 'package:ecommerce_pro/components/CustomCardAmount.dart';
+import 'package:ecommerce_pro/components/BagCard.dart';
 import 'package:flutter/foundation.dart';
 
 class Bag extends StatefulWidget {
@@ -47,66 +48,14 @@ class BagState extends State<Bag> with TickerProviderStateMixin {
                 ),
               ],
             ),
-            new Container(
-              child: new Container(
-                decoration: new BoxDecoration(
-                    color: Colors.white,
-                    border: new Border(
-                        bottom: new BorderSide(
-//              width: 0.3,
-                      color: Colors.black26,
-                    ))),
-                child: new Container(
-                  margin: const EdgeInsets.only(
-                      left: 10.0, top: 5.0, bottom: 0.0, right: 10.0),
-                  child: new ListTile(
-                    title: new Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        new Image(
-                          image: bag1,
-                          height: 50.0,
-                          width: 40.0,
-                        ),
-                        new Padding(
-                          padding:
-                              const EdgeInsets.only(left: 10.0, bottom: 10.0),
-                          child: new Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              new Text(
-                                'FabAlley Women Gray Classic Fit Casual,',
-                                style: textStyleSmallBag,
-                              ),
-                              new Text(
-                                'Top',
-                                style: textStyleSmallBag,
-                              ),
-                              new Text(
-                                'Sold by: Funfash',
-                                style: textStylesubTitleLightNotification,
-                              ),
-                              new Text(
-                                'Only 1 unit in Stock',
-                                style: yellow,
-                              ),
-                              new Text(
-                                'Rs 1299',
-                                style: textStylesubBag,
-                              ),
-                              new Text(
-                                'Rs 799',
-                                style: textStylesubBagpriceActual,
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
+            new BagCard(
+              picture: bag1,
+              text: 'FabAlley Women Gray Classic Fit Casual,',
+              text1: 'Top',
+              text2: 'Sold by: Funfash',
+              text3: 'Only 1 unit in Stock',
+              text4: 'Rs 1299',
+              text5: 'Rs 799',
             ),
             new Container(
               margin: const EdgeInsets.only(left: 0.0, right: 0.0),
@@ -145,66 +94,14 @@ class BagState extends State<Bag> with TickerProviderStateMixin {
                 ],
               ),
             ),
-            new Container(
-              child: new Container(
-                decoration: new BoxDecoration(
-                    color: Colors.white,
-                    border: new Border(
-                        bottom: new BorderSide(
-//              width: 0.3,
-                      color: Colors.black26,
-                    ))),
-                child: new Container(
-                  margin: const EdgeInsets.only(
-                      left: 10.0, top: 10.0, bottom: 0.0, right: 10.0),
-                  child: new ListTile(
-                    title: new Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        new Image(
-                          image: bag2,
-                          height: 50.0,
-                          width: 40.0,
-                        ),
-                        new Padding(
-                          padding:
-                              const EdgeInsets.only(left: 10.0, bottom: 10.0),
-                          child: new Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              new Text(
-                                'FabAlley Women Gray Classic Fit Casual,',
-                                style: textStyleSmallBag,
-                              ),
-                              new Text(
-                                'Top',
-                                style: textStyleSmallBag,
-                              ),
-                              new Text(
-                                'Sold by: Funfash',
-                                style: textStylesubTitleLightNotification,
-                              ),
-                              new Text(
-                                'Only 1 unit in Stock',
-                                style: yellow,
-                              ),
-                              new Text(
-                                'Rs 1299',
-                                style: textStylesubBag,
-                              ),
-                              new Text(
-                                'Rs 799',
-                                style: textStylesubBagpriceActual,
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
+            new BagCard(
+              picture: bag2,
+              text: 'FabAlley Women Gray Classic Fit Casual,',
+              text1: 'Top',
+              text2: 'Sold by: Funfash',
+              text3: 'Only 1 unit in Stock',
+              text4: 'Rs 1299',
+              text5: 'Rs 799',
             ),
             new Container(
               margin:
@@ -274,7 +171,7 @@ class BagState extends State<Bag> with TickerProviderStateMixin {
             ),
             new Padding(
               padding: const EdgeInsets.only(
-                  left: 10.0, top: 10.0, bottom: 0.0, right: 10.0),
+                  left: 5.0, top: 10.0, bottom: 0.0, right: 5.0),
               child: new Card(
                 child: new Column(
                   children: <Widget>[

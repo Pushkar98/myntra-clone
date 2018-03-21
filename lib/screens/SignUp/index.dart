@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ecommerce_pro/theme/style.dart';
+import 'package:ecommerce_pro/components/Buttons/signupButton.dart';
 import 'package:flutter/foundation.dart';
 
 class SignUp extends StatefulWidget {
@@ -11,7 +12,6 @@ class SignUp extends StatefulWidget {
 class SignUpState extends State<SignUp> with TickerProviderStateMixin {
   final scaffoldKey = new GlobalKey<ScaffoldState>();
   final formKey = new GlobalKey<FormState>();
-  final TextEditingController _controller = new TextEditingController();
   String _email;
   String _password;
   void _submit() {
@@ -47,7 +47,7 @@ class SignUpState extends State<SignUp> with TickerProviderStateMixin {
                 color: Colors.grey[500],
               ),
               onPressed: () {
-                Navigator.of(context).pushReplacementNamed("/home");
+                Navigator.of(context).pushReplacementNamed("/login");
               }),
         ),
         body: new ListView(
@@ -103,34 +103,9 @@ class SignUpState extends State<SignUp> with TickerProviderStateMixin {
                       ),
                       obscureText: true,
                     ),
-                    new Padding(
-                      padding: const EdgeInsets.only(top: 50.0),
-                      child: new InkWell(
-                        onTap: () {
-                          Navigator.of(context).pushNamed("/login");
-                        },
-                        child: new Container(
-                          child: new Text(
-                            defaultTargetPlatform == TargetPlatform.android
-                                ? "CREATE ACCOUNT"
-                                : "CREATE ACCOUNT",
-                            style: const TextStyle(
-                                color: Colors.white, fontSize: 14.0),
-                          ),
-                          width: screenSize.width - 30,
-                          height: 45.0,
-
-//                margin: new EdgeInsets.only(
-//                    top: 20.0, bottom: 20.0, left: 10.0, right: 10.0),
-                          alignment: FractionalOffset.center,
-                          decoration: new BoxDecoration(
-                            color: Theme.of(context).primaryColor,
-                            borderRadius: const BorderRadius.all(
-                                const Radius.circular(5.0)),
-                          ),
-                        ),
-                      ),
-                    ),
+                    new SignUpButton(
+                      text: "SIGN UP",
+                    )
                   ],
                 ),
               ),

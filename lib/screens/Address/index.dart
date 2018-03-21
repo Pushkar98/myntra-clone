@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ecommerce_pro/theme/style.dart';
 import 'package:flutter/foundation.dart';
+import 'package:ecommerce_pro/screens/HomewithTab/index.dart';
 
 class Address extends StatefulWidget {
   Address({Key key}) : super(key: key);
@@ -188,6 +189,7 @@ class AddressState extends State<Address> with TickerProviderStateMixin {
           ),
         ],
       ),
+      //bottomNavigationBar: new HomeWithTab(),
     );
   }
 }

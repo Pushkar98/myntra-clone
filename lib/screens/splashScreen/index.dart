@@ -2,23 +2,23 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class splashScreen extends StatefulWidget {
-  const splashScreen({Key key}) : super(key: key);
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({Key key}) : super(key: key);
   @override
-  splashScreenstate createState() => new splashScreenstate();
+  SplashScreenstate createState() => new SplashScreenstate();
 }
 
-class splashScreenstate extends State<splashScreen> {
+class SplashScreenstate extends State<SplashScreen> {
   var twenty;
   Timer t2;
   String routeName;
   @override
   void initState() {
     super.initState();
-    twenty = const Duration(seconds: 5);
+    twenty = const Duration(seconds: 3);
     t2 = new Timer(twenty, () {
       print(1);
-      routeName = "/login";
+      routeName = "/HomewithTab";
       navigate(context, routeName);
     });
   }
@@ -42,7 +42,7 @@ class splashScreenstate extends State<splashScreen> {
       body: new Container(
         decoration: new BoxDecoration(
             image: new DecorationImage(
-          image: new ExactAssetImage('assets/shoppingcart.png'),
+          image: new ExactAssetImage('assets/launchscreen.png'),
           fit: BoxFit.cover,
         )),
         child: new Align(

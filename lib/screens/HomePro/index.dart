@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:ecommerce_pro/theme/style.dart';
 import 'package:ecommerce_pro/screens/HomePro/style.dart';
+import 'package:ecommerce_pro/components/CircleImage.dart';
+import 'package:ecommerce_pro/components/trending.dart';
+import 'package:ecommerce_pro/components/Justin.dart';
+import 'package:ecommerce_pro/components/Ecommerce.dart';
+
 import 'package:flutter/foundation.dart';
 
 class HomePro extends StatefulWidget {
@@ -45,137 +50,26 @@ class HomeProState extends State<HomePro> with TickerProviderStateMixin {
 
                       //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: <Widget>[
-                        new Column(children: <Widget>[
-                          new Padding(
-                            padding: const EdgeInsets.only(
-                                left: 10.0,
-                                top: 10.0,
-                                bottom: 10.0,
-                                right: 10.0),
-                            child: new CircleAvatar(
-                              //child: new Image(image: women),
-                              backgroundImage:
-                                  const AssetImage("assets/circle1.png"),
-
-                              backgroundColor: Colors.grey,
-                              radius: 40.0,
-                            ),
-                          ),
-                          new Padding(
-                              padding: const EdgeInsets.only(
-                                  left: 10.0,
-                                  top: 0.0,
-                                  bottom: 10.0,
-                                  right: 10.0),
-                              child: new Text(
-                                'MEN',
-                                style: textStylesub,
-                              )),
-                        ]),
-                        new Column(children: <Widget>[
-                          new Padding(
-                            padding: const EdgeInsets.only(
-                                left: 10.0,
-                                top: 10.0,
-                                bottom: 10.0,
-                                right: 10.0),
-                            child: new CircleAvatar(
-                              //child: new Image(image: women),
-                              backgroundImage:
-                                  const AssetImage("assets/circle2.png"),
-                              backgroundColor: Colors.grey,
-                              radius: 40.0,
-                            ),
-                          ),
-                          new Padding(
-                              padding: const EdgeInsets.only(
-                                  left: 10.0,
-                                  top: 0.0,
-                                  bottom: 10.0,
-                                  right: 10.0),
-                              child: new Text(
-                                'WOMEN',
-                                style: textStylesub,
-                              )),
-                        ]),
-                        new Column(children: <Widget>[
-                          new Padding(
-                            padding: const EdgeInsets.only(
-                                left: 10.0,
-                                top: 10.0,
-                                bottom: 10.0,
-                                right: 10.0),
-                            child: new CircleAvatar(
-                              //child: new Image(image: women),
-                              backgroundImage:
-                                  const AssetImage("assets/circle3.png"),
-                              backgroundColor: Colors.grey,
-                              radius: 40.0,
-                            ),
-                          ),
-                          new Padding(
-                              padding: const EdgeInsets.only(
-                                  left: 10.0,
-                                  top: 0.0,
-                                  bottom: 10.0,
-                                  right: 10.0),
-                              child: new Text(
-                                'KIDS',
-                                style: textStylesub,
-                              )),
-                        ]),
-                        new Column(children: <Widget>[
-                          new Padding(
-                            padding: const EdgeInsets.only(
-                                left: 10.0,
-                                top: 10.0,
-                                bottom: 10.0,
-                                right: 10.0),
-                            child: new CircleAvatar(
-                              //child: new Image(image: women),
-                              backgroundImage:
-                                  const AssetImage("assets/circle4.png"),
-                              backgroundColor: Colors.grey,
-                              radius: 40.0,
-                            ),
-                          ),
-                          new Padding(
-                              padding: const EdgeInsets.only(
-                                  left: 10.0,
-                                  top: 0.0,
-                                  bottom: 10.0,
-                                  right: 10.0),
-                              child: new Text(
-                                'Home',
-                                style: textStylesub,
-                              )),
-                        ]),
-                        new Column(children: <Widget>[
-                          new Padding(
-                            padding: const EdgeInsets.only(
-                                left: 10.0,
-                                top: 10.0,
-                                bottom: 10.0,
-                                right: 10.0),
-                            child: new CircleAvatar(
-                              //child: new Image(image: women),
-                              backgroundImage:
-                                  const AssetImage("assets/circle5.png"),
-                              backgroundColor: Colors.grey,
-                              radius: 40.0,
-                            ),
-                          ),
-                          new Padding(
-                              padding: const EdgeInsets.only(
-                                  left: 10.0,
-                                  top: 0.0,
-                                  bottom: 10.0,
-                                  right: 10.0),
-                              child: new Text(
-                                'EOS',
-                                style: textStylesub,
-                              )),
-                        ]),
+                        new CircleImage(
+                          picture: const AssetImage("assets/circle1.png"),
+                          text: 'MEN',
+                        ),
+                        new CircleImage(
+                          picture: const AssetImage("assets/circle2.png"),
+                          text: 'WOMEN',
+                        ),
+                        new CircleImage(
+                          picture: const AssetImage("assets/circle3.png"),
+                          text: 'KIDS',
+                        ),
+                        new CircleImage(
+                          picture: const AssetImage("assets/circle4.png"),
+                          text: 'HOME',
+                        ),
+                        new CircleImage(
+                          picture: const AssetImage("assets/circle5.png"),
+                          text: 'EOS',
+                        ),
                       ]),
                 ),
               )),
@@ -217,17 +111,9 @@ class HomeProState extends State<HomePro> with TickerProviderStateMixin {
                       child: new Row(
                         children: <Widget>[
                           new Column(children: <Widget>[
-                            new Padding(
-                                padding: const EdgeInsets.only(
-                                    left: 10.0,
-                                    top: 0.0,
-                                    bottom: 10.0,
-                                    right: 10.0),
-                                child: new Image(
-                                  image: women1,
-                                  height: 200.0,
-                                  fit: BoxFit.cover,
-                                )),
+                            new Trending(
+                              picture: women1,
+                            ),
                             new Text(
                               "The Grunge Collection!",
                               style: textStylesubTitle,
@@ -238,17 +124,9 @@ class HomeProState extends State<HomePro> with TickerProviderStateMixin {
                             ),
                           ]),
                           new Column(children: <Widget>[
-                            new Padding(
-                                padding: const EdgeInsets.only(
-                                    left: 10.0,
-                                    top: 0.0,
-                                    bottom: 10.0,
-                                    right: 10.0),
-                                child: new Image(
-                                  image: men,
-                                  height: 200.0,
-                                  fit: BoxFit.cover,
-                                )),
+                            new Trending(
+                              picture: men,
+                            ),
                             new Text(
                               "On Point!",
                               style: textStylesubTitle,
@@ -259,17 +137,9 @@ class HomeProState extends State<HomePro> with TickerProviderStateMixin {
                             ),
                           ]),
                           new Column(children: <Widget>[
-                            new Padding(
-                                padding: const EdgeInsets.only(
-                                    left: 10.0,
-                                    top: 0.0,
-                                    bottom: 10.0,
-                                    right: 10.0),
-                                child: new Image(
-                                  image: bag,
-                                  height: 200.0,
-                                  fit: BoxFit.cover,
-                                )),
+                            new Trending(
+                              picture: bag,
+                            ),
                             new Text(
                               "A Fresh Edge To Everyday Wear ",
                               style: textStylesubTitle,
@@ -280,17 +150,9 @@ class HomeProState extends State<HomePro> with TickerProviderStateMixin {
                             ),
                           ]),
                           new Column(children: <Widget>[
-                            new Padding(
-                                padding: const EdgeInsets.only(
-                                    left: 10.0,
-                                    top: 0.0,
-                                    bottom: 10.0,
-                                    right: 10.0),
-                                child: new Image(
-                                  image: women1,
-                                  height: 200.0,
-                                  fit: BoxFit.cover,
-                                )),
+                            new Trending(
+                              picture: women1,
+                            ),
                             new Text(
                               "Up to 50% Off",
                               style: textStylesubTitle,
@@ -368,94 +230,26 @@ class HomeProState extends State<HomePro> with TickerProviderStateMixin {
                       },
                       child: new Row(
                         children: <Widget>[
-                          new Column(children: <Widget>[
-                            new Padding(
-                                padding: const EdgeInsets.only(
-                                    left: 10.0,
-                                    top: 0.0,
-                                    bottom: 10.0,
-                                    right: 10.0),
-                                child: new Image(
-                                  image: girl,
-                                  height: 120.0,
-                                  width: 200.0,
-                                  fit: BoxFit.cover,
-                                )),
-                            new Text(
-                              "We Love Winters!",
-                              style: textStylesubTitle,
-                            ),
-                            new Text(
-                              "Stay Warm & Cozy",
-                              style: textStylesubTitleLight,
-                            ),
-                          ]),
-                          new Column(children: <Widget>[
-                            new Padding(
-                                padding: const EdgeInsets.only(
-                                    left: 10.0,
-                                    top: 0.0,
-                                    bottom: 10.0,
-                                    right: 10.0),
-                                child: new Image(
-                                  image: glasses,
-                                  height: 120.0,
-                                  width: 200.0,
-                                  fit: BoxFit.cover,
-                                )),
-                            new Text(
-                              "The Grunge Collection!",
-                              style: textStylesubTitle,
-                            ),
-                            new Text(
-                              "Born For The Road",
-                              style: textStylesubTitleLight,
-                            ),
-                          ]),
-                          new Column(children: <Widget>[
-                            new Padding(
-                                padding: const EdgeInsets.only(
-                                    left: 10.0,
-                                    top: 0.0,
-                                    bottom: 10.0,
-                                    right: 10.0),
-                                child: new Image(
-                                  image: bag,
-                                  height: 120.0,
-                                  width: 200.0,
-                                  fit: BoxFit.cover,
-                                )),
-                            new Text(
-                              "On Point!",
-                              style: textStylesubTitle,
-                            ),
-                            new Text(
-                              "Premium Bags",
-                              style: textStylesubTitleLight,
-                            ),
-                          ]),
-                          new Column(children: <Widget>[
-                            new Padding(
-                                padding: const EdgeInsets.only(
-                                    left: 10.0,
-                                    top: 0.0,
-                                    bottom: 10.0,
-                                    right: 10.0),
-                                child: new Image(
-                                  image: men,
-                                  height: 120.0,
-                                  width: 200.0,
-                                  fit: BoxFit.cover,
-                                )),
-                            new Text(
-                              "Everyday Wear",
-                              style: textStylesubTitle,
-                            ),
-                            new Text(
-                              "Printed Tees",
-                              style: textStylesubTitleLight,
-                            ),
-                          ]),
+                          new JustIn(
+                            picture: girl,
+                            text: 'We Love Winters!',
+                            text1: 'Stay Warm & Cozy',
+                          ),
+                          new JustIn(
+                            picture: glasses,
+                            text: 'The Grunge Collection!',
+                            text1: 'Born For The Road',
+                          ),
+                          new JustIn(
+                            picture: bag,
+                            text: 'On Point!',
+                            text1: 'Premium Bags',
+                          ),
+                          new JustIn(
+                            picture: men,
+                            text: 'Everyday Wear',
+                            text1: 'Printed Tees',
+                          ),
                         ],
                       ),
                     ),
@@ -476,7 +270,7 @@ class HomeProState extends State<HomePro> with TickerProviderStateMixin {
                         title: new Row(
                       children: <Widget>[
                         new Text(
-                          'Since youve shown interest in ',
+                          "Since you've shown interest in ",
                           style: textStyleheader,
                         ),
                         new Text('Tshirts',
@@ -496,62 +290,21 @@ class HomeProState extends State<HomePro> with TickerProviderStateMixin {
                       },
                       child: new Row(
                         children: <Widget>[
-                          new Column(children: <Widget>[
-                            new Padding(
-                                padding: const EdgeInsets.only(
-                                    left: 10.0,
-                                    top: 10.0,
-                                    bottom: 10.0,
-                                    right: 10.0),
-                                child: new Image(
-                                  image: women1,
-                                  height: 200.0,
-                                  width: 200.0,
-                                  fit: BoxFit.cover,
-                                )),
-                          ]),
-                          new Column(children: <Widget>[
-                            new Padding(
-                                padding: const EdgeInsets.only(
-                                    left: 10.0,
-                                    top: 10.0,
-                                    bottom: 10.0,
-                                    right: 10.0),
-                                child: new Image(
-                                  image: girl,
-                                  height: 200.0,
-                                  width: 200.0,
-                                  fit: BoxFit.cover,
-                                )),
-                          ]),
-                          new Column(children: <Widget>[
-                            new Padding(
-                                padding: const EdgeInsets.only(
-                                    left: 10.0,
-                                    top: 10.0,
-                                    bottom: 10.0,
-                                    right: 10.0),
-                                child: new Image(
-                                  image: men,
-                                  height: 200.0,
-                                  width: 200.0,
-                                  fit: BoxFit.cover,
-                                )),
-                          ]),
-                          new Column(children: <Widget>[
-                            new Padding(
-                                padding: const EdgeInsets.only(
-                                    left: 10.0,
-                                    top: 10.0,
-                                    bottom: 10.0,
-                                    right: 10.0),
-                                child: new Image(
-                                  image: women1,
-                                  height: 200.0,
-                                  width: 200.0,
-                                  fit: BoxFit.cover,
-                                )),
-                          ]),
+                          new Ecommerce(
+                            picture: women1,
+                          ),
+                          new Ecommerce(
+                            picture: girl,
+                          ),
+                          new Ecommerce(
+                            picture: women1,
+                          ),
+                          new Ecommerce(
+                            picture: men,
+                          ),
+                          new Ecommerce(
+                            picture: women1,
+                          ),
                         ],
                       ),
                     ),

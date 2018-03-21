@@ -18,7 +18,7 @@ class _HomeWithTabState extends State<HomeWithTab>
     with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
-    TabController controller = new TabController(length: 7, vsync: this);
+    TabController controller = new TabController(length: 6, vsync: this);
     Size screenSize = MediaQuery.of(context).size;
     return new Scaffold(
       backgroundColor: new Color.fromRGBO(255, 255, 255, 1.0),
@@ -33,7 +33,7 @@ class _HomeWithTabState extends State<HomeWithTab>
         controller: controller,
       ),
       bottomNavigationBar: new Container(
-        height: screenSize.height / 10,
+        height: screenSize.height / 8,
         decoration: new BoxDecoration(
             //color: Theme.of(context).primaryColor,
             ),

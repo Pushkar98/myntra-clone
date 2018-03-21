@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ecommerce_pro/theme/style.dart';
 import 'package:flutter/foundation.dart';
+import 'package:ecommerce_pro/components/Buttons/loginButton.dart';
 
 class Login extends StatefulWidget {
   Login({Key key}) : super(key: key);
@@ -79,33 +80,8 @@ class LoginState extends State<Login> with TickerProviderStateMixin {
                     ),
                     obscureText: true,
                   ),
-                  new Padding(
-                    padding: const EdgeInsets.only(top: 50.0),
-                    child: new InkWell(
-                      onTap: () {
-                        Navigator.of(context).pushNamed("/signup");
-                      },
-                      child: new Container(
-                        child: new Text(
-                          defaultTargetPlatform == TargetPlatform.android
-                              ? "LOGIN"
-                              : "LOGIN",
-                          style: const TextStyle(
-                              color: Colors.white, fontSize: 18.0),
-                        ),
-                        // width: screenSize.width - 30,
-                        height: 45.0,
-
-//                margin: new EdgeInsets.only(
-//                    top: 20.0, bottom: 20.0, left: 10.0, right: 10.0),
-                        alignment: FractionalOffset.center,
-                        decoration: new BoxDecoration(
-                          color: Theme.of(context).primaryColor,
-                          borderRadius: const BorderRadius.all(
-                              const Radius.circular(5.0)),
-                        ),
-                      ),
-                    ),
+                  new LoginButton(
+                    text: "LOGIN",
                   ),
                   new Container(
                     padding: const EdgeInsets.only(
