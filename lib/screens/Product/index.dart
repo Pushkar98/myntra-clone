@@ -20,7 +20,7 @@ class ProductState extends State<Product> with TickerProviderStateMixin {
           backgroundColor: whiteColor,
           centerTitle: true,
           title: new Text(
-            "CATEGORIES",
+            "PRODUCT",
             style: textStylew600,
           ),
           actions: <Widget>[
@@ -33,7 +33,7 @@ class ProductState extends State<Product> with TickerProviderStateMixin {
         ),
         body: new ListView(
           padding: const EdgeInsets.only(
-              left: 3.0, top: 0.0, bottom: 0.0, right: 3.0),
+              left: 0.0, top: 0.0, bottom: 0.0, right: 0.0),
           children: <Widget>[
             new Card(
               child: new Padding(
@@ -46,13 +46,17 @@ class ProductState extends State<Product> with TickerProviderStateMixin {
             new Image(
               image: stockUp,
             ),
-            new ProductCard(
-              picture: women1,
-              picture1: women1,
-              picture2: women1,
-              text: '30 - 50% Off',
-              text1: "Up to 60% Off",
-              text2: '30 - 50% Off',
+            new Container(
+              margin:
+                  const EdgeInsets.only(left: 5.0, bottom: 10.0, right: 5.0),
+              child: new ProductCard(
+                picture: women1,
+                picture1: women1,
+                picture2: women1,
+                text: '30 - 50% Off',
+                text1: "Up to 60% Off",
+                text2: '30 - 50% Off',
+              ),
             ),
             new ProductCard(
               picture: women1,

@@ -16,110 +16,101 @@ class ProductCard extends StatelessWidget {
       children: <Widget>[
         new Column(children: <Widget>[
           new Container(
-            margin: const EdgeInsets.only(left: 8.0, bottom: 5.0, right: 0.0),
+            margin: const EdgeInsets.only(left: 8.0, bottom: 0.0, right: 0.0),
             // height: 115.0,
             color: Colors.white,
             child: new Container(
                 margin:
-                    const EdgeInsets.only(left: 20.0, bottom: 5.0, right: 0.0),
+                    const EdgeInsets.only(left: 0.0, bottom: 0.0, right: 0.0),
                 decoration: new BoxDecoration(
                     color: Colors.white,
                     border: new Border(
                         bottom: new BorderSide(
-                      width: 0.5,
+                      width: 0.0,
                       color: Colors.black38,
                     ))),
                 child: new Image(
                   image: picture,
-                  height: 90.0,
+                  height: 80.0,
                   // fit: BoxFit.cover,
                 )),
           ),
           new Container(
             color: Colors.white,
-            child: new Container(
-                margin: const EdgeInsets.only(
-                    left: 0.0, top: 5.0, right: 0.0, bottom: 10.0),
-                decoration: new BoxDecoration(
-                    color: Colors.white,
-                    border: new Border(
-                        bottom: new BorderSide(
-                      width: 0.5,
-                      color: Colors.black38,
-                    ))),
-                child: new Text(text)),
-          )
-          /*  new Text(
-                    "30-50 % Off",
-                    style: textStylesubTitle,
-                  ), */
-        ]),
-        new Column(children: <Widget>[
-          new Container(
-            //height: 115.0,
-            color: Colors.white,
-            child: new Container(
-                margin: const EdgeInsets.only(left: 5.0, bottom: 5.0),
-                decoration: new BoxDecoration(
-                    color: Colors.white,
-                    border: new Border(
-                        bottom: new BorderSide(
-                      width: 0.5,
-                      color: Colors.black38,
-                    ))),
-                child: new Image(
-                  image: picture1,
-                  height: 90.0,
-                  // fit: BoxFit.cover,
-                )),
-          ),
-          new Container(
-            color: Colors.white,
-            child: new Container(
-                margin: const EdgeInsets.only(
-                    left: 5.0, top: 5.0, right: 5.0, bottom: 10.0),
-                decoration: new BoxDecoration(
-                    color: Colors.white,
-                    border: new Border(
-                        bottom: new BorderSide(
-                      width: 0.5,
-                      color: Colors.black38,
-                    ))),
-                child: new Text(text)),
+            child: new Column(
+              children: <Widget>[
+                new Padding(
+                    padding: const EdgeInsets.only(
+                        left: 18.0, top: 4.0, bottom: 10.0, right: 20.0),
+                    child: new Text('30 - 50 % Off'))
+              ],
+            ),
           )
         ]),
         new Column(children: <Widget>[
           new Container(
-            //height: 115.0,
+            margin: const EdgeInsets.only(left: 8.0, bottom: 0.0, right: 0.0),
+            // height: 115.0,
             color: Colors.white,
             child: new Container(
-                margin: const EdgeInsets.only(left: 5.0, bottom: 5.0),
+                margin:
+                    const EdgeInsets.only(left: 0.0, bottom: 0.0, right: 0.0),
                 decoration: new BoxDecoration(
                     color: Colors.white,
                     border: new Border(
                         bottom: new BorderSide(
-                      width: 0.5,
+                      width: 0.0,
                       color: Colors.black38,
                     ))),
                 child: new Image(
-                  image: picture2,
-                  height: 90.0,
+                  image: picture,
+                  height: 80.0,
                   // fit: BoxFit.cover,
                 )),
           ),
           new Container(
             color: Colors.white,
+            child: new Column(
+              children: <Widget>[
+                new Padding(
+                    padding: const EdgeInsets.only(
+                        left: 18.0, top: 4.0, bottom: 10.0, right: 20.0),
+                    child: new Text('30 - 50 % Off'))
+              ],
+            ),
+          )
+        ]),
+        new Column(children: <Widget>[
+          new Container(
+            margin: const EdgeInsets.only(left: 8.0, bottom: 0.0, right: 0.0),
+            // height: 115.0,
+            color: Colors.white,
             child: new Container(
-                margin: const EdgeInsets.only(
-                    left: 5.0, top: 5.0, right: 5.0, bottom: 10.0),
+                margin:
+                    const EdgeInsets.only(left: 0.0, bottom: 0.0, right: 0.0),
                 decoration: new BoxDecoration(
                     color: Colors.white,
                     border: new Border(
                         bottom: new BorderSide(
-                      width: 0.5,
+                      width: 0.0,
                       color: Colors.black38,
                     ))),
-                child: new Text(text)),
+                child: new Image(
+                  image: picture,
+                  height: 80.0,
+                  // fit: BoxFit.cover,
+                )),
+          ),
+          new Container(
+            color: Colors.white,
+            child: new Column(
+              children: <Widget>[
+                new Padding(
+                    padding: const EdgeInsets.only(
+                        left: 18.0, top: 4.0, bottom: 10.0, right: 20.0),
+                    child: new Text('30 - 50 % Off'))
+              ],
+            ),
           )
         ]),
       ],

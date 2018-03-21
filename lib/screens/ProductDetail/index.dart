@@ -3,9 +3,19 @@ import 'package:ecommerce_pro/theme/style.dart';
 import 'package:ecommerce_pro/components/ProductDetailCard.dart';
 import 'package:ecommerce_pro/components/ProductSizeCard.dart';
 import 'package:ecommerce_pro/components/SizeCard.dart';
+import 'Details.dart';
 import 'style.dart';
+import 'package:flutter/foundation.dart';
+import 'package:ecommerce_pro/components/ProductDetailTab.dart';
 
-class ProductDetail extends StatelessWidget {
+class ProductDetail extends StatefulWidget {
+  const ProductDetail({Key key}) : super(key: key);
+  @override
+  ProductDetailState createState() => new ProductDetailState();
+}
+
+class ProductDetailState extends State<ProductDetail>
+    with TickerProviderStateMixin {
   List<String> images = [
     "assets/b4.png",
     "assets/b4.png",
@@ -15,7 +25,12 @@ class ProductDetail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final TabController controller = DefaultTabController.of(context);
+    final TabController controller = new TabController(length: 3, vsync: this);
+    final TabController controller1 = new TabController(length: 2, vsync: this);
+    final TabController controller2 = new TabController(length: 2, vsync: this);
+
+    Size screenSize = MediaQuery.of(context).size;
+
     return new Scaffold(
       appBar: new AppBar(
         //backgroundColor: Theme.of(context).secondaryHeaderColor,
@@ -61,9 +76,6 @@ class ProductDetail extends StatelessWidget {
                                 image: new ExactAssetImage(image),
                               ),
                             ),
-                            /*  child: new Row(
-                              children: <Widget>[new Icon(Icons.access_time)],
-                            ), */
                           ),
                         );
                       }).toList()),
@@ -130,7 +142,7 @@ class ProductDetail extends StatelessWidget {
               text: "Tap to get the best Price",
             ),
             new Container(
-              height: 300.0,
+              height: 500.0,
               padding: const EdgeInsets.only(
                   left: 5.0, right: 10.0, top: 0.0, bottom: 0.0),
               decoration: new BoxDecoration(image: backgroundImage),
@@ -175,34 +187,110 @@ class ProductDetail extends StatelessWidget {
                       ),
                     ],
                   ),
-                  new DefaultTabController(
-                    length: 2,
-                    child: new Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
+                  new TabBar(
+                    indicatorColor: Colors.blueGrey,
+                    labelColor: Colors.black45,
+                    labelStyle: new TextStyle(
+                        fontWeight: FontWeight.bold, fontSize: 16.0),
+                    unselectedLabelColor: Colors.black45,
+                    unselectedLabelStyle: new TextStyle(
+                        fontWeight: FontWeight.normal, fontSize: 16.0),
+                    controller: controller1,
+                    tabs: pages.map((String page) {
+                      return new Tab(
+                        child: new Container(
+                          child: new Center(
+                              heightFactor: 2.0, child: new Text(page)),
+                        ),
+                      );
+                    }).toList(),
+                  ),
+                  new Container(
+                    height: 50.0,
+                    // margin: const EdgeInsets.only(bottom: 5.0),
+                    child: new TabBarView(
                       children: <Widget>[
-                        new Container(
-                          color: Colors.white,
-                          height: 40.0,
-                          //alignment: FractionalOffset.center,
-                          child: new TabBar(
-                            indicatorColor: whiteColor,
-                            indicatorPadding: new EdgeInsets.all(8.0),
-                            labelColor: const Color.fromRGBO(0, 0, 0, 1.0),
-                            labelStyle: new TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 16.0),
-                            unselectedLabelColor:
-                                const Color.fromRGBO(0, 0, 0, 0.5),
-                            unselectedLabelStyle: new TextStyle(
-                                fontWeight: FontWeight.normal, fontSize: 16.0),
-                            tabs: pages.map((String page) {
-                              return new Center(child: new Text(page));
-                            }).toList(),
-                          ),
+                        new Detail(
+                          text:
+                              'Stay warm and trendy this winter with this trendy sweater from nouk.Layer it on a tee, or just team it with a pair of jeans and boots when you head out this winter',
                         ),
-
-                        ),
+                        new Detail(
+                          text:
+                              '76% acrylic, 19% polyster, 5% metallic yarn Hand-wash cold',
+                        )
                       ],
+                      controller: controller1,
                     ),
+                  ),
+                  new Container(
+                    decoration: new BoxDecoration(
+                        color: Colors.white,
+                        border: new Border(
+                            bottom: new BorderSide(
+//              width: 0.3,
+                          color: Colors.black26,
+                        ))),
+                    child: new Container(
+                        margin: const EdgeInsets.only(bottom: 5.0),
+                        child: new Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: <Widget>[new Text("STYLE NOTE")],
+                        )),
+                  ),
+                  new Container(
+//      color: Colors.white,
+                    decoration: new BoxDecoration(
+                        color: Colors.white,
+                        border: new Border(
+                            bottom: new BorderSide(
+//              width: 0.3,
+                          color: Colors.black26,
+                        ))),
+                    child: new Container(
+                        margin: const EdgeInsets.only(
+                            left: 3.0, top: 10.0, bottom: 10.0),
+                        child: new Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: <Widget>[
+                            new Text(
+                                "Fashion has taken today's youth by surprise, and the avaibility of numerous options just leaves them spoilt of choice. Online stores fuel fashion by making the latest trending dresses, accessories, and apparels available to you within a few clicks. Shopping is no longer a day long affair with online shopping"),
+                            new Padding(
+                              padding: const EdgeInsets.only(
+                                  left: 0.0,
+                                  top: 10.0,
+                                  bottom: 10.0,
+                                  right: 10.0),
+                              child: new Row(
+                                children: <Widget>[new Text('MORE INFO')],
+                              ),
+                            )
+                          ],
+                        )),
+                  ),
+                  new Container(
+//      color: Colors.white,
+                    decoration: new BoxDecoration(
+                        color: Colors.white,
+                        border: new Border(
+                            bottom: new BorderSide(
+//              width: 0.3,
+                          color: Colors.black26,
+                        ))),
+                    child: new Container(
+                        margin: const EdgeInsets.only(
+                            left: 3.0, top: 10.0, bottom: 10.0),
+                        child: new Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: <Widget>[
+                            new Text("PRODUCT CODE: 1760167"),
+                            new Text('Sold By: Funfash'),
+                            new Text(
+                                'Tax info: Applicable GST will be charged at the time of checkout')
+                          ],
+                        )),
                   ),
                 ],
               ),
@@ -210,7 +298,68 @@ class ProductDetail extends StatelessWidget {
           ],
         ),
       ),
+      bottomNavigationBar: new Container(
+        height: screenSize.height / 12,
+        decoration: new BoxDecoration(
+          color: Colors.green,
+        ),
+        child: new TabBar(
+          tabs: <Container>[
+            new Container(
+              height: screenSize.height / 12,
+              width: screenSize.width / 3,
+              decoration: new BoxDecoration(color: Colors.blue[600]),
+              padding: const EdgeInsets.only(
+                  left: 0.0, right: 0.0, top: 0.0, bottom: 0.0),
+              child: new Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  new Icon(
+                    Icons.list,
+                    color: Colors.white,
+                  ),
+                  new Text("SAVED",
+                      style: new TextStyle(
+                          fontSize: 15.0,
+                          letterSpacing: 0.8,
+                          fontWeight: FontWeight.w400,
+                          fontFamily: "Roboto",
+                          color: Colors.white)),
+                ],
+              ),
+            ),
+            new Container(
+              height: screenSize.height / 15,
+              width: screenSize.width / 2,
+              decoration: new BoxDecoration(color: Colors.green),
+              padding: const EdgeInsets.only(
+                  left: 0.0, right: 20.0, top: 0.0, bottom: 0.0),
+              child: new Row(
+                children: [
+                  new Icon(
+                    Icons.card_travel,
+                    color: Colors.white,
+                  ),
+                  new Text("GO TO BAG",
+                      style: new TextStyle(
+                          fontSize: 15.0,
+                          letterSpacing: 0.8,
+                          fontWeight: FontWeight.w400,
+                          fontFamily: "Roboto",
+                          color: Colors.white)),
+                ],
+              ),
+            )
+          ],
+          indicatorColor: Colors.transparent,
+          labelColor: Colors.white,
+          unselectedLabelColor: Colors.white30,
+          controller: controller2,
+          labelStyle: new TextStyle(
+            fontSize: 12.0,
+          ),
+        ),
+      ),
     );
   }
 }
-

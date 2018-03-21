@@ -11,6 +11,13 @@ class ProductListCard extends StatelessWidget {
   final String text3;
   final String text4;
   final String text5;
+  final String text6;
+
+  final String text7;
+
+  final String text8;
+
+  final String text9;
 
   @override
   Widget build(BuildContext context) {
@@ -33,30 +40,84 @@ class ProductListCard extends StatelessWidget {
                     child: new Column(
                       children: <Widget>[
                         new Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
                             new Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: <Widget>[
-                                new Text(
-                                  text,
-                                  style: textStylesubTitle,
+                                new Padding(
+                                  padding: const EdgeInsets.only(
+                                      top: 0.0,
+                                      left: 0.0,
+                                      right: 20.0,
+                                      bottom: 0.0),
+                                  child: new Column(
+                                    children: <Widget>[
+                                      new Text(text,
+                                          style: new TextStyle(
+                                              color: Colors.grey,
+                                              fontSize: 14.0,
+                                              fontWeight: FontWeight.w500,
+                                              fontStyle: FontStyle.normal)),
+                                    ],
+                                  ),
                                 ),
                               ],
                             ),
-                            new Text('data'),
-                            new Icon(
-                              icon,
+                            new Padding(
+                              padding: const EdgeInsets.only(
+                                  top: 0.0,
+                                  left: 30.0,
+                                  right: 0.0,
+                                  bottom: 0.0),
+                              child: new Icon(
+                                icon,
+                                color: Colors.grey,
+                                size: 25.0,
+                              ),
                             )
                           ],
                         ),
                         new Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.start,
                           children: <Widget>[
-                            new Row(
-                              children: <Widget>[new Text(text1)],
+                            new Padding(
+                              padding: const EdgeInsets.only(
+                                  top: 5.0, left: 4.0, right: 0.0),
+                              child: new Row(
+                                children: <Widget>[
+                                  new Text(text1,
+                                      style: new TextStyle(
+                                        color: Colors.black,
+                                        fontSize: 14.0,
+                                        fontWeight: FontWeight.w400,
+                                      )),
+                                  new Text(text2,
+                                      style: new TextStyle(
+                                        color: Colors.grey,
+                                        fontSize: 12.0,
+                                        fontWeight: FontWeight.normal,
+                                      )),
+                                  new Text(text3,
+                                      style: new TextStyle(
+                                        color: Colors.blue,
+                                        fontSize: 12.0,
+                                        fontWeight: FontWeight.normal,
+                                      )),
+                                ],
+                              ),
                             ),
-                            new Text(text2),
+                            new Padding(
+                              padding: const EdgeInsets.only(
+                                  top: 10.0, left: 4.0, right: 0.0),
+                              child: new Text(text4,
+                                  style: new TextStyle(
+                                      color: Colors.grey,
+                                      fontSize: 12.0,
+                                      fontWeight: FontWeight.w500,
+                                      fontStyle: FontStyle.normal)),
+                            ),
                           ],
                         )
                       ],
@@ -84,29 +145,84 @@ class ProductListCard extends StatelessWidget {
                     child: new Column(
                       children: <Widget>[
                         new Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
                             new Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: <Widget>[
-                                new Text(
-                                  text3,
-                                  style: textStylesubTitle,
+                                new Padding(
+                                  padding: const EdgeInsets.only(
+                                      top: 0.0,
+                                      left: 0.0,
+                                      right: 20.0,
+                                      bottom: 0.0),
+                                  child: new Column(
+                                    children: <Widget>[
+                                      new Text(text5,
+                                          style: new TextStyle(
+                                              color: Colors.grey,
+                                              fontSize: 14.0,
+                                              fontWeight: FontWeight.w500,
+                                              fontStyle: FontStyle.normal)),
+                                    ],
+                                  ),
                                 ),
                               ],
                             ),
-                            new Icon(
-                              icon,
+                            new Padding(
+                              padding: const EdgeInsets.only(
+                                  top: 0.0,
+                                  left: 30.0,
+                                  right: 0.0,
+                                  bottom: 0.0),
+                              child: new Icon(
+                                icon,
+                                color: Colors.grey,
+                                size: 25.0,
+                              ),
                             )
                           ],
                         ),
                         new Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.start,
                           children: <Widget>[
-                            new Row(
-                              children: <Widget>[new Text(text4)],
+                            new Padding(
+                              padding: const EdgeInsets.only(
+                                  top: 5.0, left: 4.0, right: 0.0),
+                              child: new Row(
+                                children: <Widget>[
+                                  new Text(text6,
+                                      style: new TextStyle(
+                                        color: Colors.black,
+                                        fontSize: 14.0,
+                                        fontWeight: FontWeight.w400,
+                                      )),
+                                  new Text(text7,
+                                      style: new TextStyle(
+                                        color: Colors.grey,
+                                        fontSize: 12.0,
+                                        fontWeight: FontWeight.normal,
+                                      )),
+                                  new Text(text8,
+                                      style: new TextStyle(
+                                        color: Colors.blue,
+                                        fontSize: 12.0,
+                                        fontWeight: FontWeight.normal,
+                                      )),
+                                ],
+                              ),
                             ),
-                            new Text(text5),
+                            new Padding(
+                              padding: const EdgeInsets.only(
+                                  top: 10.0, left: 4.0, right: 0.0),
+                              child: new Text(text9,
+                                  style: new TextStyle(
+                                      color: Colors.grey,
+                                      fontSize: 12.0,
+                                      fontWeight: FontWeight.w500,
+                                      fontStyle: FontStyle.normal)),
+                            ),
                           ],
                         )
                       ],
@@ -121,14 +237,19 @@ class ProductListCard extends StatelessWidget {
     );
   }
 
-  ProductListCard(
-      {this.picture,
-      this.picture2,
-      this.icon,
-      this.text,
-      this.text1,
-      this.text2,
-      this.text3,
-      this.text4,
-      this.text5});
+  ProductListCard({
+    this.picture,
+    this.picture2,
+    this.icon,
+    this.text,
+    this.text1,
+    this.text2,
+    this.text3,
+    this.text4,
+    this.text5,
+    this.text6,
+    this.text7,
+    this.text8,
+    this.text9,
+  });
 }
