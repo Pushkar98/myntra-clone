@@ -35,14 +35,14 @@ class Routes {
     "/productList": (BuildContext context) => new ProductList(),
     "/shopmen": (BuildContext context) => new ShopMen(),
     "/productdetails": (BuildContext context) => new ProductDetail(),
-    "/profile": (BuildContext context) => new ProfileScreen()
+    "/profile": (BuildContext context) => new ProfileScreen(),
   };
 
   Routes() {
     runApp(new MaterialApp(
       title: "Flutter Ecommerce App",
       debugShowCheckedModeBanner: false,
-      home: new SplashScreen(),
+      home: new ShopMen(),
       //theme: appTheme,
       routes: routes,
     ));

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ecommerce_pro/theme/style.dart';
 import 'package:ecommerce_pro/screens/Categories/style.dart';
 import 'package:ecommerce_pro/components/CustomCardAccount.dart';
+import 'package:ecommerce_pro/components/CustomCardAccountSub.dart';
 
 class Categories extends StatefulWidget {
   Categories({Key key}) : super(key: key);
@@ -11,8 +12,50 @@ class Categories extends StatefulWidget {
 
 class CategoriesState extends State<Categories> with TickerProviderStateMixin {
   final scaffoldKey = new GlobalKey<ScaffoldState>();
-  _onPressed() {
+  bool test = true;
+  bool test1 = true;
+  bool test2 = true;
+  bool test3 = true;
+  bool test4 = true;
+  bool test5 = true;
+  /*  _onPressed() {
     print("Button tapped");
+  } */
+
+  void changeState() {
+    setState(() {
+      test = !test;
+    });
+  }
+
+  void changeState1() {
+    setState(() {
+      test1 = !test1;
+    });
+  }
+
+  void changeState2() {
+    setState(() {
+      test2 = !test2;
+    });
+  }
+
+  void changeState3() {
+    setState(() {
+      test3 = !test3;
+    });
+  }
+
+  void changeState4() {
+    setState(() {
+      test4 = !test4;
+    });
+  }
+
+  void changeState5() {
+    setState(() {
+      test5 = !test5;
+    });
   }
 
   @override
@@ -40,30 +83,96 @@ class CategoriesState extends State<Categories> with TickerProviderStateMixin {
             new Card(
               child: new Column(
                 children: <Widget>[
-                  new CustomCardAccount(
-                    text: "Topwear",
-                    trailingIcon: Icons.arrow_drop_down,
-                  ),
-                  new CustomCardAccount(
-                    text: "Bottomwear",
-                    trailingIcon: Icons.arrow_drop_down,
-                  ),
-                  new CustomCardAccount(
-                    text: "Sports & Active Wear",
-                    trailingIcon: Icons.arrow_drop_down,
-                  ),
-                  new CustomCardAccount(
-                    text: "Indian & Festive Wear",
-                    trailingIcon: Icons.arrow_drop_down,
-                  ),
-                  new CustomCardAccount(
-                    text: "Plus Size",
-                    trailingIcon: Icons.arrow_drop_down,
-                  ),
-                  new CustomCardAccount(
-                    text: "FootWear",
-                    trailingIcon: Icons.arrow_drop_down,
-                  ),
+                  new Container(
+                      //height: 80.0,
+                      child: (test
+                          ? (new CustomCardAccount(
+                              text: 'Topwear',
+                              trailingIcon: Icons.arrow_drop_down,
+                              changstate: changeState,
+                            ))
+                          : (new CustomCardAccountSub(
+                              text: 'Topwear',
+                              text1: 'T-Shirts',
+                              text2: 'Casual Shirts',
+                              text3: 'Formal Shirts',
+                              changstate: changeState,
+                            )))),
+                  new Container(
+                      //height: 80.0,
+                      child: (test1
+                          ? (new CustomCardAccount(
+                              text: 'Bottomwear',
+                              trailingIcon: Icons.arrow_drop_down,
+                              changstate: changeState1,
+                            ))
+                          : (new CustomCardAccountSub(
+                              text: 'Bottomwear',
+                              text1: 'Jeans',
+                              text2: 'Casual Trousers',
+                              text3: 'Track Pants',
+                              changstate: changeState1,
+                            )))),
+                  new Container(
+                      //height: 80.0,
+                      child: (test2
+                          ? (new CustomCardAccount(
+                              text: 'Sports & Active Wear',
+                              trailingIcon: Icons.arrow_drop_down,
+                              changstate: changeState2,
+                            ))
+                          : (new CustomCardAccountSub(
+                              text: 'Sports & Active Wear',
+                              text1: 'Active T-shirts',
+                              text2: 'Track Pants',
+                              text3: 'Sport Pants',
+                              changstate: changeState2,
+                            )))),
+                  new Container(
+                      //height: 80.0,
+                      child: (test3
+                          ? (new CustomCardAccount(
+                              text: 'Indian & Festive Wear',
+                              trailingIcon: Icons.arrow_drop_down,
+                              changstate: changeState3,
+                            ))
+                          : (new CustomCardAccountSub(
+                              text: 'Indian & Festive Wear',
+                              text1: 'Active T-shirts',
+                              text2: 'Track Pants',
+                              text3: 'Sport Pants',
+                              changstate: changeState3,
+                            )))),
+                  new Container(
+                      //height: 80.0,
+                      child: (test4
+                          ? (new CustomCardAccount(
+                              text: 'Plus Size',
+                              trailingIcon: Icons.arrow_drop_down,
+                              changstate: changeState4,
+                            ))
+                          : (new CustomCardAccountSub(
+                              text: 'Plus Size',
+                              text1: 'Active T-shirts',
+                              text2: 'Track Pants',
+                              text3: 'Sport Pants',
+                              changstate: changeState4,
+                            )))),
+                  new Container(
+                      //height: 80.0,
+                      child: (test5
+                          ? (new CustomCardAccount(
+                              text: 'Footwear',
+                              trailingIcon: Icons.arrow_drop_down,
+                              changstate: changeState5,
+                            ))
+                          : (new CustomCardAccountSub(
+                              text: 'Footwear',
+                              text1: 'Active T-shirts',
+                              text2: 'Track Pants',
+                              text3: 'Sport Pants',
+                              changstate: changeState5,
+                            )))),
                 ],
               ),
               color: Colors.white,
