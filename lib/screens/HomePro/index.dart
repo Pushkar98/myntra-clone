@@ -5,7 +5,7 @@ import 'package:ecommerce_pro/components/CircleImage.dart';
 import 'package:ecommerce_pro/components/trending.dart';
 import 'package:ecommerce_pro/components/Justin.dart';
 import 'package:ecommerce_pro/components/Ecommerce.dart';
-
+import 'package:ecommerce_pro/components/Buttons/buyNowButton.dart';
 import 'package:flutter/foundation.dart';
 
 class HomePro extends StatefulWidget {
@@ -19,6 +19,8 @@ class HomeProState extends State<HomePro> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
+    Size screenSize = MediaQuery.of(context).size;
+
     return new Scaffold(
         appBar: new AppBar(
           //backgroundColor: Theme.of(context).secondaryHeaderColor,
@@ -190,14 +192,11 @@ class HomeProState extends State<HomePro> with TickerProviderStateMixin {
                       new Column(children: <Widget>[
                         new Padding(
                             padding: const EdgeInsets.only(
-                                left: 10.0,
-                                top: 0.0,
-                                bottom: 10.0,
-                                right: 10.0),
+                                left: 10.0, top: 0.0, bottom: 10.0, right: 8.0),
                             child: new Image(
                               image: glasses,
-                              height: 330.0,
-                              width: 360.0,
+                              height: screenSize.height / 2.5,
+                              width: screenSize.width / 1.2,
                               fit: BoxFit.cover,
                             )),
                       ]),
@@ -261,13 +260,15 @@ class HomeProState extends State<HomePro> with TickerProviderStateMixin {
                 children: [
                   new Container(
                     margin: const EdgeInsets.only(
-                        top: 0.0, bottom: 0.0, right: 5.0, left: 10.0),
+                        top: 0.0, bottom: 0.0, right: 0.0, left: 0.0),
                     padding: const EdgeInsets.only(
-                        top: 0.0, bottom: 0.0, left: 10.0, right: 2.0),
-                    height: 40.0,
+                        top: 0.0, bottom: 0.0, left: 0.0, right: 0.0),
+                    height: screenSize.height / 18.5,
                     color: Colors.white,
                     child: new ListTile(
                         title: new Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.start,
                       children: <Widget>[
                         new Text(
                           "Since you've shown interest in ",
@@ -276,7 +277,7 @@ class HomeProState extends State<HomePro> with TickerProviderStateMixin {
                         new Text('Tshirts',
                             style: new TextStyle(
                               color: const Color.fromRGBO(0, 0, 255, 1.0),
-                              fontSize: 14.0,
+                              fontSize: 16.0,
                               fontWeight: FontWeight.w600,
                             )),
                       ],
@@ -317,54 +318,21 @@ class HomeProState extends State<HomePro> with TickerProviderStateMixin {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               new Text(
-                                'United Colors of Benetton ',
+                                ' United Colors of Benetton ',
                                 style: textStylesubTitle,
                               ),
                               new Text(
-                                'United Colors of Benetton Men Coral red Solid',
+                                ' United Colors of Benetton Men Coral red Solid  ',
                                 style: textStylesubTitleLighter,
                               ),
                               new Text(
-                                'Polo Collar T-Shirt',
+                                ' Polo Collar T-Shirt',
                                 style: textStylesubTitleLighter,
                               ),
                             ],
                           ),
-                          new Column(
-                            children: <Widget>[
-                              new InkWell(
-                                onTap: () {
-                                  Navigator
-                                      .of(context)
-                                      .pushNamed("/PhoneNumber");
-                                },
-                                child: new Container(
-                                  child: new Text(
-                                    defaultTargetPlatform ==
-                                            TargetPlatform.android
-                                        ? "BUY NOW"
-                                        : "BUY NOW",
-                                    style: const TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 14.0,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                  // width: screenSize.width - 30,
-                                  height: 45.0,
-                                  width: 110.0,
-
-//                margin: new EdgeInsets.only(
-//                    top: 20.0, bottom: 20.0, left: 10.0, right: 10.0),
-                                  alignment: FractionalOffset.center,
-                                  decoration: new BoxDecoration(
-                                    color: Colors.green[400],
-                                    borderRadius: const BorderRadius.all(
-                                        const Radius.circular(0.2)),
-                                  ),
-                                ),
-                              ),
-                            ],
+                          new BuynowButton(
+                            text: 'BUY NOW',
                           )
                         ],
                       ),

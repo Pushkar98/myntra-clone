@@ -44,7 +44,7 @@ TextStyle textprofile = const TextStyle(
     fontWeight: FontWeight.bold,
     letterSpacing: 0.0);
 TextStyle yellow = const TextStyle(
-    color: const Color.fromRGBO(255, 255, 0, 0.8),
+    color: Colors.yellow,
     fontWeight: FontWeight.normal,
     fontSize: 12.0,
     letterSpacing: 0.0);

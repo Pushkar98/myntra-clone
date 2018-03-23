@@ -71,7 +71,7 @@ class CategoriesState extends State<Categories> with TickerProviderStateMixin {
           actions: <Widget>[
             new Icon(
               Icons.search,
-              color: Theme.of(context).primaryColor,
+              color: Colors.grey,
               size: 25.0,
             ),
           ],

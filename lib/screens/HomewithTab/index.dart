@@ -33,7 +33,7 @@ class _HomeWithTabState extends State<HomeWithTab>
         controller: controller,
       ),
       bottomNavigationBar: new Container(
-        height: screenSize.height / 8,
+        height: screenSize.height / 10,
         decoration: new BoxDecoration(
             //color: Theme.of(context).primaryColor,
             ),
@@ -83,7 +83,7 @@ class _HomeWithTabState extends State<HomeWithTab>
                     size: 25.0,
                     color: Colors.grey.shade400,
                   ),
-                  new Text("Notifications")
+                  new Text("Notification")
                 ],
               ),
             ),

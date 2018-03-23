@@ -6,6 +6,8 @@ class SignUpButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size screenSize = MediaQuery.of(context).size;
+
     return new Padding(
       padding: const EdgeInsets.only(top: 50.0),
       child: new InkWell(
@@ -18,7 +20,7 @@ class SignUpButton extends StatelessWidget {
             style: const TextStyle(color: Colors.white, fontSize: 18.0),
           ),
           // width: screenSize.width - 30,
-          height: 45.0,
+          height: screenSize.height / 16.0,
 
 //                margin: new EdgeInsets.only(
 //                    top: 20.0, bottom: 20.0, left: 10.0, right: 10.0),

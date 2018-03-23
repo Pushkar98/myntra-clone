@@ -21,6 +21,8 @@ class ProductListCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size screenSize = MediaQuery.of(context).size;
+
     return new Row(
       children: <Widget>[
         new Column(children: <Widget>[
@@ -36,7 +38,7 @@ class ProductListCard extends StatelessWidget {
                   children: <Widget>[
                     new Image(
                       image: picture,
-                      height: 260.0,
+                      height: screenSize.height / 4.0,
                     ),
                     new Padding(
                       padding: const EdgeInsets.only(
@@ -146,7 +148,7 @@ class ProductListCard extends StatelessWidget {
                   children: <Widget>[
                     new Image(
                       image: picture2,
-                      height: 260.0,
+                      height: screenSize.height / 4.0,
                     ),
                     new Padding(
                       padding: const EdgeInsets.only(

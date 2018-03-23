@@ -30,6 +30,8 @@ class AddressState extends State<Address> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
+    Size screenSize = MediaQuery.of(context).size;
+
     return new Scaffold(
       appBar: new AppBar(
         //backgroundColor: Theme.of(context).secondaryHeaderColor,
@@ -174,7 +176,7 @@ class AddressState extends State<Address> with TickerProviderStateMixin {
                   style: const TextStyle(color: Colors.white, fontSize: 18.0),
                 ),
                 // width: screenSize.width - 30,
-                height: 35.0,
+                height: screenSize.height / 17.0,
 
 //                margin: new EdgeInsets.only(
 //                    top: 20.0, bottom: 20.0, left: 10.0, right: 10.0),
