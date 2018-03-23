@@ -6,6 +6,7 @@ import 'package:ecommerce_pro/components/trending.dart';
 import 'package:ecommerce_pro/components/Justin.dart';
 import 'package:ecommerce_pro/components/Ecommerce.dart';
 import 'package:ecommerce_pro/components/Buttons/buyNowButton.dart';
+import 'package:ecommerce_pro/components/Buttons/BottomNavigation/test1.dart';
 import 'package:flutter/foundation.dart';
 
 class HomePro extends StatefulWidget {
@@ -46,7 +47,7 @@ class HomeProState extends State<HomePro> with TickerProviderStateMixin {
                 scrollDirection: Axis.horizontal,
                 child: new GestureDetector(
                   onTap: () {
-                    Navigator.of(context).pushNamed('/shopmen');
+                    Navigator.of(context).pushReplacementNamed('/shopmen1');
                   },
                   child: new Row(
 

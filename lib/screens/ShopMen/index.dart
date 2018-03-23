@@ -4,6 +4,7 @@ import 'style.dart';
 import 'package:ecommerce_pro/components/ShopMencard.dart';
 import 'package:ecommerce_pro/components/CustomCardAccount.dart';
 import 'package:ecommerce_pro/components/CustomCardAccountSub.dart';
+import 'package:ecommerce_pro/components/Buttons/BottomNavigation/test1.dart';
 
 class ShopMen extends StatefulWidget {
   ShopMen({Key key}) : super(key: key);
@@ -83,7 +84,7 @@ class ShopMenState extends State<ShopMen> with TickerProviderStateMixin {
               color: Colors.black,
             ),
             onPressed: () {
-              Navigator.of(context).pushNamed("/HomewithTab");
+              Navigator.of(context).maybePop("/HomewithTab");
             }),
       ),
       body: new ListView(
@@ -137,7 +138,7 @@ class ShopMenState extends State<ShopMen> with TickerProviderStateMixin {
                   changstate: changeState1,
                 ))
               : (new CustomCardAccountSub(
-                  text: 'Sports & Active Wear',
+                  text: 'Bottomwear',
                   text1: 'Active T-shirts',
                   text2: 'Track Pants',
                   text3: 'Sport Pants',

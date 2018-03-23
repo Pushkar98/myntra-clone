@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ecommerce_pro/theme/style.dart';
-import 'package:ecommerce_pro/components/Buttons/signupButton.dart';
+import 'package:ecommerce_pro/components/Buttons/commonsaveButton.dart';
 import 'package:flutter/foundation.dart';
 
 class SignUp extends StatefulWidget {
@@ -47,7 +47,7 @@ class SignUpState extends State<SignUp> with TickerProviderStateMixin {
                 color: Colors.grey[500],
               ),
               onPressed: () {
-                Navigator.of(context).pushReplacementNamed("/login");
+                Navigator.of(context).maybePop("/login");
               }),
         ),
         body: new ListView(
@@ -103,8 +103,9 @@ class SignUpState extends State<SignUp> with TickerProviderStateMixin {
                       ),
                       obscureText: true,
                     ),
-                    new SignUpButton(
+                    new SaveButton(
                       text: "SIGN UP",
+                      text1: "/login",
                     )
                   ],
                 ),

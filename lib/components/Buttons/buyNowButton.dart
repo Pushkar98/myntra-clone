@@ -12,20 +12,20 @@ class BuynowButton extends StatelessWidget {
       children: <Widget>[
         new InkWell(
           onTap: () {
-            Navigator.of(context).pushNamed("/PhoneNumber");
+            Navigator.of(context).pushNamed("/productlist");
           },
           child: new Container(
             child: new Text(
               defaultTargetPlatform == TargetPlatform.android ? text : text,
               style: const TextStyle(
                 color: Colors.white,
-                fontSize: 14.0,
+                fontSize: 12.0,
                 fontWeight: FontWeight.bold,
               ),
             ),
             // width: screenSize.width - 30,
             height: screenSize.height / 20.0,
-            width: screenSize.width / 4.0,
+            width: screenSize.width / 5.2,
 
 //                margin: new EdgeInsets.only(
 //                    top: 20.0, bottom: 20.0, left: 10.0, right: 10.0),

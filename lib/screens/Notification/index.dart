@@ -229,7 +229,11 @@ class NotificationsState extends State<Notifications>
                               style: textStylesubnotification,
                             ),
                             new Text(
-                              'Pick DC styles for the concert| Tell us',
+                              'Pick DC styles for the concert |',
+                              style: textStylesTitleubnotification,
+                            ),
+                            new Text(
+                              'Tell us',
                               style: textStylesTitleubnotification,
                             ),
                             new Text(
@@ -262,8 +266,8 @@ class NotificationsState extends State<Notifications>
                     color: Colors.black26,
                   ))),
               child: new Container(
-                margin:
-                    const EdgeInsets.only(left: 5.0, top: 5.0, bottom: 15.0),
+                margin: const EdgeInsets.only(
+                    left: 5.0, top: 5.0, bottom: 15.0, right: 0.0),
                 child: new ListTile(
                   title: new Row(
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -275,8 +279,8 @@ class NotificationsState extends State<Notifications>
                         size: 40.0,
                       ),
                       new Padding(
-                        padding:
-                            const EdgeInsets.only(left: 10.0, bottom: 10.0),
+                        padding: const EdgeInsets.only(
+                            left: 0.0, bottom: 10.0, right: 2.0),
                         child: new Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
@@ -285,7 +289,11 @@ class NotificationsState extends State<Notifications>
                               style: textStylesubnotification,
                             ),
                             new Text(
-                              'Budget-Approved Styles | Only for Kids',
+                              'Budget-Approved Styles |',
+                              style: textStylesTitleubnotification,
+                            ),
+                            new Text(
+                              'Only for Kids',
                               style: textStylesTitleubnotification,
                             ),
                             new Text(

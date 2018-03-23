@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ecommerce_pro/theme/style.dart';
 import 'package:flutter/foundation.dart';
 import 'package:ecommerce_pro/components/PaymentCard.dart';
+import 'package:ecommerce_pro/components/EditAddresCard.dart';
 
 class Payment extends StatefulWidget {
   Payment({Key key}) : super(key: key);
@@ -30,7 +31,7 @@ class PaymentState extends State<Payment> with TickerProviderStateMixin {
               color: Colors.black,
             ),
             onPressed: () {
-              Navigator.of(context).pushReplacementNamed("/confirm");
+              Navigator.of(context).maybePop("/confirm");
             }),
       ),
       body: new ListView(
@@ -233,81 +234,9 @@ class PaymentState extends State<Payment> with TickerProviderStateMixin {
                       )
                     ],
                   ),
-                  new Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: <Widget>[
-                      new Padding(
-                        padding: const EdgeInsets.only(
-                            left: 0.0, top: 10.0, bottom: 10.0, right: 10.0),
-                        child: new Flex(
-                          direction: Axis.horizontal,
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: <Widget>[
-                            new Row(
-                              children: <Widget>[
-                                new InkWell(
-                                  onTap: () {
-                                    Navigator
-                                        .of(context)
-                                        .pushNamed("/PhoneNumber");
-                                  },
-                                  child: new Container(
-                                    child: new Text(
-                                      defaultTargetPlatform ==
-                                              TargetPlatform.android
-                                          ? "EDIT/CHANGE ADDRESS"
-                                          : "EDIT/CHANGE ADDRESS",
-                                      style: textStylePayment2,
-                                    ),
-                                    // width: screenSize.width - 30,
-                                    height: 45.0,
-                                    width: 150.0,
-
-//                margin: new EdgeInsets.only(
-//                    top: 20.0, bottom: 20.0, left: 10.0, right: 10.0),
-                                    alignment: FractionalOffset.center,
-                                    decoration: new BoxDecoration(
-                                      color: Colors.grey[100],
-                                      borderRadius: const BorderRadius.all(
-                                          const Radius.circular(0.2)),
-                                    ),
-                                  ),
-                                ),
-                                new Text('       '),
-                                new InkWell(
-                                  onTap: () {
-                                    Navigator
-                                        .of(context)
-                                        .pushNamed("/PhoneNumber");
-                                  },
-                                  child: new Container(
-                                    child: new Text(
-                                      defaultTargetPlatform ==
-                                              TargetPlatform.android
-                                          ? "ADD NEW ADDRESS"
-                                          : "ADD NEW ADDRESS",
-                                      style: textStylePayment2,
-                                    ),
-                                    // width: screenSize.width - 30,
-                                    height: 45.0,
-                                    width: 150.0,
-
-//                margin: new EdgeInsets.only(
-//                    top: 20.0, bottom: 20.0, left: 10.0, right: 10.0),
-                                    alignment: FractionalOffset.center,
-                                    decoration: new BoxDecoration(
-                                      color: Colors.grey[100],
-                                      borderRadius: const BorderRadius.all(
-                                          const Radius.circular(0.2)),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
+                  new EditAddressCard(
+                    text: "EDIT/CHANGE ADDRESS",
+                    text1: "ADD NEW ADDRESS",
                   ),
                 ],
               ),

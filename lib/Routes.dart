@@ -16,6 +16,7 @@ import 'package:ecommerce_pro/screens/ProductList/index.dart';
 import 'package:ecommerce_pro/screens/ShopMen/index.dart';
 import 'package:ecommerce_pro/screens/ProductDetail/index.dart';
 import 'package:ecommerce_pro/screens/Profile/index.dart';
+import 'package:ecommerce_pro/components/Buttons/BottomNavigation/test1.dart';
 
 class Routes {
   var routes = <String, WidgetBuilder>{
@@ -36,6 +37,7 @@ class Routes {
     "/shopmen": (BuildContext context) => new ShopMen(),
     "/productdetails": (BuildContext context) => new ProductDetail(),
     "/profile": (BuildContext context) => new ProfileScreen(),
+    "/shopmen1": (BuildContext context) => new HomeWithTab1(),
   };
 
   Routes() {

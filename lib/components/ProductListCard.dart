@@ -33,7 +33,7 @@ class ProductListCard extends StatelessWidget {
               },
               child: new Padding(
                 padding: const EdgeInsets.only(
-                    left: 0.0, top: 0.0, bottom: 10.0, right: 25.0),
+                    left: 0.0, top: 0.0, bottom: 10.0, right: 10.0),
                 child: new Column(
                   children: <Widget>[
                     new Image(
@@ -143,7 +143,7 @@ class ProductListCard extends StatelessWidget {
               },
               child: new Padding(
                 padding: const EdgeInsets.only(
-                    left: 0.0, top: 0.0, bottom: 10.0, right: 25.0),
+                    left: 0.0, top: 0.0, bottom: 10.0, right: 3.0),
                 child: new Column(
                   children: <Widget>[
                     new Image(

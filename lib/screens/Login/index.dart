@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ecommerce_pro/theme/style.dart';
 import 'package:flutter/foundation.dart';
-import 'package:ecommerce_pro/components/Buttons/loginButton.dart';
+import 'package:ecommerce_pro/components/Buttons/commonsaveButton.dart';
 
 class Login extends StatefulWidget {
   Login({Key key}) : super(key: key);
@@ -46,7 +46,7 @@ class LoginState extends State<Login> with TickerProviderStateMixin {
               color: Colors.grey[500],
             ),
             onPressed: () {
-              Navigator.of(context).pushReplacementNamed("/HomewithTab");
+              Navigator.of(context).maybePop("/HomewithTab");
             }),
       ),
       body: new ListView(
@@ -80,8 +80,9 @@ class LoginState extends State<Login> with TickerProviderStateMixin {
                     ),
                     obscureText: true,
                   ),
-                  new LoginButton(
+                  new SaveButton(
                     text: "LOGIN",
+                    text1: "/profile",
                   ),
                   new Container(
                     padding: const EdgeInsets.only(

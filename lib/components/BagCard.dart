@@ -20,11 +20,11 @@ class BagCard extends StatelessWidget {
             border: new Border(
                 bottom: new BorderSide(
 //              width: 0.3,
-              color: Colors.black26,
+              color: Colors.grey,
             ))),
         child: new Container(
           margin: const EdgeInsets.only(
-              left: 10.0, top: 5.0, bottom: 0.0, right: 10.0),
+              left: 5.0, top: 5.0, bottom: 0.0, right: 0.0),
           child: new ListTile(
             title: new Row(
               mainAxisAlignment: MainAxisAlignment.start,

@@ -51,7 +51,7 @@ class EstimatedDeliveryCard extends StatelessWidget {
                 ),
               ),
               new Padding(
-                padding: const EdgeInsets.only(left: 50.0, right: 0.0),
+                padding: const EdgeInsets.only(left: 25.0, right: 0.0),
                 child: new Column(
                   children: <Widget>[
                     new Text(

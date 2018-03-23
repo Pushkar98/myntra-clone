@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:ecommerce_pro/theme/style.dart';
 import 'package:flutter/foundation.dart';
 
-class LoginButton extends StatelessWidget {
+class SaveButton extends StatelessWidget {
   final String text;
+  final String text1;
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class LoginButton extends StatelessWidget {
       padding: const EdgeInsets.only(top: 50.0),
       child: new InkWell(
         onTap: () {
-          Navigator.of(context).pushNamed("/profile");
+          Navigator.of(context).pushNamed(text1);
         },
         child: new Container(
           child: new Text(
@@ -35,5 +35,5 @@ class LoginButton extends StatelessWidget {
     );
   }
 
-  LoginButton({this.text});
+  SaveButton({this.text, this.text1});
 }

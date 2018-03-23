@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:ecommerce_pro/theme/style.dart';
 import 'package:flutter/foundation.dart';
 import 'package:ecommerce_pro/components/EstimatedDeliveryCard.dart';
+import 'package:ecommerce_pro/components/EditAddresCard.dart';
+import 'package:ecommerce_pro/components/Buttons/commonsaveButton.dart';
 
 class Confirm extends StatefulWidget {
   Confirm({Key key}) : super(key: key);
@@ -32,7 +34,7 @@ class ConfirmState extends State<Confirm> with TickerProviderStateMixin {
               color: Colors.black,
             ),
             onPressed: () {
-              Navigator.of(context).pushReplacementNamed("/address");
+              Navigator.of(context).maybePop("/address");
             }),
       ),
       body: new ListView(
@@ -102,71 +104,9 @@ class ConfirmState extends State<Confirm> with TickerProviderStateMixin {
                       )
                     ],
                   ),
-                  new Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: <Widget>[
-                      new Padding(
-                        padding: const EdgeInsets.only(
-                            left: 0.0, top: 10.0, bottom: 10.0, right: 10.0),
-                        child: new Flex(
-                          direction: Axis.horizontal,
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: <Widget>[
-                            new Row(
-                              children: <Widget>[
-                                new InkWell(
-                                  child: new Container(
-                                    child: new Text(
-                                      defaultTargetPlatform ==
-                                              TargetPlatform.android
-                                          ? "EDIT/CHANGE ADDRESS"
-                                          : "EDIT/CHANGE ADDRESS",
-                                      style: textStylePayment2,
-                                    ),
-                                    // width: screenSize.width - 30,
-                                    height: 45.0,
-                                    width: 150.0,
-
-//                margin: new EdgeInsets.only(
-//                    top: 20.0, bottom: 20.0, left: 10.0, right: 10.0),
-                                    alignment: FractionalOffset.center,
-                                    decoration: new BoxDecoration(
-                                      color: Colors.grey[100],
-                                      borderRadius: const BorderRadius.all(
-                                          const Radius.circular(0.2)),
-                                    ),
-                                  ),
-                                ),
-                                new Text('       '),
-                                new InkWell(
-                                  child: new Container(
-                                    child: new Text(
-                                      defaultTargetPlatform ==
-                                              TargetPlatform.android
-                                          ? "ADD NEW ADDRESS"
-                                          : "ADD NEW ADDRESS",
-                                      style: textStylePayment2,
-                                    ),
-                                    // width: screenSize.width - 30,
-                                    height: 45.0,
-                                    width: 150.0,
-
-//                margin: new EdgeInsets.only(
-//                    top: 20.0, bottom: 20.0, left: 10.0, right: 10.0),
-                                    alignment: FractionalOffset.center,
-                                    decoration: new BoxDecoration(
-                                      color: Colors.grey[100],
-                                      borderRadius: const BorderRadius.all(
-                                          const Radius.circular(0.2)),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
+                  new EditAddressCard(
+                    text: "EDIT/CHANGE ADDRESS",
+                    text1: "ADD NEW ADDRESS",
                   ),
                 ],
               ),
@@ -280,32 +220,9 @@ class ConfirmState extends State<Confirm> with TickerProviderStateMixin {
               ],
             ),
           ),
-          new Padding(
-            padding: const EdgeInsets.only(top: 20.0),
-            child: new InkWell(
-              onTap: () {
-                Navigator.of(context).pushNamed("/payment");
-              },
-              child: new Container(
-                child: new Text(
-                  defaultTargetPlatform == TargetPlatform.android
-                      ? "CONTINUE TO PAYMENT"
-                      : "CONTINUE TO PAYMENT",
-                  style: const TextStyle(color: Colors.white, fontSize: 18.0),
-                ),
-                // width: screenSize.width - 30,
-                height: screenSize.height / 17.0,
-
-//                margin: new EdgeInsets.only(
-//                    top: 20.0, bottom: 20.0, left: 10.0, right: 10.0),
-                alignment: FractionalOffset.center,
-                decoration: new BoxDecoration(
-                  color: Theme.of(context).primaryColor,
-                  borderRadius:
-                      const BorderRadius.all(const Radius.circular(0.0)),
-                ),
-              ),
-            ),
+          new SaveButton(
+            text: "CONTINUE TO PAYMENT",
+            text1: "/payment",
           ),
         ],
       ),

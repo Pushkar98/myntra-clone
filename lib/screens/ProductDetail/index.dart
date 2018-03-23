@@ -207,7 +207,7 @@ class ProductDetailState extends State<ProductDetail>
                     }).toList(),
                   ),
                   new Container(
-                    height: 50.0,
+                    height: screenSize.height / 10.0,
                     // margin: const EdgeInsets.only(bottom: 5.0),
                     child: new TabBarView(
                       children: <Widget>[
