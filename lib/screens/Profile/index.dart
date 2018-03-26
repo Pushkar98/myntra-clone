@@ -129,7 +129,7 @@ class ProfileScreen extends StatelessWidget {
             padding: const EdgeInsets.only(top: 20.0, left: 30.0, right: 30.0),
             child: new InkWell(
               onTap: () {
-                Navigator.of(context).pushNamed("/signup");
+                Navigator.of(context).pushNamed("/HomeWithTab");
               },
               child: new Container(
                 child: new Text(

@@ -14,6 +14,8 @@ class ProductDetail extends StatefulWidget {
   ProductDetailState createState() => new ProductDetailState();
 }
 
+enum MyDialogAction { yes }
+
 class ProductDetailState extends State<ProductDetail>
     with TickerProviderStateMixin {
   List<String> images = [
@@ -22,6 +24,55 @@ class ProductDetailState extends State<ProductDetail>
     "assets/b5.png",
   ];
   List<String> pages = ["DETAILS", "MATERIAL & CARE"];
+  bool test = true;
+  bool test1 = true;
+  bool test2 = true;
+  bool test3 = true;
+
+  void changeState() {
+    setState(() {
+      test = !test;
+    });
+  }
+
+  void changeState1() {
+    setState(() {
+      test1 = !test1;
+    });
+  }
+
+  void changeState2() {
+    setState(() {
+      test2 = !test2;
+    });
+  }
+
+  void changeState3() {
+    setState(() {
+      test3 = !test3;
+    });
+  }
+
+  void _dialogResult(MyDialogAction value) {
+    Navigator.pop(context);
+  }
+
+  void _showAlert() {
+    AlertDialog dialog = new AlertDialog(
+      content: new Text(
+        "Please Select a Size",
+      ),
+      actions: <Widget>[
+        new FlatButton(
+          onPressed: () {
+            _dialogResult(MyDialogAction.yes);
+          },
+          child: new Text("Ok!"),
+        )
+      ],
+    );
+    showDialog(context: context, child: dialog);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -154,39 +205,50 @@ class ProductDetailState extends State<ProductDetail>
                     text: 'Size',
                     text1: "SIZE CHART",
                   ),
-                  new Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    //mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      new Padding(
-                        padding: const EdgeInsets.only(
-                            left: 0.0, top: 10.0, bottom: 10.0, right: 10.0),
-                        child: new SizeCard(
-                          text: "S",
+                  new Container(
+                    child: new Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        new Padding(
+                          padding: const EdgeInsets.only(
+                              left: 0.0, top: 10.0, bottom: 10.0, right: 10.0),
+                          child: new SizeCard(
+                            text: "S",
+                            color: (test ? Colors.blue : Colors.green),
+                            changstate: changeState,
+                          ),
                         ),
-                      ),
-                      new Padding(
-                        padding: const EdgeInsets.only(
-                            left: 0.0, top: 10.0, bottom: 10.0, right: 10.0),
-                        child: new SizeCard(
-                          text: "M",
+                        new Padding(
+                          padding: const EdgeInsets.only(
+                              left: 0.0, top: 10.0, bottom: 10.0, right: 10.0),
+                          child: new SizeCard(
+                            text: "M",
+                            color: (test1 ? Colors.blue : Colors.green),
+                            changstate: changeState1,
+                          ),
                         ),
-                      ),
-                      new Padding(
-                        padding: const EdgeInsets.only(
-                            left: 0.0, top: 10.0, bottom: 10.0, right: 10.0),
-                        child: new SizeCard(
-                          text: "L",
+                        new Padding(
+                          padding: const EdgeInsets.only(
+                              left: 0.0, top: 10.0, bottom: 10.0, right: 10.0),
+                          child: new SizeCard(
+                            text: "L",
+                            color: (test2 ? Colors.blue : Colors.green),
+                            changstate: changeState2,
+                          ),
                         ),
-                      ),
-                      new Padding(
-                        padding: const EdgeInsets.only(
-                            left: 0.0, top: 10.0, bottom: 10.0, right: 10.0),
-                        child: new SizeCard(
-                          text: "X",
+                        new Padding(
+                          padding: const EdgeInsets.only(
+                              left: 0.0, top: 10.0, bottom: 10.0, right: 10.0),
+                          child: new SizeCard(
+                            text: "X",
+                            color: (test3 ? Colors.blue : Colors.green),
+                            changstate: changeState3,
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
+                    // ),
                   ),
                   new TabBar(
                     indicatorColor: Colors.blueGrey,
@@ -357,7 +419,9 @@ class ProductDetailState extends State<ProductDetail>
                   left: 0.0, right: 20.0, top: 0.0, bottom: 0.0),
               child: new GestureDetector(
                 onTap: () {
-                  Navigator.of(context).pushNamed('/bag');
+                  ((test && test1 && test2 && test3)
+                      ? _showAlert()
+                      : Navigator.of(context).pushNamed('/bag'));
                 },
                 child: new Row(
                   children: [

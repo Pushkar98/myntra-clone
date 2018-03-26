@@ -15,7 +15,7 @@ class SplashScreenstate extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    twenty = const Duration(seconds: 3);
+    twenty = const Duration(seconds: 1);
     t2 = new Timer(twenty, () {
       print(1);
       routeName = "/HomewithTab";
