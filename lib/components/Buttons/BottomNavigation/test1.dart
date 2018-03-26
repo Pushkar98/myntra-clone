@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'package:ecommerce_pro/screens/Home/index.dart' as HomeScreen;
+import 'package:ecommerce_pro/screens/Profile/index.dart' as Profile;
 import 'package:ecommerce_pro/screens/ShopMen/index.dart' as ShopMen;
+import 'package:ecommerce_pro/screens/Home/index.dart' as Home;
+
 import 'package:ecommerce_pro/screens/Categories/index.dart' as Categories;
 import 'package:ecommerce_pro/screens/Bag/index.dart' as Bag;
 import 'package:ecommerce_pro/screens/Notification/index.dart' as Notifications;
@@ -24,7 +26,7 @@ class _HomeWithTab1State extends State<HomeWithTab1>
         children: <Widget>[
           new ShopMen.ShopMen(),
           new Categories.Categories(),
-          new HomeScreen.HomeScreen(),
+          new Home.HomeScreen(),
           new Notifications.Notifications(),
           new Bag.Bag(),
         ],

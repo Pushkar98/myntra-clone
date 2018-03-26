@@ -6,7 +6,6 @@ class CustomCardAccountSub extends StatelessWidget {
   final String text1;
   final String text2;
   final String text3;
-  final Function onPress;
   final VoidCallback changstate;
 
   @override
@@ -58,6 +57,9 @@ class CustomCardAccountSub extends StatelessWidget {
               ))),
           child: new Container(
             child: new ListTile(
+              onTap: () {
+                Navigator.of(context).pushNamed('/productList');
+              },
               title: new Row(
                 children: <Widget>[
                   new Padding(
@@ -89,6 +91,9 @@ class CustomCardAccountSub extends StatelessWidget {
               ))),
           child: new Container(
             child: new ListTile(
+              onTap: () {
+                Navigator.of(context).pushNamed('/productList');
+              },
               title: new Row(
                 children: <Widget>[
                   new Padding(
@@ -120,6 +125,9 @@ class CustomCardAccountSub extends StatelessWidget {
               ))),
           child: new Container(
             child: new ListTile(
+              onTap: () {
+                Navigator.of(context).pushNamed('/productList');
+              },
               title: new Row(
                 children: <Widget>[
                   new Padding(

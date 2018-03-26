@@ -30,7 +30,7 @@ class ProductState extends State<Product> with TickerProviderStateMixin {
                 color: Colors.black,
               ),
               onPressed: () {
-                Navigator.of(context).pushReplacementNamed("/HomewithTab");
+                Navigator.of(context).maybePop("/HomewithTab");
               }),
           actions: <Widget>[
             new Icon(
@@ -52,40 +52,114 @@ class ProductState extends State<Product> with TickerProviderStateMixin {
                     image: loginCover,
                   )),
             ),
-            new Image(
+            /*  new Image(
               image: stockUp,
+            ), */
+            new Container(
+              child: new Column(
+                children: <Widget>[
+                  new Text("---Last Chance of Stock Up---",
+                      style: new TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 22.0,
+                          color: Colors.black,
+                          fontStyle: FontStyle.italic)),
+                ],
+              ),
             ),
             new Container(
               margin:
-                  const EdgeInsets.only(left: 5.0, bottom: 10.0, right: 5.0),
+                  const EdgeInsets.only(left: 2.0, bottom: 10.0, right: 0.0),
               child: new ProductCard(
                 picture: women1,
-                picture1: women1,
-                picture2: women1,
+                picture1: product2,
+                picture2: product3,
                 text: '30 - 50% Off',
                 text1: "Up to 60% Off",
                 text2: '30 - 50% Off',
               ),
             ),
             new ProductCard(
-              picture: women1,
-              picture1: women1,
-              picture2: women1,
+              picture: product4,
+              picture1: product5,
+              picture2: product6,
+              text: 'Up to 30% Off',
+              text1: '30 - 50% Off',
+              text2: '40 - 70% Off',
+            ),
+            new ProductCard(
+              picture: product7,
+              picture1: product8,
+              picture2: product9,
               text: '30 - 50% Off',
               text1: "Up to 60% Off",
               text2: '30 - 50% Off',
             ),
+            new Card(
+              child: new Padding(
+                  padding: const EdgeInsets.only(
+                      left: 10.0, top: 10.0, bottom: 10.0, right: 10.0),
+                  child: new Image(
+                    image: loginCover,
+                  )),
+            ),
+            new Container(
+              child: new Column(
+                children: <Widget>[
+                  new Text("---Shop Categories---",
+                      style: new TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 22.0,
+                          color: Colors.black,
+                          fontStyle: FontStyle.italic)),
+                  new Text(
+                    "30-70% Off",
+                    style: new TextStyle(
+                        fontSize: 14.0,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black),
+                  )
+                ],
+              ),
+            ),
+            new Container(
+              margin: const EdgeInsets.only(
+                  left: 2.0, bottom: 10.0, right: 0.0, top: 10.0),
+              child: new ProductCard(
+                picture: women1,
+                picture1: product2,
+                picture2: product3,
+                text: '30 - 50% Off',
+                text1: "Up to 60% Off",
+                text2: '30 - 50% Off',
+              ),
+            ),
             new ProductCard(
-              picture: women1,
-              picture1: women1,
-              picture2: women1,
+              picture: product4,
+              picture1: product5,
+              picture2: product6,
+              text: 'Up to 30% Off',
+              text1: '30 - 50% Off',
+              text2: '40 - 70% Off',
+            ),
+            new ProductCard(
+              picture: product7,
+              picture1: product8,
+              picture2: product9,
               text: '30 - 50% Off',
               text1: "Up to 60% Off",
               text2: '30 - 50% Off',
             ),
             new Container(
               child: new Column(
-                children: <Widget>[new Text("Shop More Brands")],
+                children: <Widget>[
+                  new Text("---Shop More Brands---",
+                      style: new TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 22.0,
+                          color: Colors.black,
+                          fontStyle: FontStyle.italic)),
+                ],
               ),
             ),
             new BrandCard(

@@ -12,7 +12,7 @@ class BuynowButton extends StatelessWidget {
       children: <Widget>[
         new InkWell(
           onTap: () {
-            Navigator.of(context).pushNamed("/productlist");
+            Navigator.of(context).pushNamed("/productList");
           },
           child: new Container(
             child: new Text(

@@ -67,7 +67,7 @@ class ProductDetailState extends State<ProductDetail>
           onPressed: () {
             _dialogResult(MyDialogAction.yes);
           },
-          child: new Text("Ok!"),
+          child: new Text("OK!"),
         )
       ],
     );
@@ -98,7 +98,7 @@ class ProductDetailState extends State<ProductDetail>
               color: Colors.black,
             ),
             onPressed: () {
-              Navigator.of(context).pushReplacementNamed("/HomewithTab");
+              Navigator.of(context).maybePop("/productList");
             }),
       ),
       body: new SingleChildScrollView(
@@ -421,7 +421,7 @@ class ProductDetailState extends State<ProductDetail>
                 onTap: () {
                   ((test && test1 && test2 && test3)
                       ? _showAlert()
-                      : Navigator.of(context).pushNamed('/bag'));
+                      : Navigator.of(context).pushNamed('/HomewithTab'));
                 },
                 child: new Row(
                   children: [

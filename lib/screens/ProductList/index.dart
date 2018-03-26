@@ -40,7 +40,7 @@ class ProductListState extends State<ProductList>
               color: Colors.black,
             ),
             onPressed: () {
-              Navigator.of(context).pushReplacementNamed("/HomewithTab");
+              Navigator.of(context).maybePop("/HomewithTab");
             }),
       ),
       body: new ListView(

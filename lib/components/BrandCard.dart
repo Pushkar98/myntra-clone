@@ -8,68 +8,63 @@ class BrandCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size screenSize = MediaQuery.of(context).size;
+
     return new Row(
       children: <Widget>[
         new Column(children: <Widget>[
-          new Container(
-            margin: const EdgeInsets.only(left: 8.0, bottom: 5.0, right: 0.0),
-            // height: 115.0,
-            color: Colors.white,
-            child: new Container(
-                margin:
-                    const EdgeInsets.only(left: 20.0, bottom: 5.0, right: 0.0),
-                decoration: new BoxDecoration(
-                    color: Colors.white,
-                    border: new Border(
-                        bottom: new BorderSide(
-                      width: 0.5,
-                      color: Colors.black38,
-                    ))),
-                child: new Image(
-                  image: picture,
-                  height: 70.0,
-                  // fit: BoxFit.cover,
-                )),
+          new Card(
+            child: new InkWell(
+              onTap: () {
+                Navigator.of(context).pushNamed("/productList");
+              },
+              child: new Column(
+                children: <Widget>[
+                  new Image(
+                    image: picture,
+                    height: screenSize.height / 8.0,
+                    width: screenSize.width / 3.3,
+                    // fit: BoxFit.cover,
+                  ),
+                ],
+              ),
+            ),
           ),
         ]),
         new Column(children: <Widget>[
-          new Container(
-            //height: 115.0,
-            color: Colors.white,
-            child: new Container(
-                margin: const EdgeInsets.only(left: 5.0, bottom: 5.0),
-                decoration: new BoxDecoration(
-                    color: Colors.white,
-                    border: new Border(
-                        bottom: new BorderSide(
-                      width: 0.5,
-                      color: Colors.black38,
-                    ))),
-                child: new Image(
-                  image: picture1,
-                  height: 70.0,
-                  // fit: BoxFit.cover,
-                )),
+          new Card(
+            child: new InkWell(
+              onTap: () {
+                Navigator.of(context).pushNamed("/productList");
+              },
+              child: new Column(
+                children: <Widget>[
+                  new Image(
+                    image: picture1,
+                    height: screenSize.height / 8.0,
+                    width: screenSize.width / 3.3, // fit: BoxFit.cover,
+                  ),
+                ],
+              ),
+            ),
           ),
         ]),
         new Column(children: <Widget>[
-          new Container(
-            //height: 115.0,
-            color: Colors.white,
-            child: new Container(
-                margin: const EdgeInsets.only(left: 5.0, bottom: 5.0),
-                decoration: new BoxDecoration(
-                    color: Colors.white,
-                    border: new Border(
-                        bottom: new BorderSide(
-                      width: 0.5,
-                      color: Colors.black38,
-                    ))),
-                child: new Image(
-                  image: picture2,
-                  height: 70.0,
-                  // fit: BoxFit.cover,
-                )),
+          new Card(
+            child: new InkWell(
+              onTap: () {
+                Navigator.of(context).pushNamed("/productList");
+              },
+              child: new Column(
+                children: <Widget>[
+                  new Image(
+                    image: picture2,
+                    height: screenSize.height / 8.0,
+                    width: screenSize.width / 3.3, // fit: BoxFit.cover,
+                  ),
+                ],
+              ),
+            ),
           ),
         ]),
       ],

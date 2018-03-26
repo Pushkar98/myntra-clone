@@ -18,130 +18,102 @@ class ProductCard extends StatelessWidget {
       children: <Widget>[
         new Column(children: <Widget>[
           new Card(
-            child: new Column(
-              children: <Widget>[
-                new Image(
-                  image: picture,
-                  height: 83.0,
-                  // fit: BoxFit.cover,
-                ),
-                new Text("hdhjjh")
-              ],
+            child: new InkWell(
+              onTap: () {
+                Navigator.of(context).pushNamed("/productList");
+              },
+              child: new Column(
+                children: <Widget>[
+                  new Image(
+                    image: picture,
+                    height: screenSize.height / 8.0,
+                    width: screenSize.width / 3.3,
+                    // fit: BoxFit.cover,
+                  ),
+                  new Padding(
+                    padding: const EdgeInsets.only(
+                        left: 10.0, bottom: 10.0, right: 10.0, top: 10.0),
+                    child: new Text(
+                      text,
+                      style: new TextStyle(
+                          fontSize: 14.0,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black),
+                    ),
+                  )
+                ],
+              ),
             ),
           ),
-          //   new Container(
-          //     width: screenSize.width / 3.4,
-
-          //     margin: const EdgeInsets.only(left: 8.0, bottom: 0.0, right: 0.0),
-          //     // height: 115.0,
-          //     color: Colors.white,
-          //     child: new Container(
-          //         margin:
-          //             const EdgeInsets.only(left: 0.0, bottom: 0.0, right: 0.0),
-          //         decoration: new BoxDecoration(
-          //             color: Colors.white,
-          //             border: new Border(
-          //                 bottom: new BorderSide(
-          //               width: 0.0,
-          //               color: Colors.black38,
-          //             ))),
-          //         child: new Image(
-          //           image: picture,
-          //           height: 83.0,
-          //           // fit: BoxFit.cover,
-          //         )),
-          //   ),
-          //   new Container(
-          //     color: Colors.white,
-          //     child: new Column(
-          //       children: <Widget>[
-          //         new Padding(
-          //             padding: const EdgeInsets.only(
-          //                 left: 10.0, top: 4.0, bottom: 10.0, right: 10.0),
-          //             child: new Text('30 - 50 % Off'))
-          //       ],
-          //     ),
-          //   )
         ]),
         new Column(children: <Widget>[
-          new Container(
-            width: screenSize.width / 3.4,
-
-            margin: const EdgeInsets.only(left: 8.0, bottom: 0.0, right: 0.0),
-            // height: 115.0,
-            color: Colors.white,
-            child: new Container(
-                margin:
-                    const EdgeInsets.only(left: 0.0, bottom: 0.0, right: 0.0),
-                decoration: new BoxDecoration(
-                    color: Colors.white,
-                    border: new Border(
-                        bottom: new BorderSide(
-                      width: 0.0,
-                      color: Colors.black38,
-                    ))),
-                child: new Image(
-                  image: picture,
-                  height: 80.0,
-                  // fit: BoxFit.cover,
-                )),
-          ),
-          new Container(
-            color: Colors.white,
-            child: new Column(
-              children: <Widget>[
-                new Padding(
+          new Card(
+            child: new InkWell(
+              onTap: () {
+                Navigator.of(context).pushNamed("/productList");
+              },
+              child: new Column(
+                children: <Widget>[
+                  new Image(
+                    image: picture1,
+                    height: screenSize.height / 8.0,
+                    width: screenSize.width / 3.3, // fit: BoxFit.cover,
+                  ),
+                  new Padding(
                     padding: const EdgeInsets.only(
-                        left: 8.0, top: 4.0, bottom: 10.0, right: 10.0),
-                    child: new Text('30 - 50 % Off'))
-              ],
+                        left: 10.0, bottom: 10.0, right: 10.0, top: 10.0),
+                    child: new Text(
+                      text1,
+                      style: new TextStyle(
+                          fontSize: 14.0,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black),
+                    ),
+                  )
+                ],
+              ),
             ),
-          )
+          ),
         ]),
         new Column(children: <Widget>[
-          new Container(
-            width: screenSize.width / 3.4,
-
-            margin: const EdgeInsets.only(left: 8.0, bottom: 0.0, right: 0.0),
-            // height: 115.0,
-            color: Colors.white,
-            child: new Container(
-                margin:
-                    const EdgeInsets.only(left: 0.0, bottom: 0.0, right: 0.0),
-                decoration: new BoxDecoration(
-                    color: Colors.white,
-                    border: new Border(
-                        bottom: new BorderSide(
-                      width: 0.0,
-                      color: Colors.black38,
-                    ))),
-                child: new Image(
-                  image: picture,
-                  height: 80.0,
-                  // fit: BoxFit.cover,
-                )),
-          ),
-          new Container(
-            color: Colors.white,
-            child: new Column(
-              children: <Widget>[
-                new Padding(
+          new Card(
+            child: new InkWell(
+              onTap: () {
+                Navigator.of(context).pushNamed("/productList");
+              },
+              child: new Column(
+                children: <Widget>[
+                  new Image(
+                    image: picture2,
+                    height: screenSize.height / 8.0,
+                    width: screenSize.width / 3.3, // fit: BoxFit.cover,
+                  ),
+                  new Padding(
                     padding: const EdgeInsets.only(
-                        left: 10.0, top: 4.0, bottom: 10.0, right: 10.0),
-                    child: new Text('30 - 50 % Off'))
-              ],
+                        left: 10.0, bottom: 10.0, right: 10.0, top: 10.0),
+                    child: new Text(
+                      text2,
+                      style: new TextStyle(
+                          fontSize: 14.0,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black),
+                    ),
+                  )
+                ],
+              ),
             ),
-          )
+          ),
         ]),
       ],
     );
   }
 
-  ProductCard(
-      {this.picture,
-      this.picture1,
-      this.picture2,
-      this.text,
-      this.text1,
-      this.text2});
+  ProductCard({
+    this.picture,
+    this.picture1,
+    this.picture2,
+    this.text,
+    this.text1,
+    this.text2,
+  });
 }

@@ -3,6 +3,7 @@ import 'package:ecommerce_pro/theme/style.dart';
 import 'package:ecommerce_pro/screens/Categories/style.dart';
 import 'package:ecommerce_pro/components/CustomCardAccount.dart';
 import 'package:ecommerce_pro/components/CustomCardAccountSub.dart';
+import 'package:ecommerce_pro/components/RecentlyViewed.dart';
 
 class Categories extends StatefulWidget {
   Categories({Key key}) : super(key: key);
@@ -178,122 +179,62 @@ class CategoriesState extends State<Categories> with TickerProviderStateMixin {
               color: Colors.white,
             ),
             new Card(
-                child: new Column(
-              children: [
-                new Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: <Widget>[
-                    new Text(
-                      'RECENTLY VIEWED',
-                      style: textStyleheader,
-                    ),
-                    new Text('                                   '),
-                    new Text(
-                      'CLEAR ALL',
-                      style: new TextStyle(
-                          color: Colors.red,
-                          fontSize: 12.0,
-                          fontWeight: FontWeight.normal),
-                    ),
-                  ],
-                ),
-                new SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: new Row(
-                    children: <Widget>[
-                      new Column(children: <Widget>[
-                        new Padding(
-                            padding: const EdgeInsets.only(
-                                left: 30.0,
-                                top: 10.0,
-                                bottom: 10.0,
-                                right: 10.0),
-                            child: new Image(
-                              image: mantastic,
-                              height: 120.0,
-                              width: 200.0,
-                              fit: BoxFit.cover,
-                            )),
-                        new Text(
-                          "We Love Winters!",
-                          style: textStylesubTitle,
+                child: new Padding(
+                    padding: const EdgeInsets.only(
+                        left: 5.0, top: 10.0, bottom: 10.0, right: 5.0),
+                    child: new Column(
+                      children: [
+                        new Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            new Text(
+                              'RECENTLY VIEWED',
+                              style: textStyleheader,
+                            ),
+                            new Text(
+                              'CLEAR ALL',
+                              style: new TextStyle(
+                                  color: Colors.red,
+                                  fontSize: 12.0,
+                                  fontWeight: FontWeight.normal),
+                            ),
+                          ],
                         ),
-                        new Text(
-                          "stay warm & Cozy",
-                          style: textStylesubTitleLight,
+                        new SingleChildScrollView(
+                          scrollDirection: Axis.horizontal,
+                          child: new GestureDetector(
+                            onTap: () {
+                              Navigator.of(context).pushNamed('/productList');
+                            },
+                            child: new Row(
+                              children: <Widget>[
+                                new RecentlyViewed(
+                                  picture: mantastic,
+                                  text: "We Love Winters!",
+                                  text1: "stay warm & Cozy",
+                                ),
+                                new RecentlyViewed(
+                                  picture: glasses,
+                                  text: "The Grunge Collection!",
+                                  text1: "Born For The Road",
+                                ),
+                                new RecentlyViewed(
+                                  picture: bag,
+                                  text: "On Point!",
+                                  text1: "Premium Bags",
+                                ),
+                                new RecentlyViewed(
+                                  picture: men,
+                                  text: "Everyday Wear",
+                                  text1: "Printed Tees",
+                                ),
+                              ],
+                            ),
+                          ),
                         ),
-                      ]),
-                      new Column(children: <Widget>[
-                        new Padding(
-                            padding: const EdgeInsets.only(
-                                left: 10.0,
-                                top: 10.0,
-                                bottom: 10.0,
-                                right: 10.0),
-                            child: new Image(
-                              image: glasses,
-                              height: 120.0,
-                              width: 200.0,
-                              fit: BoxFit.cover,
-                            )),
-                        new Text(
-                          "The Grunge Collection!",
-                          style: textStylesubTitle,
-                        ),
-                        new Text(
-                          "Born For The Road",
-                          style: textStylesubTitleLight,
-                        ),
-                      ]),
-                      new Column(children: <Widget>[
-                        new Padding(
-                            padding: const EdgeInsets.only(
-                                left: 10.0,
-                                top: 10.0,
-                                bottom: 10.0,
-                                right: 10.0),
-                            child: new Image(
-                              image: bag,
-                              height: 120.0,
-                              width: 200.0,
-                              fit: BoxFit.cover,
-                            )),
-                        new Text(
-                          "On Point!",
-                          style: textStylesubTitle,
-                        ),
-                        new Text(
-                          "Premium Bags",
-                          style: textStylesubTitleLight,
-                        ),
-                      ]),
-                      new Column(children: <Widget>[
-                        new Padding(
-                            padding: const EdgeInsets.only(
-                                left: 10.0,
-                                top: 10.0,
-                                bottom: 10.0,
-                                right: 10.0),
-                            child: new Image(
-                              image: men,
-                              height: 120.0,
-                              width: 200.0,
-                              fit: BoxFit.cover,
-                            )),
-                        new Text(
-                          "Everyday Wear",
-                          style: textStylesubTitle,
-                        ),
-                        new Text(
-                          "Printed Tees",
-                          style: textStylesubTitleLight,
-                        ),
-                      ]),
-                    ],
-                  ),
-                ),
-              ],
-            )),
+                      ],
+                    ))),
             new Container(
               padding: const EdgeInsets.only(
                   left: 30.0, right: 30.0, bottom: 20.0, top: 20.0),

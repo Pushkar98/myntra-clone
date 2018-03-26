@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ecommerce_pro/theme/style.dart';
 import 'style.dart';
 import 'package:flutter/foundation.dart';
+//import 'package:ecommerce_pro/components/Buttons/BottomNavigation/test1.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({Key key}) : super(key: key);
@@ -129,7 +130,7 @@ class ProfileScreen extends StatelessWidget {
             padding: const EdgeInsets.only(top: 20.0, left: 30.0, right: 30.0),
             child: new InkWell(
               onTap: () {
-                Navigator.of(context).pushNamed("/HomeWithTab");
+                Navigator.of(context).maybePop("/HomeWithTab");
               },
               child: new Container(
                 child: new Text(
@@ -159,6 +160,7 @@ class ProfileScreen extends StatelessWidget {
           ),
         ],
       ),
+      // bottomNavigationBar: new HomeWithTab1(),
     );
   }
 }
