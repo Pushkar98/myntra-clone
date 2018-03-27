@@ -29,10 +29,13 @@ TextStyle textStylesTitleubnotification = const TextStyle(
     fontSize: 15.0,
     letterSpacing: 0.0);
 TextStyle textStylesubBag = const TextStyle(
-    color: const Color.fromRGBO(0, 0, 0, 2.0),
-    fontWeight: FontWeight.bold,
-    fontSize: 13.0,
-    letterSpacing: 0.0);
+  color: const Color.fromRGBO(0, 0, 0, 2.0),
+  fontWeight: FontWeight.bold,
+  fontSize: 13.0,
+  letterSpacing: 0.0,
+  fontStyle: FontStyle.italic,
+  decoration: TextDecoration.lineThrough,
+);
 TextStyle textStylesubBagpriceActual = const TextStyle(
     color: const Color.fromRGBO(0, 0, 255, 2.0),
     fontWeight: FontWeight.normal,
@@ -118,7 +121,12 @@ TextStyle textPrice = const TextStyle(
     fontSize: 14.0,
     fontWeight: FontWeight.w500);
 TextStyle textDiscount = const TextStyle(
-    color: Colors.grey, fontSize: 14.0, fontWeight: FontWeight.w500);
+  color: Colors.grey,
+  fontSize: 14.0,
+  fontWeight: FontWeight.w500,
+  fontStyle: FontStyle.italic,
+  decoration: TextDecoration.lineThrough,
+);
 TextStyle textPriceActual = const TextStyle(
     color: Colors.blue, fontSize: 14.0, fontWeight: FontWeight.normal);
 TextStyle textDescription = const TextStyle(

@@ -63,7 +63,7 @@ class NotificationsState extends State<Notifications>
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
                             new Text(
-                              'Just Under Rs 399',
+                              'Just Under \$ 399',
                               style: textStylesubnotification,
                             ),
                             new Text(
@@ -116,7 +116,7 @@ class NotificationsState extends State<Notifications>
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
                             new Text(
-                              'Just Under Rs 599',
+                              'Just Under \$ 599',
                               style: textStylesubnotification,
                             ),
                             new Text(
@@ -285,7 +285,7 @@ class NotificationsState extends State<Notifications>
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
                             new Text(
-                              'Just Under Rs 999',
+                              'Just Under \$ 999',
                               style: textStylesubnotification,
                             ),
                             new Text(

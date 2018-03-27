@@ -43,7 +43,7 @@ class PaymentState extends State<Payment> with TickerProviderStateMixin {
               padding: const EdgeInsets.only(
                   left: 10.0, top: 10.0, bottom: 10.0, right: 10.0),
               child: new Text(
-                "You Pay Rs 1,598",
+                "You Pay \$ 1,598",
                 style: new TextStyle(fontWeight: FontWeight.w500),
               ),
             ),
@@ -119,7 +119,7 @@ class PaymentState extends State<Payment> with TickerProviderStateMixin {
                       child: new Row(
                         children: <Widget>[
                           new Text(
-                            "Rs. 1120",
+                            "\$ 1120",
                             style: new TextStyle(fontWeight: FontWeight.normal),
                           ),
                         ],
@@ -161,7 +161,7 @@ class PaymentState extends State<Payment> with TickerProviderStateMixin {
                       child: new Row(
                         children: <Widget>[
                           new Text(
-                            "Rs 1598",
+                            "\$ 1598",
                             style: new TextStyle(fontWeight: FontWeight.bold),
                           ),
                         ],

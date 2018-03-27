@@ -7,6 +7,7 @@ import 'Details.dart';
 import 'style.dart';
 import 'package:flutter/foundation.dart';
 import 'package:ecommerce_pro/components/ProductDetailTab.dart';
+import 'package:ecommerce_pro/components/Buttons/raisedButton.dart';
 
 class ProductDetail extends StatefulWidget {
   const ProductDetail({Key key}) : super(key: key);
@@ -130,6 +131,66 @@ class ProductDetailState extends State<ProductDetail>
                           ),
                         );
                       }).toList()),
+                      new Row(
+                        children: <Widget>[
+                          new Padding(
+                            padding: const EdgeInsets.only(
+                                left: 10.0,
+                                top: 140.0,
+                                bottom: 0.0,
+                                right: 0.0),
+                            child: new Container(
+                              decoration: new BoxDecoration(
+                                  color: Colors.transparent,
+                                  border: new Border(
+                                    bottom: new BorderSide(
+                                      width: 0.3,
+                                      color: Colors.transparent,
+                                    ),
+                                    top: new BorderSide(
+                                      width: 0.3,
+                                      color: Colors.grey,
+                                    ),
+                                    left: new BorderSide(
+                                      width: 0.3,
+                                      color: Colors.grey,
+                                    ),
+                                    right: new BorderSide(
+                                      width: 0.3,
+                                      color: Colors.grey,
+                                    ),
+                                  )),
+                              child: new Container(
+                                height: screenSize.height / 14.0,
+                                width: screenSize.width / 6.5,
+                                decoration: new BoxDecoration(
+                                    color: Colors.transparent,
+                                    border: new Border(
+                                      bottom: new BorderSide(
+                                        width: 0.3,
+                                        color: Colors.grey,
+                                      ),
+                                      top: new BorderSide(
+                                        width: 0.3,
+                                        color: Colors.grey,
+                                      ),
+                                      left: new BorderSide(
+                                        width: 0.3,
+                                        color: Colors.grey,
+                                      ),
+                                      right: new BorderSide(
+                                        width: 0.3,
+                                        color: Colors.grey,
+                                      ),
+                                    )),
+
+                                // color: Colors.grey,
+                                child: new Icon(Icons.info_outline),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                       new Container(
                         alignment: new FractionalOffset(0.5, 0.95),
                         child: new TabPageSelector(
@@ -137,7 +198,7 @@ class ProductDetailState extends State<ProductDetail>
                           color: transparentColor,
                           selectedColor: whiteColor,
                         ),
-                      )
+                      ),
                     ],
                   ))),
             ),
@@ -157,7 +218,7 @@ class ProductDetailState extends State<ProductDetail>
             new Container(
               decoration: new BoxDecoration(color: Colors.white),
               padding: const EdgeInsets.only(
-                  left: 10.0, right: 0.0, top: 10.0, bottom: 10.0),
+                  left: 8.0, right: 0.0, top: 10.0, bottom: 10.0),
               child: new Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 //mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -166,7 +227,7 @@ class ProductDetailState extends State<ProductDetail>
                     padding: const EdgeInsets.only(
                         left: 0.0, top: 10.0, bottom: 10.0, right: 10.0),
                     child: new Text(
-                      'Rs 1,499',
+                      '\$ 1,499',
                       style: textPrice,
                     ),
                   ),
@@ -174,7 +235,7 @@ class ProductDetailState extends State<ProductDetail>
                     padding: const EdgeInsets.only(
                         left: 10.0, top: 10.0, bottom: 10.0, right: 10.0),
                     child: new Text(
-                      'Rs 2,499',
+                      '\$ 2,499',
                       style: textDiscount,
                     ),
                   ),
@@ -190,18 +251,18 @@ class ProductDetailState extends State<ProductDetail>
               ),
             ),
             new ProductDetailCard(
-              icon: Icons.list,
+              icon: Icons.local_offer,
               text: "Tap to get the best Price",
             ),
             new Container(
               height: 500.0,
               padding: const EdgeInsets.only(
-                  left: 5.0, right: 10.0, top: 0.0, bottom: 0.0),
+                  left: 2.0, right: 10.0, top: 0.0, bottom: 0.0),
               decoration: new BoxDecoration(image: backgroundImage),
               child: new Column(
                 children: <Widget>[
                   new ProductSizeCard(
-                    icon: Icons.list,
+                    icon: Icons.straighten,
                     text: 'Size',
                     text1: "SIZE CHART",
                   ),
@@ -345,7 +406,8 @@ class ProductDetailState extends State<ProductDetail>
                         )),
                   ),
                   new Container(
-//      color: Colors.white,
+                    //height: screenSize.height / 9.4,
+                    width: screenSize.width / 0.8,
                     decoration: new BoxDecoration(
                         color: Colors.white,
                         border: new Border(
@@ -354,8 +416,9 @@ class ProductDetailState extends State<ProductDetail>
                           color: Colors.black26,
                         ))),
                     child: new Container(
+                        // height: screenSize.height / 11.0,
                         margin: const EdgeInsets.only(
-                            left: 3.0, top: 10.0, bottom: 10.0),
+                            left: 0.0, top: 10.0, bottom: 10.0, right: 0.0),
                         child: new Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.start,

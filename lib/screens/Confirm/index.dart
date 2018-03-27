@@ -167,7 +167,7 @@ class ConfirmState extends State<Confirm> with TickerProviderStateMixin {
                       child: new Row(
                         children: <Widget>[
                           new Text(
-                            "Rs. 1120",
+                            "\$ 1120",
                             style: new TextStyle(fontWeight: FontWeight.normal),
                           ),
                         ],
@@ -209,7 +209,7 @@ class ConfirmState extends State<Confirm> with TickerProviderStateMixin {
                       child: new Row(
                         children: <Widget>[
                           new Text(
-                            "Rs 1598",
+                            "\$ 1598",
                             style: new TextStyle(fontWeight: FontWeight.bold),
                           ),
                         ],

@@ -1,114 +1,112 @@
 import 'package:flutter/material.dart';
+import 'package:ecommerce_pro/screens/ShopMen/index.dart' as ShopMen;
+import 'package:ecommerce_pro/screens/Categories/index.dart' as Categories;
+import 'package:ecommerce_pro/screens/Bag/index.dart' as Bag;
+import 'package:ecommerce_pro/screens/Notification/index.dart' as Notifications;
 
-void main() => runApp(new LayoutApp());
-
-class LayoutApp extends StatelessWidget {
+class HomeWithTab1 extends StatefulWidget {
+  HomeWithTab1({Key key}) : super(key: key);
   @override
-  Widget build(BuildContext context) {
-    return new MaterialApp(
-      home: new LayoutPage(),
-    );
-  }
+  _HomeWithTab1State createState() => new _HomeWithTab1State();
 }
 
-class LayoutPage extends StatefulWidget {
-  LayoutPage({Key key}) : super(key: key);
-  @override
-  _LayoutPageState createState() => new _LayoutPageState();
-}
-
-class _LayoutPageState extends State<LayoutPage> {
-  MainAxisAlignment mainaxis = MainAxisAlignment.center;
-  bool newCenter = false;
-  void changeToSpaceBetween() {
-    setState(() {
-      if (mainaxis == MainAxisAlignment.center) {
-        mainaxis = MainAxisAlignment.spaceBetween;
-      } else {
-        mainaxis = MainAxisAlignment.center;
-      }
-    });
-  }
-
-  void changeToCenter() {
-    setState(() {
-      newCenter = !newCenter;
-    });
-  }
-
+class _HomeWithTab1State extends State<HomeWithTab1>
+    with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
-    final Size screenSize = MediaQuery.of(context).size;
+    TabController controller = new TabController(length: 5, vsync: this);
+    Size screenSize = MediaQuery.of(context).size;
     return new Scaffold(
-        body: new Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-          new Container(
-            height: screenSize.height / 4,
-            child: new Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                new RaisedButton(
-                  onPressed: changeToSpaceBetween,
-                  child: new Text("Show Space in between"),
-                ),
-                new Padding(
-                  padding: new EdgeInsets.all(10.0),
-                  child: new RaisedButton(
-                    onPressed: changeToCenter,
-                    child: new Text("Show Center"),
-                  ),
-                )
-              ],
+      body: new TabBarView(
+        children: <Widget>[
+          new ShopMen.ShopMen(),
+          //   new Categories.Categories(),
+          // new HomeScreen.HomeScreen(),
+          //new Notifications.Notifications(),
+          //new Bag.Bag(),
+        ],
+        controller: controller,
+      ),
+      backgroundColor: new Color.fromRGBO(255, 255, 255, 1.0),
+      bottomNavigationBar: new Container(
+        height: screenSize.height / 10,
+        decoration: new BoxDecoration(
+            //color: Theme.of(context).primaryColor,
             ),
+        child: new TabBar(
+          tabs: <Tab>[
+            new Tab(
+              child: new Column(
+                children: <Widget>[
+                  new Icon(
+                    Icons.home,
+                    size: 25.0,
+                    color: Colors.grey.shade400,
+                  ),
+                  new Text("Home")
+                ],
+              ),
+            ),
+            new Tab(
+              child: new Column(
+                children: <Widget>[
+                  new Icon(
+                    Icons.category,
+                    size: 25.0,
+                    color: Colors.grey.shade400,
+                  ),
+                  new Text("Categories")
+                ],
+              ),
+            ),
+            new Tab(
+              child: new Column(
+                children: <Widget>[
+                  new Icon(
+                    Icons.account_box,
+                    size: 25.0,
+                    color: Colors.grey.shade400,
+                  ),
+                  new Text("Profile")
+                ],
+              ),
+            ),
+            new Tab(
+              child: new Column(
+                children: <Widget>[
+                  new Icon(
+                    Icons.notifications,
+                    size: 25.0,
+                    color: Colors.grey.shade400,
+                  ),
+                  new Text("Notification")
+                ],
+              ),
+            ),
+            new Tab(
+              child: new Column(
+                children: <Widget>[
+                  new Icon(
+                    Icons.card_travel,
+                    size: 25.0,
+                    color: Colors.grey.shade400,
+                  ),
+                  new Text("Bag")
+                ],
+              ),
+            ),
+          ],
+          indicatorColor: Colors.blue,
+          labelColor: Colors.black,
+          unselectedLabelColor: Colors.black,
+          controller: controller,
+          labelStyle: new TextStyle(
+            fontSize: 10.0,
+            color: Colors.grey[400],
+            // fontWeight: FontWeight.w500
           ),
-          new Container(
-              height: 3 * screenSize.height / 4,
-              child: (newCenter
-                  ? (new Center(
-                      child: new Container(
-                      child: new Column(
-                        mainAxisAlignment: mainaxis,
-                        children: <Widget>[
-                          new Container(
-                            color: Colors.red,
-                            width: 100.0,
-                            height: 100.0,
-                          ),
-                          new Container(
-                            color: Colors.blue,
-                            width: 100.0,
-                            height: 100.0,
-                          ),
-                          new Container(
-                            color: Colors.green,
-                            width: 100.0,
-                            height: 100.0,
-                          ),
-                        ],
-                      ),
-                    )))
-                  : (new Column(
-                      mainAxisAlignment: mainaxis,
-                      children: <Widget>[
-                        new Container(
-                          color: Colors.red,
-                          width: 100.0,
-                          height: 100.0,
-                        ),
-                        new Container(
-                          color: Colors.blue,
-                          width: 100.0,
-                          height: 100.0,
-                        ),
-                        new Container(
-                          color: Colors.green,
-                          width: 100.0,
-                          height: 100.0,
-                        ),
-                      ],
-                    )))),
-        ]));
+        ),
+      ),
+    );
   }
 }

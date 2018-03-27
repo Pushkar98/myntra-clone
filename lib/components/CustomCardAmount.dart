@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:ecommerce_pro/theme/style.dart';
 
 class CustomCardAmount extends StatelessWidget {
-  String text;
-  String text1;
-  IconData trailingText;
-  final Function onPress;
+  final String text;
+  final String text1;
+  final Color color;
+  final FontWeight fontWeight;
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class CustomCardAmount extends StatelessWidget {
                       child: new Text(
                         text,
                         style: new TextStyle(
-                            color: new Color.fromRGBO(0, 0, 0, 0.8),
+                            color: Colors.black,
                             fontSize: 14.0,
                             fontWeight: FontWeight.w400),
                       )),
@@ -38,14 +38,15 @@ class CustomCardAmount extends StatelessWidget {
               trailing: new Text(
                 text1,
                 style: new TextStyle(
-                    color: new Color.fromRGBO(0, 0, 0, 0.8),
-                    fontSize: 14.0,
-                    fontWeight: FontWeight.w400),
+                  fontSize: 14.0,
+                  fontWeight: fontWeight,
+                  color: color,
+                ),
               )),
         ),
       ),
     );
   }
 
-  CustomCardAmount({this.text, this.text1});
+  CustomCardAmount({this.text, this.text1, this.color, this.fontWeight});
 }

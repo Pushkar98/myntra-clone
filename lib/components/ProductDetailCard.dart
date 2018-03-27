@@ -17,7 +17,7 @@ class ProductDetailCard extends StatelessWidget {
             color: Colors.black26,
           ))),
       child: new Container(
-        margin: const EdgeInsets.only(left: 3.0),
+        margin: const EdgeInsets.only(left: 0.0),
         child: new ListTile(
           title: new Row(
             children: <Widget>[

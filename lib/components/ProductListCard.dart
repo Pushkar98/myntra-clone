@@ -38,7 +38,8 @@ class ProductListCard extends StatelessWidget {
                   children: <Widget>[
                     new Image(
                       image: picture,
-                      height: screenSize.height / 4.0,
+                      height: screenSize.height / 3.5,
+                      width: screenSize.width / 2.2,
                     ),
                     new Padding(
                       padding: const EdgeInsets.only(
@@ -104,6 +105,9 @@ class ProductListCard extends StatelessWidget {
                                           color: Colors.grey,
                                           fontSize: 12.0,
                                           fontWeight: FontWeight.normal,
+                                          fontStyle: FontStyle.italic,
+                                          decoration:
+                                              TextDecoration.lineThrough,
                                         )),
                                     new Text(text3,
                                         style: new TextStyle(
@@ -148,7 +152,8 @@ class ProductListCard extends StatelessWidget {
                   children: <Widget>[
                     new Image(
                       image: picture2,
-                      height: screenSize.height / 4.0,
+                      height: screenSize.height / 3.5,
+                      width: screenSize.width / 2.2,
                     ),
                     new Padding(
                       padding: const EdgeInsets.only(
@@ -214,6 +219,9 @@ class ProductListCard extends StatelessWidget {
                                           color: Colors.grey,
                                           fontSize: 12.0,
                                           fontWeight: FontWeight.normal,
+                                          fontStyle: FontStyle.italic,
+                                          decoration:
+                                              TextDecoration.lineThrough,
                                         )),
                                     new Text(text8,
                                         style: new TextStyle(

@@ -17,7 +17,7 @@ class ProductSizeCard extends StatelessWidget {
             color: Colors.white,
           ))),
       child: new Container(
-        margin: const EdgeInsets.only(left: 3.0),
+        margin: const EdgeInsets.only(left: 0.0, right: 0.0),
         child: new ListTile(
           title: new Row(
             children: <Widget>[

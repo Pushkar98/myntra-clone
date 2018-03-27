@@ -353,15 +353,17 @@ class HomeProState extends State<HomePro> with TickerProviderStateMixin {
                         new Padding(
                           padding: const EdgeInsets.only(
                               left: 10.0, top: 10.0, bottom: 10.0, right: 10.0),
-                          child: new Text('Rs 900'),
+                          child: new Text('\$ 900'),
                         ),
                         new Padding(
                           padding: const EdgeInsets.only(
                               left: 0.0, top: 10.0, bottom: 10.0, right: 0.0),
                           child: new Text(
-                            'Rs 1,499',
+                            "\$ 1,499",
                             style: new TextStyle(
                               color: Colors.grey,
+                              decoration: TextDecoration.lineThrough,
+                              fontStyle: FontStyle.italic,
                             ),
                           ),
                         ),
@@ -369,8 +371,10 @@ class HomeProState extends State<HomePro> with TickerProviderStateMixin {
                           padding: const EdgeInsets.only(
                               left: 10.0, top: 10.0, bottom: 10.0, right: 10.0),
                           child: new Text(
-                            ' 40%off',
-                            style: new TextStyle(color: Colors.green),
+                            '40%off',
+                            style: new TextStyle(
+                              color: Colors.green,
+                            ),
                           ),
                         ),
                       ],

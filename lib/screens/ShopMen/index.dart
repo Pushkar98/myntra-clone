@@ -4,7 +4,7 @@ import 'style.dart';
 import 'package:ecommerce_pro/components/ShopMencard.dart';
 import 'package:ecommerce_pro/components/CustomCardAccount.dart';
 import 'package:ecommerce_pro/components/CustomCardAccountSub.dart';
-//import 'package:ecommerce_pro/components/Buttons/BottomNavigation/test1.dart';
+import 'package:ecommerce_pro/components//test1.dart';
 
 class ShopMen extends StatefulWidget {
   ShopMen({Key key}) : super(key: key);
@@ -198,6 +198,7 @@ class ShopMenState extends State<ShopMen> with TickerProviderStateMixin {
                 ))),
         ],
       ),
+      //bottomNavigationBar: new HomeWithTab1(),
     );
   }
 }

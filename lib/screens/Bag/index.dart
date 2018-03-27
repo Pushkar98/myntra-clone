@@ -16,7 +16,7 @@ class Bag extends StatefulWidget {
 
 class BagState extends State<Bag> with TickerProviderStateMixin {
   final scaffoldKey = new GlobalKey<ScaffoldState>();
-  String $;
+
   @override
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
@@ -43,7 +43,7 @@ class BagState extends State<Bag> with TickerProviderStateMixin {
                   style: textStylesubTitle,
                 ),
                 new Text(
-                  'TOTAL: Rs 1,598',
+                  'TOTAL: \$ 1,598',
                   style: textStylesubTitle,
                 ),
               ],
@@ -60,8 +60,8 @@ class BagState extends State<Bag> with TickerProviderStateMixin {
                       text1: 'Top',
                       text2: 'Sold by: Funfash',
                       text3: 'Only 1 unit in Stock',
-                      text4: 'Rs 1299',
-                      text5: 'Rs 799',
+                      text4: '\$ 1299',
+                      text5: '\$ 799',
                     ),
                     new BagWishlist(
                       text: 'REMOVE',
@@ -84,8 +84,8 @@ class BagState extends State<Bag> with TickerProviderStateMixin {
                       text1: 'Top',
                       text2: 'Sold by: Funfash',
                       text3: 'Only 1 unit in Stock',
-                      text4: 'Rs 1299',
-                      text5: 'Rs 799',
+                      text4: '\$ 1299',
+                      text5: '\$ 799',
                     ),
                     new BagWishlist(
                       text: 'REMOVE',
@@ -132,23 +132,33 @@ class BagState extends State<Bag> with TickerProviderStateMixin {
                   children: <Widget>[
                     new CustomCardAmount(
                       text: "Bag Total",
-                      text1: "Rs 2,598",
+                      text1: "\$ 2,598",
+                      color: Colors.black,
+                      fontWeight: FontWeight.w400,
                     ),
                     new CustomCardAmount(
                       text: "Bag Discount",
-                      text1: "-Rs 1,000 ",
+                      text1: " \$ -1,000 ",
+                      color: Colors.blue,
+                      fontWeight: FontWeight.normal,
                     ),
                     new CustomCardAmount(
                       text: "Sub Total",
-                      text1: "Rs 1,598",
+                      text1: "\$ 1,598",
+                      color: Colors.black,
+                      fontWeight: FontWeight.w400,
                     ),
                     new CustomCardAmount(
                       text: "Coupon Discount",
                       text1: "0",
+                      color: Colors.black,
+                      fontWeight: FontWeight.w400,
                     ),
                     new CustomCardAmount(
                       text: "Total Payable",
-                      text1: "Rs 1,598",
+                      text1: "\$ 1,598",
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
                     ),
                   ],
                 ),
