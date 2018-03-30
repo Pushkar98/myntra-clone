@@ -1,0 +1,3 @@
+[submodule "ecommerce_pro"]
+	path = ecommerce_pro
+	url = https://github.com/Pushkar98/myntra-clone.git
